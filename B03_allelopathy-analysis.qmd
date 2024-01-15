@@ -1,0 +1,594 @@
+# Allelopathy Data Analysis {#sec-allelopathy-data-analysis}
+
+Learning Objectives
+
+**After completing this activity you should be able to**
+
+-   use `read_delim()`to read a tab-delimited file into `R` as a data.frame.
+-   assess what information is contained in a data set.
+-   decide what type of descriptive statistics to apply according to whether a variable is continuous or categorical.
+-   use `ggplot()` to generate and modify barplots according to the type of data being visualized.
+-   decide whether to apply a t-test or a $\chi^{2}$-test depending on what type of metrics you are comparing.
+-   distinguish between describing and interpreting results.
+
+We are going to explore your results by applying the key concepts you have learned about descriptive and inferential stats. After completing this component you will use the provided template to write a lab report. You should refer to your methods and this analysis `quarto` documents to complete your methods and results sections. You will be able to pull your analysis section directly from this document[^08_allelopathy-analysis-1] to produce the tables and/or figures you want to include in your report. Typically for your methods you would have sections describing your experimental design and data collection and how you did your analysis. You should make sure that you understand what we are doing here and why to describe each step in your report and then include the code to make that happen.
+
+[^08_allelopathy-analysis-1]: cut and paste is your friend!
+
+In your results section, refer to your figures/tables that you include as you describe your results. From this and previous chapters, remember that you can use the `label` code chunk option to give your code chunk a name, for code chunks that produce a figure if you preface that name with `fig` it will automatically number your figures for you. Similarly, if it is a code chunk that produces a table, if you preface your label name with `tbl` it will automatically number your tables. You should use the `fig-cap` and `tbl-cap` code chunk options to include a figure/table caption. So for example if you are producing a bar plot for frequencies you could use `#| label: fig-bar` and then `#| fig-cap: "Descriptive  figure caption` to get a number figure in your report.
+
+Let's load our `R` packages and get rolling!
+
+```{r}
+#| label: setup
+#| include: false
+
+# load libraries for reporting
+library(knitr)
+
+# load libraries for data import
+library(readr)
+library(here)
+library(janitor)
+
+# load libraries for data wrangling
+library(dplyr)
+library(tidyr)
+library(tibble)
+
+# load libraries for plotting
+library(ggplot2)
+library(ggthemes)
+
+# load library for stats
+library(infer)
+
+# load dataset
+library(palmerpenguins)
+
+```
+
+## Germination frequency
+
+### Get the data
+
+Go to the `GoogleSheet` that contains the germination counts for your lab and select the tab for your group. Double check that the data has been entered correctly. Then go to `File` -\> `Download` -\> `Tab Separated Values (.tsv)` down load your data as a tab-delimited file. Now, use your `File Explorer` if you are on a Windows computer and `Finder` of you are on a Mac and navigate to the `Downloads` folder. You should see the file you just downloaded there. Rename it to `gemination_plant.tsv` depending on the plant you are testing and place it in the `data` folder of your `02_Allelopathy` project folder.
+
+Once you go back to your `Rstudio` window with your `Rproj` loaded you should see the file in your `data` folder in the `Files` pane. Double check that it is there, if not, as you instructor to help you get set up.
+
+Now we are ready to read in our germination data as a `data.frame` that we can compute on in `R`.
+
+```{r}
+#| label: read-germination-data
+
+# define your filename
+file <- "germination_demo-1.tsv" # CHANGE THIS TO YOUR EXACT FILENAME, remember R is case sensitive
+
+# read in data
+germination <- read_delim(here("data", file), delim = "\t") %>%
+  clean_names()
+
+# take a look at first few lines
+head(germination)
+
+```
+
+::: {.callout-tip title="Consider this"}
+Take a look at the `data.frame` object holding your data by clicking on it in the `Environment` pane (bottom left) or using `View(germination)`.
+
+Describe how your data is organized:
+
+-   what information is in each row?
+-   what information is in each column?
+
+Assess what type of data you have
+
+-   is it continuous or categorical?
+-   what groups are you comparing?
+
+Then determine which descriptive statistics are appropriate to summarize this data set and how you would visualize your data.
+:::
+
+::: {.callout-note title="Answer" collapse="true"}
+Each row represents one seed. And each column contains information for one variable.
+
+Your data is categorical with two possible values "germinated" and "not germinated" and you have two groups (treatments) you are comparing "Control" and "Experiment".
+
+We want to know the total number of seeds that germinated and did not germinate across all replicates, and what proportion of the total number of seeds germinated.
+
+Because we have categorical data and want to visualize how the data is distributed across our categories, we will want to use a bar plot to visualize our data.
+:::
+
+### Summarize your results
+
+::: {.callout-tip title="Consider this"}
+Your `data.frame` contains the raw data.
+
+Suggest 2-3 ways that you can summarize your data in a meaningful way to describe your results in the context of the hypothesis you are exploring with this experiment. Explain why you think these would be appropriate data analysis methods.
+:::
+
+::: {.callout-note title="Answer" collapse="true"}
+We are going to calculate the total number and relative proportion of seeds that germinated for each treatment.
+:::
+
+```{r}
+#| label: tbl-germination-success
+#| tbl-cap: "Summary of germination success after 48 hrs. Total number (n) and percent of seeds that germinated."
+
+germination %>%
+  group_by(treatment) %>%             # group data by treatment
+  count(germination) %>%              # count number seeds germinated
+  mutate(percent = n/sum(n)*100) %>%
+  kable(digits = 2)
+  
+```
+
+This table gives you two summary statistics, but the table might not be the best way to present your data for easy comparison in a report.
+
+Data visualizations are frequently more helpful present your results compared to tables with numbers, so let's create a grouped bar chart visualizing our results.
+
+```{r}
+#| label: fig-germination-success
+#| fig-cap: "Germination success of radish seeds exposed to odiferous plant material. Number of seeds that germinated (orange) and did not germinate (green) after 48 hours for control (ctrl; no exposure) and experimental treatment (exp)."
+
+# pick two colors for your control and experimental treatment
+colors <- c("darkorange", "cyan4")
+
+
+# create bar plot with counts
+ggplot(germination, aes(x = treatment,          # specify categories on x axis
+                        fill = germination)) +  # specify how to group data
+  geom_bar(stat = "count",                      # length of bar indicates number of observations
+           width = .75,                         # space between groups
+           position = position_dodge(.8),       # space between bars in group
+           color = "black") +                   # line color
+  scale_fill_manual(values = colors) +          # use custom colors
+  labs(x = "Treatment",                         # x-axis title
+       y = "Number of Seeds") +                 # y-axis title
+  theme_classic() +                             # specify theme
+  theme(legend.position = "bottom")             # place legend under figure
+
+```
+
+::: {.callout-tip title="Give it a try"}
+Usually for your report you would chose to either include a table or a visualization that summarizes your data. In either case you would include a descriptive figure or table title/caption that describes how to interpret the figure[^08_allelopathy-analysis-2].
+
+Then you describe your results referencing your figure/table, however, your reader should be able to have the full picture of your results even without seeing the actual figure/table. A good template to use is to start with the broad pattern and then highlight important details. A good description of results contextualizes them for the reader[^08_allelopathy-analysis-3]. You have already done all the thinking, guide your reader through what you've found.
+
+Describe your results[^08_allelopathy-analysis-4]. Remember, at this point you should not be interpreting them.
+:::
+
+[^08_allelopathy-analysis-2]: As a rule of thumb, you should have enough information in the caption that the reader can understand the figure even without reading the methods/results
+
+[^08_allelopathy-analysis-3]: For example, instead of just listing out values provide context and help your reader see the patterns by using terms like "higher" "lower", "similar" or highlighting certain results as "notably, ...", "except for...".
+
+[^08_allelopathy-analysis-4]: Consider this thinking out loud in a way where you have a set of notes that you can then edit for your report.
+
+::: {.callout-note title="Answer" collapse="true"}
+Your description could look something like this:
+
+Broad pattern:
+
+> Radish seeds exposed to plant had a 22% lower germination success compared to the control.
+
+Details
+
+> Overall, a total of 39 seeds (65%) germinated in the control, while only 26 (43%) germinated in the experimental treatment (Figure xx).
+
+It's important that we add this context because it is quite different if 100% germinated in the control and 78% in the experimental treatment or something more similar to what we observe here.
+:::
+
+Descriptive statistics are the important first step to summarizing our findings. However, as you know, at this point we don't know if our observed differences in germination success are just due to sampling error or if they actually represent reality.
+
+::: {.callout-tip title="Consider this"}
+Argue which type of statistical test we should apply and outline the key steps you will need to take to perform the test.
+:::
+
+### Test for statistical significance
+
+We need to apply a $𝛘^2$ to evaluate the difference between frequencies.
+
+::: {.callout-tip title="Give it a try"}
+State your null and alternative hypothesis and predict the outcome if the claim is true.
+:::
+
+::: {.callout-note title="Answer" collapse="true"}
+Your null hypothesis is a claim that there is no effect:
+
+-   $H_{0}$: Presence of plant X does not have an effect on the germination rate of radish seeds.
+-   Prediction: The number of seeds that germinate are not different between the experimental treatment and the control.
+
+The alternative hypothesis is a claim that there is an observed effect.
+
+-   $H_{0}$: Presence of plant X has a negative effect on the germination rate of radish seeds.
+-   Prediction: The number of seeds that germinate for seeds exposed to plant X will be lower compared to the control.
+:::
+
+::: {.callout-tip title="Consider this"}
+We will specify our significance threshold $\alpha$ as 0.05.
+
+Explain what this means and why it is important for us to specify this.
+:::
+
+::: {.callout-note title="Answer" collapse="true"}
+This means that if our observed results have a less than 5% probability occurring according to our null distribution we will reject our null hypothesis.
+:::
+
+Our next step is to calculate our observed test statistic:
+
+```{r}
+#| label: chi-statistic
+
+# calculate observed statistic
+observed_statistic <- germination %>%        # define data to use
+  specify(response = germination,            # specify response (dependent) variable
+          success = "germinated",            # specify response that is success
+          explanatory = treatment,  ) %>%    # specify explanatory (independent) variable
+  hypothesize(null = "independence") %>%     # define null hypothesis
+  calculate(stat = "Chisq",                  # define test statistic to use 
+            order = c("ctrl", "exp"))        # order to subtract explanatory variables
+
+# print test statistic
+observed_statistic
+
+```
+
+Now, let's simulate our null distribution and compare how our observed test statistic compares.
+
+```{r}
+#| label: fig-null-dist-chi-test
+#| fig-cap: "Null distribution of chi-square test statistic assuming presence of plant material has no effect on radish seed growth. Bars indicates permuted null distribution, black line indicates theoretical chi-square distribution. The calculated chi-square test statistic is indicated by the red line. Values observed in the null distribution that are more extreme that the t-statistic calculated for the empirical data set are shaded in red."
+
+# create null distribution
+null_dist <- germination %>%
+  specify(response = germination,            # specify response (dependent) variable
+          success = "germinated",            # specify response that is success
+          explanatory = treatment,  ) %>%    # specify explanatory (independent) variable
+  hypothesize(null = "independence") %>%     # define null hypothesis
+  generate(reps = 1000,                      # number of samples to generate null distribution
+           type = "permute") %>%             # shuffle to break association
+  calculate(stat = "Chisq",                  # define test statistic to use 
+            order = c("ctrl", "exp"))        # order to subtract explanatory variables
+
+
+# visualize null distribution test statistic
+null_dist %>%
+  visualize(method = "both") + 
+  shade_p_value(observed_statistic,
+                direction = "greater")
+
+```
+
+And for our last step, we need to get our p-value[^08_allelopathy-analysis-5]:
+
+[^08_allelopathy-analysis-5]: Note: for your report, you do not need to visualize your null distribution we are doing this to help us get a better feel for how statistical tests worth. You can combine content from code chunks to go straight to getting your p-value.
+
+```{r}
+#| label: calculate-p
+
+# obtain p-value
+null_dist %>%
+  get_p_value(obs_stat = observed_statistic,
+              direction = "greater")
+
+```
+
+::: {.callout-tip title="Give it a try"}
+Compare your p-value to the threshold of significance we defined above to determine how to interpret the results of your chi\^{2}\$-test.
+
+Then update the results you formulated earlier to add this information into your description of the results.
+
+Finally, write a few sentences as a draft of how you would include this in the discussion of your results, i.e. how you will interpret your results to draw a conclusion in the context of our broad research hypothesis that we designed this experiment to explore.
+:::
+
+::: {.callout-note title="Answer" collapse="true"}
+In this case our p-value is 0.023 which means that is a less than 2.3% probability that we would observe a test statistic at least this extreme give our null hypothesis.
+
+This value is smaller than our specified threshold of significance and therefore we will reject our null hypothesis and conclude that the difference in the observed germination rates is statistically significant and consistent with our hypothesis that plant X has an effect on the germination rate.
+
+We can augment our results to include this information:
+
+> Radish seeds exposed to plant had a 22% lower germination success compared to the control. Overall, a total of 39 seeds (65%) germinated in the control, while only 26 (43%) germinated in the experimental treatment (Figure xx). This difference is statistically significant (p = 0.02).
+
+In the discussion we would interpret our results:
+
+> The germination rate of radish seeds was significantly lower when they were exposed to plant X (Figure X). This is consistent with our hypothesis that plant X is releasing an allelopathic chemical compound which impacts radish seed germination.
+:::
+
+Remember, if your results are not statistically significant, you still need to write a set of conclusions! Even though we seem to think that "negative results" are "bad", "negative" just means that we did not observe an effect - but that is also a result because you can now exclude one possible explanation for your observation and move on to test the next one.
+
+## Seedling growth
+
+### Get your data
+
+Go to the `GoogleSheet` that contains the seedling lengths for your lab and select the tab for your group. Double check that the data has been entered correctly. Then go to `File` -\> `Download` -\> `Tab Separated Values (.tsv)` down load your data as a tab-delimited file. Now, use your `File Explorer` if you are on a Windows computer and `Finder` of you are on a Mac and navigate to the `Downloads` folder. You should see the file you just downloaded there. Rename it to `seedling-length_plant.tsv` depending on the plant you are testing and place it in the `data` folder of your `02_Allelopathy` project folder.
+
+Once you go back to your `Rstudio` window with your `Rproj` loaded you should see the file in your `data` folder in the `Files` pane. Double check that it is there, if not, as you instructor to help you get set up.
+
+Now we are ready to read in our germination data as a `data.frame` that we can compute on in `R`.
+
+```{r}
+#| label: read-seedling-length-data
+
+# define your filename
+file <- "seedling-length_demo-1.tsv" # CHANGE THIS TO YOUR EXACT FILENAME, remember R is case sensitive
+
+# read in data
+length <- read_delim(here("data", file), delim = "\t") %>%
+  clean_names()
+
+# take a look at first few lines
+head(length)
+
+```
+
+### Summarize your results
+
+::: {.callout-tip title="Consider this"}
+Take a look at the `data.frame` object holding your data by clicking on it in the `Environment` pane (bottom left) or using `View(length)`.
+
+Describe how your data is organized:
+
+-   what information is in each row?
+-   what information is in each column?
+
+Assess what type of data you have
+
+-   is it continuous or categorical?
+-   what groups are you comparing?
+
+Then determine which descriptive statistics are appropriate to summarize this data set and how you would visualize your data.
+:::
+
+::: {.callout-note title="Answer" collapse="true"}
+Each row represents one seedling. And each column contains information for one variable.
+
+Your data is continuous; you have a length measurement in millimeters. You have two groups (treatments) you are comparing "Control" and "Experiment" which is categorical.
+
+You will want to determine the mean and standard deviation of the seedling length for both treatments. It could also be helpful to generate additional summary statistics including median, minimum and maximum values to give yourself an overview of the data.
+
+We can explore to visualizations for your data, the first is that you can visualize the distributions using a histogram, the second is that you can visualize the mean and standard deviation using a bar chart or similar.
+:::
+
+We will need to summarize our results to evaluate our findings.
+
+::: {.callout-tip title="Consider this"}
+Suggest 3-4 metrics to summarize your data in a meaningful way that will allow you to describe your results in the context of the hypothesis you are exploring with this experiment.
+
+Explain why you think these would be appropriate data analysis methods.
+:::
+
+::: {.callout-note title="Answer" collapse="true"}
+As we have continuous data, we can use the descriptive statistics we have discussed previously that allow us to assess the distribution (histogram), central tendency (mean, median, mode) and variability (variance, standard deviation) of our data.
+:::
+
+Let's start by putting together a table with summary statistics.
+
+```{r}
+#| label: tbl-summary-length
+#| tbl-cap: "Summary statistics for seedling length. Mean, median, standard deviation (sd), minimum (min) and maximum (max) length in millimeters for seedlings exposed to plant X (exp) or not (ctrl)."
+
+length %>%                                # specify data
+  group_by(treatment) %>%                 # group by treatment
+  summarize(mean = mean(length_mm),       # calculate mean
+            sd = sd(length_mm),           # calculate standard deviation
+            median = median(length_mm),   # determine median value
+            min = min(length_mm),         # determine minimum value
+            max = max(length_mm))         # determine maximum value
+
+```
+
+::: {.callout-tip title="Give it a try"}
+Describe your results[^08_allelopathy-analysis-6]. Make sure that you are being specific and adding context to make it easy for your reader to identify the key patterns.
+
+As rule of thumb, you should describe your results so that your reader has all the key information they need even without seeing the data tables.
+
+Remember, at this point you should not be interpreting your results!
+:::
+
+[^08_allelopathy-analysis-6]: Consider this thinking out loud in a way where you have a set of notes that you can then edit for your report.
+
+::: {.callout-note title="Answer" collapse="true"}
+Your description could look something like this:
+
+Broad pattern:
+
+> Overall, seedling growth was lower for radish seeds exposed to plant X compared to the control.
+
+Details
+
+> Mean seedling growth after 1 week was 6.2 +/- 1.7mm for plants exposed to plant X compared to a mean length of 8.4 +/- 1.47mm in the control. Similarly, the variability in seedling length was higher in exposed radish seeds (range = 3 - 10) compared to the control (range = 5 - 11).
+
+In this case, you would not need to include table because you've included all the values, rather you might chose to include figure that effectively summarizes your data that you would then reference here.
+:::
+
+Again, data visualizations are an important tool to summarize and present your data. Let's start by visualizing our data with a histogram which emphasize the distribution of our values.
+
+```{r}
+#| label: fig-length-histogram
+#| fig-cap: "Seedling length distribution after 1 week for radish seeds explosed to plant X (green) and not (orange)." 
+
+ggplot(length, aes(x = length_mm, fill = treatment)) +
+  geom_histogram(binwidth = 1,
+                 color = "black") +
+  facet_grid(treatment ~ .) +
+  scale_fill_manual(values = colors) +
+  theme_classic() +
+  theme(legend.position = "none")
+
+```
+
+Alternatively, we could create a bar plot where the height is scaled relative to the mean. This also allows us to add error bars that are scaled to the length of the standard deviation[^08_allelopathy-analysis-7].
+
+[^08_allelopathy-analysis-7]: This is a classic plot for experiments with multiple treatments
+
+```{r}
+#| label: fig-length-bar
+#| fig-cap: "Mean seedling length and standard deviation after 1 week for radish seeds explosed to plant X (green) and not (orange)."
+
+# create dataframe with mean and sd
+summary <- length %>%
+  group_by(treatment) %>%
+  summarise(mean = mean(length_mm),
+            sd = sd(length_mm))
+
+ggplot(summary) +
+  geom_bar(aes(x = treatment, y = mean,
+               fill = treatment),
+           stat = "identity",
+           color = "black") +
+  geom_errorbar(aes(x = treatment,
+                    ymin = mean-sd,
+                    ymax = mean+sd),
+                width = 0.25,
+                size = 1.2) +
+  scale_fill_manual(values = colors) +
+  theme_classic() +
+  theme(legend.position = "none")
+
+```
+
+Bar plots take up a lot of "ink" and so an alternative is to create a plot using a point range. In that case the mean is represented by a point and the standard deviation by lines extending out from that point.
+
+```{r}
+#| label: fig-length-point
+#| fig-cap: "Mean seedling length and standard deviation after 1 week for radish seeds explosed to plant X (green) and not (orange)."
+
+# create dataframe with mean and sd
+summary <- length %>%
+  group_by(treatment) %>%
+  summarise(mean = mean(length_mm),
+            sd = sd(length_mm))
+
+# create dataframe with mean and sd
+summary <- length %>%
+  group_by(treatment) %>%
+  summarise(mean = mean(length_mm),
+            sd = sd(length_mm))
+
+ggplot(summary) +
+  geom_pointrange(aes(x = treatment,
+                    y = mean,
+                    ymin = mean-sd,
+                    ymax = mean+sd,
+                    color = treatment),
+                size = 1.2) +
+  scale_color_manual(values = colors) +
+  theme_classic() +
+  theme(legend.position = "none")
+
+```
+
+Again, our set of summary statistics and data visualization enable us to present the patterns in our data set. However, at this point we cannot make statement whether our observed differences in seedling lengths are within the range of variability in growth we would expect to see even if the plant material does not have an effect on growth.
+
+::: {.callout-tip title="Consider this"}
+Argue which type of statistical test we should apply and outline the key steps you will need to take to perform the test.
+:::
+
+### Test for significance
+
+We need to apply a $t$-test to evaluate the difference between means.
+
+::: {.callout-tip title="Give it a try"}
+State your null and alternative hypothesis and predict the outcome if each claim is true.
+:::
+
+::: {.callout-note title="Answer" collapse="true"}
+Your null hypothesis is a claim that there is no effect:
+
+-   $H_{0}$: Presence of plant X does not have an effect on the growth rate of radish seeds.
+-   Prediction: The seedling length does not differ between the experimental treatment and the control.
+
+The alternative hypothesis is a claim that there is an observed effect.
+
+-   $H_{0}$: Presence of plant X has a negative effect on the growth rate of radish seeds.
+-   Prediction: The seedling length for seeds exposed to plant X will be lower compared to the control.
+:::
+
+::: {.callout-tip title="Consider this"}
+We will specify our significance threshold $\alpha$ as 0.05.
+
+Explain what this means and why it is important for us to specify this.
+:::
+
+::: {.callout-note title="Answer" collapse="true"}
+This means that if our observed results have a less than 5% probability occurring according to our null distribution we will reject our null hypothesis.
+:::
+
+Our next step is to calculate our observed test statistic:
+
+```{r}
+#| label: t-statistic
+
+# calculate observed statistic
+observed_statistic <- length %>%             # define data to use
+  specify(response = length_mm,              # specify response (dependent) variable
+          explanatory = treatment,  ) %>%    # specify explanatory (independent) variable
+  calculate(stat = "diff in means",          # define test statistic to use 
+            order = c("ctrl", "exp"))        # order to subtract explanatory variables
+
+# print test statistic
+observed_statistic
+
+```
+
+Now, let's simulate our null distribution and compare how our observed test statistic compares.
+
+```{r}
+#| label: fig-null-dist-t-test
+#| fig-cap: "Null distribution of t test statistic assuming presence of plant material has no effect on radish seed growth. The calculated t-square test statistic is indicated by the red line. Values observed in the null distribution that are more extreme that the t-statistic calculated for the empirical data set are shaded in red."
+
+# create null distribution
+null_dist <- length %>%
+  specify(response = length_mm,              # specify response (dependent) variable
+          explanatory = treatment,  ) %>%    # specify explanatory (independent) variable
+  hypothesize(null = "independence") %>%     # define null hypothesis
+  generate(reps = 1000,                      # number of samples to generate null distribution
+           type = "permute") %>%             # shuffle to break association
+  calculate(stat = "diff in means",          # define test statistic to use 
+            order = c("ctrl", "exp"))        # order to subtract explanatory variables
+
+
+# visualize null distribution test statistic
+null_dist %>%
+  visualize() + 
+  shade_p_value(observed_statistic,
+                direction = "greater")
+
+```
+
+And for our last step, we need to determine our p-value.
+
+```{r}
+#| label: calculate-p-II
+
+# obtain p-value
+null_dist %>%
+  get_p_value(obs_stat = observed_statistic,
+              direction = "greater")
+
+```
+
+::: {.callout-tip title="Give it a try"}
+Compare your p-value to the threshold of significance we defined above to determine how to interpret the results of your chi\^{2}\$-test.
+
+Then update the results you formulated earlier to add this information into your description of the results.
+
+Finally, write a few sentences as a draft of how you would include this in the discussion of your results, i.e. how you will interpret your results to draw a conclusion in the context of our broad research hypothesis that we designed this experiment to explore.
+:::
+
+::: {.callout-note title="Answer" collapse="true"}
+In this case our p-value is 0.001 which means that is a less than 0.1% probability that we would observe a test statistic at least this extreme give our null hypothesis.
+
+This value is smaller than our specified threshold of significance and therefore we will reject our null hypothesis and conclude that the difference in the observed germination rates is statistically significant and consistent with our hypothesis that plant X has an effect on the germination rate.
+
+We can augment our results to include this information:
+
+> Overall, seedling growth was significantly lower for radish seeds exposed to plant X compared to the control (p = 0.001). Mean seedling growth after 1 week was 6.2 +/- 1.7mm for plants exposed to plant X compared to a mean length of 8.4 +/- 1.47mm in the control. Similarly, the variability in seedling length was higher in exposed radish seeds (range = 3 - 10) compared to the control (range = 5 - 11).
+
+In the discussion we would interpret our results:
+
+> The growth rate of radish seeds was significantly lower when they were exposed to plant X (Figure X). This is consistent with our hypothesis that plant X is releasing an allelopathic chemical compound which impacts radish seed growth.
+:::
+
+Remember, if your results are not statistically significant, you still need to write a set of conclusions! Even though we seem to think that "negative results" are "bad", "negative" just means that we did not observe an effect - but that is also a result because you can now exclude one possible explanation for your observation and move on to test the next one.

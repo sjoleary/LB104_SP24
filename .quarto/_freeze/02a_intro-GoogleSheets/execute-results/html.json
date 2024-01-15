@@ -1,0 +1,14 @@
+{
+  "hash": "ded543d98c697dc3dc9219e08a22b00c",
+  "result": {
+    "markdown": "# Introduction to Data Management using spreadsheets {#sec-introduction-to-GoogleSheets}\n\n\n\n\n\n\nLearning Objectives\n\n**After completing this activity you should be able to**\n\n* \n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

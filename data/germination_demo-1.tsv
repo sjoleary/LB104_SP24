@@ -1,0 +1,121 @@
+test-plant	replicate	treatment	seedling	germination	date-setup	time-setup	date-recorded	time-recorded	notes
+plant	lastname-1	ctrl	1	germinated	2023-01-12	9:00	2023-01-14	9:00	
+plant	lastname-1	ctrl	2	germinated	2023-01-12	9:00	2023-01-14	9:00	
+plant	lastname-1	ctrl	3	germinated	2023-01-12	9:00	2023-01-14	9:00	
+plant	lastname-1	ctrl	4	germinated	2023-01-12	9:00	2023-01-14	9:00	
+plant	lastname-1	ctrl	5	germinated	2023-01-12	9:00	2023-01-14	9:00	
+plant	lastname-1	ctrl	6	no germination	2023-01-12	9:00	2023-01-14	9:00	
+plant	lastname-1	ctrl	7	no germination	2023-01-12	9:00	2023-01-14	9:00	
+plant	lastname-1	ctrl	8	germinated	2023-01-12	9:00	2023-01-14	9:00	
+plant	lastname-1	ctrl	9	germinated	2023-01-12	9:00	2023-01-14	9:00	
+plant	lastname-1	ctrl	10	germinated	2023-01-12	9:00	2023-01-14	9:00	
+plant	lastname-1	ctrl	11	no germination	2023-01-12	9:00	2023-01-14	9:00	
+plant	lastname-1	ctrl	12	no germination	2023-01-12	9:00	2023-01-14	9:00	
+plant	lastname-1	ctrl	13	germinated	2023-01-12	9:00	2023-01-14	9:00	
+plant	lastname-1	ctrl	14	germinated	2023-01-12	9:00	2023-01-14	9:00	
+plant	lastname-1	ctrl	15	no germination	2023-01-12	9:00	2023-01-14	9:00	
+plant	lastname-1	ctrl	16	no germination	2023-01-12	9:00	2023-01-14	9:00	
+plant	lastname-1	ctrl	17	no germination	2023-01-12	9:00	2023-01-14	9:00	
+plant	lastname-1	ctrl	18	germinated	2023-01-12	9:00	2023-01-14	9:00	
+plant	lastname-1	ctrl	19	germinated	2023-01-12	9:00	2023-01-14	9:00	
+plant	lastname-1	ctrl	20	germinated	2023-01-12	9:00	2023-01-14	9:00	
+plant	lastname-1	exp	1	no germination	2023-01-12	9:00	2023-01-14	9:00	
+plant	lastname-1	exp	2	no germination	2023-01-12	9:00	2023-01-14	9:00	
+plant	lastname-1	exp	3	germinated	2023-01-12	9:00	2023-01-14	9:00	
+plant	lastname-1	exp	4	no germination	2023-01-12	9:00	2023-01-14	9:00	
+plant	lastname-1	exp	5	no germination	2023-01-12	9:00	2023-01-14	9:00	
+plant	lastname-1	exp	6	germinated	2023-01-12	9:00	2023-01-14	9:00	
+plant	lastname-1	exp	7	no germination	2023-01-12	9:00	2023-01-14	9:00	
+plant	lastname-1	exp	8	germinated	2023-01-12	9:00	2023-01-14	9:00	
+plant	lastname-1	exp	9	germinated	2023-01-12	9:00	2023-01-14	9:00	
+plant	lastname-1	exp	10	germinated	2023-01-12	9:00	2023-01-14	9:00	
+plant	lastname-1	exp	11	germinated	2023-01-12	9:00	2023-01-14	9:00	
+plant	lastname-1	exp	12	germinated	2023-01-12	9:00	2023-01-14	9:00	
+plant	lastname-1	exp	13	no germination	2023-01-12	9:00	2023-01-14	9:00	
+plant	lastname-1	exp	14	germinated	2023-01-12	9:00	2023-01-14	9:00	
+plant	lastname-1	exp	15	no germination	2023-01-12	9:00	2023-01-14	9:00	
+plant	lastname-1	exp	16	germinated	2023-01-12	9:00	2023-01-14	9:00	
+plant	lastname-1	exp	17	no germination	2023-01-12	9:00	2023-01-14	9:00	
+plant	lastname-1	exp	18	no germination	2023-01-12	9:00	2023-01-14	9:00	
+plant	lastname-1	exp	19	no germination	2023-01-12	9:00	2023-01-14	9:00	
+plant	lastname-1	exp	20	no germination	2023-01-12	9:00	2023-01-14	9:00	
+plant	lastname-2	ctrl	1	germinated	2023-01-12	9:00	2023-01-14	9:00	
+plant	lastname-2	ctrl	2	germinated	2023-01-12	9:00	2023-01-14	10:30	
+plant	lastname-2	ctrl	3	no germination	2023-01-12	9:00	2023-01-14	10:30	
+plant	lastname-2	ctrl	4	germinated	2023-01-12	9:00	2023-01-14	10:30	
+plant	lastname-2	ctrl	5	germinated	2023-01-12	9:00	2023-01-14	10:30	
+plant	lastname-2	ctrl	6	no germination	2023-01-12	9:00	2023-01-14	10:30	
+plant	lastname-2	ctrl	7	no germination	2023-01-12	9:00	2023-01-14	10:30	
+plant	lastname-2	ctrl	8	germinated	2023-01-12	9:00	2023-01-14	10:30	
+plant	lastname-2	ctrl	9	germinated	2023-01-12	9:00	2023-01-14	10:30	
+plant	lastname-2	ctrl	10	germinated	2023-01-12	9:00	2023-01-14	10:30	
+plant	lastname-2	ctrl	11	no germination	2023-01-12	9:00	2023-01-14	10:30	
+plant	lastname-2	ctrl	12	no germination	2023-01-12	9:00	2023-01-14	10:30	
+plant	lastname-2	ctrl	13	no germination	2023-01-12	9:00	2023-01-14	10:30	
+plant	lastname-2	ctrl	14	germinated	2023-01-12	9:00	2023-01-14	10:30	
+plant	lastname-2	ctrl	15	no germination	2023-01-12	9:00	2023-01-14	10:30	
+plant	lastname-2	ctrl	16	no germination	2023-01-12	9:00	2023-01-14	10:30	
+plant	lastname-2	ctrl	17	no germination	2023-01-12	9:00	2023-01-14	10:30	
+plant	lastname-2	ctrl	18	germinated	2023-01-12	9:00	2023-01-14	10:30	
+plant	lastname-2	ctrl	19	no germination	2023-01-12	9:00	2023-01-14	10:30	
+plant	lastname-2	ctrl	20	germinated	2023-01-12	9:00	2023-01-14	10:30	
+plant	lastname-2	exp	1	no germination	2023-01-12	9:00	2023-01-14	10:30	
+plant	lastname-2	exp	2	no germination	2023-01-12	9:00	2023-01-14	10:30	
+plant	lastname-2	exp	3	germinated	2023-01-12	9:00	2023-01-14	10:30	
+plant	lastname-2	exp	4	no germination	2023-01-12	9:00	2023-01-14	10:30	
+plant	lastname-2	exp	5	no germination	2023-01-12	9:00	2023-01-14	10:30	
+plant	lastname-2	exp	6	germinated	2023-01-12	9:00	2023-01-14	10:30	
+plant	lastname-2	exp	7	no germination	2023-01-12	9:00	2023-01-14	10:30	
+plant	lastname-2	exp	8	germinated	2023-01-12	9:00	2023-01-14	10:30	
+plant	lastname-2	exp	9	no germination	2023-01-12	9:00	2023-01-14	10:30	
+plant	lastname-2	exp	10	no germination	2023-01-12	9:00	2023-01-14	10:30	
+plant	lastname-2	exp	11	germinated	2023-01-12	9:00	2023-01-14	10:30	
+plant	lastname-2	exp	12	germinated	2023-01-12	9:00	2023-01-14	10:30	
+plant	lastname-2	exp	13	no germination	2023-01-12	9:00	2023-01-14	10:30	
+plant	lastname-2	exp	14	germinated	2023-01-12	9:00	2023-01-14	10:30	
+plant	lastname-2	exp	15	no germination	2023-01-12	9:00	2023-01-14	10:30	
+plant	lastname-2	exp	16	no germination	2023-01-12	9:00	2023-01-14	10:30	
+plant	lastname-2	exp	17	no germination	2023-01-12	9:00	2023-01-14	10:30	
+plant	lastname-2	exp	18	no germination	2023-01-12	9:00	2023-01-14	10:30	
+plant	lastname-2	exp	19	no germination	2023-01-12	9:00	2023-01-14	10:30	
+plant	lastname-2	exp	20	no germination	2023-01-12	9:00	2023-01-14	10:30	
+plant	lastname-3	ctrl	1	germinated	2023-01-12	9:00	2023-01-14	8:45	
+plant	lastname-3	ctrl	2	germinated	2023-01-12	9:00	2023-01-14	s	
+plant	lastname-3	ctrl	3	germinated	2023-01-12	9:00	2023-01-14	8:45	
+plant	lastname-3	ctrl	4	germinated	2023-01-12	9:00	2023-01-14	8:45	
+plant	lastname-3	ctrl	5	germinated	2023-01-12	9:00	2023-01-14	8:45	
+plant	lastname-3	ctrl	6	no germination	2023-01-12	9:00	2023-01-14	8:45	
+plant	lastname-3	ctrl	7	no germination	2023-01-12	9:00	2023-01-14	8:45	
+plant	lastname-3	ctrl	8	germinated	2023-01-12	9:00	2023-01-14	8:45	
+plant	lastname-3	ctrl	9	germinated	2023-01-12	9:00	2023-01-14	8:45	
+plant	lastname-3	ctrl	10	germinated	2023-01-12	9:00	2023-01-14	8:45	
+plant	lastname-3	ctrl	11	germinated	2023-01-12	9:00	2023-01-14	8:45	
+plant	lastname-3	ctrl	12	germinated	2023-01-12	9:00	2023-01-14	8:45	
+plant	lastname-3	ctrl	13	germinated	2023-01-12	9:00	2023-01-14	8:45	
+plant	lastname-3	ctrl	14	germinated	2023-01-12	9:00	2023-01-14	8:45	
+plant	lastname-3	ctrl	15	no germination	2023-01-12	9:00	2023-01-14	8:45	
+plant	lastname-3	ctrl	16	no germination	2023-01-12	9:00	2023-01-14	8:45	
+plant	lastname-3	ctrl	17	germinated	2023-01-12	9:00	2023-01-14	8:45	
+plant	lastname-3	ctrl	18	germinated	2023-01-12	9:00	2023-01-14	8:45	
+plant	lastname-3	ctrl	19	germinated	2023-01-12	9:00	2023-01-14	8:45	
+plant	lastname-3	ctrl	20	germinated	2023-01-12	9:00	2023-01-14	8:45	
+plant	lastname-3	exp	1	no germination	2023-01-12	9:00	2023-01-14	8:45	
+plant	lastname-3	exp	2	no germination	2023-01-12	9:00	2023-01-14	8:45	
+plant	lastname-3	exp	3	germinated	2023-01-12	9:00	2023-01-14	8:45	
+plant	lastname-3	exp	4	no germination	2023-01-12	9:00	2023-01-14	8:45	
+plant	lastname-3	exp	5	no germination	2023-01-12	9:00	2023-01-14	8:45	
+plant	lastname-3	exp	6	germinated	2023-01-12	9:00	2023-01-14	8:45	
+plant	lastname-3	exp	7	germinated	2023-01-12	9:00	2023-01-14	8:45	
+plant	lastname-3	exp	8	germinated	2023-01-12	9:00	2023-01-14	8:45	
+plant	lastname-3	exp	9	germinated	2023-01-12	9:00	2023-01-14	8:45	
+plant	lastname-3	exp	10	germinated	2023-01-12	9:00	2023-01-14	8:45	
+plant	lastname-3	exp	11	germinated	2023-01-12	9:00	2023-01-14	8:45	
+plant	lastname-3	exp	12	germinated	2023-01-12	9:00	2023-01-14	8:45	
+plant	lastname-3	exp	13	no germination	2023-01-12	9:00	2023-01-14	8:45	
+plant	lastname-3	exp	14	germinated	2023-01-12	9:00	2023-01-14	8:45	
+plant	lastname-3	exp	15	no germination	2023-01-12	9:00	2023-01-14	8:45	
+plant	lastname-3	exp	16	germinated	2023-01-12	9:00	2023-01-14	8:45	
+plant	lastname-3	exp	17	no germination	2023-01-12	9:00	2023-01-14	8:45	
+plant	lastname-3	exp	18	germinated	2023-01-12	9:00	2023-01-14	8:45	
+plant	lastname-3	exp	19	no germination	2023-01-12	9:00	2023-01-14	8:45	
+plant	lastname-3	exp	20	no germination	2023-01-12	9:00	2023-01-14	8:45	

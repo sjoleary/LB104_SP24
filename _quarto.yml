@@ -1,0 +1,66 @@
+project:
+  type: book
+
+book:
+  title: "Labmanual General Biology II"
+  subtitle: "BI104 | Spring 2024 | Saint Anselm College"
+  author: "Shannon J O'Leary"
+  date: today
+  chapters:
+    - index.qmd
+    
+    - part: A_Exp-Design-Analysis.qmd
+      chapters: 
+        - A01_intro-exp-design.qmd
+        - A02_intro-spreadsheets.qmd
+        - A03_intro-R.qmd
+        - A04_descript-stats.qmd
+        - A05_inferent-stats.qmd
+        - A06_writing-report.qmd
+    
+    - part: B_allelopathy.qmd
+      chapters:
+        - B01_allelopathy-design.qmd
+        - B02_allelopathy-methods.qmd
+        - B03_allelopathy-analysis.qmd
+    
+    - part: C_ecological-succession.qmd
+      chapters:
+        - C01_introduction.qmd
+        - C02_succession-I.qmd
+        - C03_succession-II.qmd
+    
+    - part: D_lichens.qmd
+      chapters: 
+        - D01_spatial-analysis.qmd
+        - D02_lichen-data-collection.qmd
+        - D03_lichen-analysis.qmd
+
+    - part: Z_supplements.qmd
+      chapters:
+        - references.qmd
+
+bibliography: references.bib
+
+format:
+  html:
+    theme: sandstone
+    toc: true
+    toc-depth: 2
+    toc-location: left
+    code-fold: false
+    code-overflow: scroll
+    code-copy: hover
+    number-sections: true
+    anchor-sections: true
+    embed-resources: true
+  # pdf:
+  #   documentclass: scrreprt
+
+reference-location: margin
+citation-location: margin
+fig-cap-location: margin
+tbl-cap-location: margin
+
+
+

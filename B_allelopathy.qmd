@@ -1,0 +1,52 @@
+# Allelopathy {#sec-allelopathy}
+
+After completing this unit, you should be able to
+
+-   Describe allelopathy as a form of interspecific competition among plants.
+-   Describe the process of formulating a question and testable hypothesis based on a (set of) observations.
+-   Describe key principles of experimental design, including the difference between dependent, independent, and controlled/confounding variables, the importance of controls, replicates, and adequate sample sizes.
+-   Report your results and interpret them in the context of your stated hypothesis.
+
+For each of our units we will have a project folder[^b_allelopathy-1] with an `Rproject`, `*.qmd`-files to complete lab assignments and write your lab report along with sub-directories to hold the data and results that you will generate. At the beginning of the semester, you should have created a directory on your Desktop or Documents folder on your laptop (name it something like `bi104`) as a home directory for all of our project folders this semester.
+
+[^b_allelopathy-1]: We will use "directory" and "folder" synonymously throughout this lab handbook
+
+Download the 02_Allelopathy project folder. Once you have downloaded it, unzip the project directory into your `bi104` directory[^b_allelopathy-2].
+
+[^b_allelopathy-2]: On a MacOS, your system it will automatically unzip the folder for you and you should be able to directly move the **entire unzipped directory** to your `bi104` folder. On a Windows OS you will need to right click and select `extract all`, then you should be able to specify which directory you want to unzip your file into.
+
+Once you have done this, you can open the `Rproj` for this module either by double clicking on it which will launch `Rstudio` or by opening `Rstudio` and then using `File > Open Project` or by clicking on the `Rproject` icon in the top right of your program window and selecting `Open Project`.
+
+Once you have opened a project you should see the project name in the top right corner[^b_allelopathy-3].
+
+[^b_allelopathy-3]: Pro tip: If you run into issues where a `quarto` document won't render or file paths aren't working (especially if things were working previously) one of your first steps should be to double check that the correct `Rproj` is loaded.
+
+## Competition is a key factor shaping species distribution and abundance
+
+A key question within ecology is how the **abiotic** and **biotic factors** within an ecosystem affect the distribution and abundance of individual populations. Because most ecosystems are limited in terms of resources the competition for those resources with other species **interspecific competition** is frequently a key factor in shaping population dynamics of a population, as there will be less of one or more resources available in the environment to support the population of a given species.
+
+Interspecific competition can be classified as either **exploitative competition**[^b_allelopathy-4] or **interference competition**.
+
+[^b_allelopathy-4]: This semester when we discuss **species interactions** during the lecture portion of this course, we will discuss exploitative competition and define it as an interaction which negatively impacts both populations involved.
+
+Especially in the context of plants, you are probably more familiar with **exploitative competition** which occurs when there is no direct interaction between individuals of different species, rather be consuming ("exploiting") a resource the individuals of one species lessen the amount that resource available to another species. For example, all the trees in a forests compete for a limited supply of space, water, and nutrients in the soil. Or if you have ever planted seeds in a garden, you would have been given instructions on how far to space them out to make sure that they have enough resources.
+
+By contrast, with **interference competition** there is direct interaction between members of different species as the individuals of one species physically prevent the individuals of the second species from gaining access. A typical example here would be hyenas, jackals, and vultures actively fighting with each other to gain access to carcasses as their food source. Outside of fantasy novels, you probably would not associate plants with interference competition, slugging it out over access to sunlight and other resources. However, **allelopathy**[^b_allelopathy-5] is a form of interference competition where one plant species emits toxic substances that kill or inhibit the growth of other plant species.
+
+[^b_allelopathy-5]: allelo means "others", pathy means "cause harm"
+
+## Allelopathy is a form of interference competition
+
+One of the best known examples of allelopathy is black walnut (*Juglans nigra*) which releases a substance called hydroxyjuglone from various tissues. Oxidation of this substance in the soil produces juglone which inhibits the growth of certain other species in that same soil while not affecting others. For example, tomato plants will not grow well under black walnut trees while Kentucky bluegrass common ground cover for suburban lawns are unaffected.
+
+While all allelopathic plants generate **phytotoxic chemicals**[^b_allelopathy-6], the way they enter the environment may differ. For example, some allelopathic plants excrete allelopathic compounds from their roots into the soil from where they are then absorbed by the roots of over plants. In other cases, toxic chemicals may be leached from dropped leaves and twigs when rainwater dissolves and carries soluble compounds into the soil. Finally, plants may release phytotoxic chemicals as **volatile compounds** into the air that are then deposited on the leaves and shoots of nearby plants.
+
+[^b_allelopathy-6]: phyto means "plants", toxic means "poisonous".
+
+Understanding allelopathy can have important applications. For example, there is ongoing interest in using allelopathic plants instead of herbicides especially in the context of agriculture. Similarly, understanding these effects can be important for restoration ecology where foresters have discovered that the presence/absence of allelopathic plants influences the success of reseeding clear cuts.
+
+For this research project you will design a **bioassay** to test for allelopathic effects of different plant species. Specifically, you will (1) identify an odoriferous plant to test for allelopathic effects and (2) design an experiment to test your hypothesis and (3) collect and analyze your data using some basic statistical techniques you will be introduced to this semester.
+
+## Acknowledgements
+
+This lab is adapted from the Johnson and Johnson (2002) Allelopathy Lab manual.

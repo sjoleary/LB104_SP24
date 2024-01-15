@@ -1,0 +1,22 @@
+# Scientific Method & Experimental Design {#sec-scientific-method--experimental-design}
+
+**After completing this unit, you should be able to**
+
+-   Outline the scientific method as an iterative process of observation, hypothesis formation, experimentation, data collection & analysis, and conclusion drawing.
+-   Describe the key components of experimental design to ensure conclusions are reliable.
+-   Generate descriptive statistics summarizing distribution, central tendency and variability of a data set using `R`.
+-   Perform a t-test and $\X^2$-test to determine the probability that results are result of sampling error and do not represent reality.
+
+For each of our units we will have a project folder[^a_exp-design-analysis-1] with an `Rproject`, `*.qmd`-files to complete lab assignments and write your lab report along with sub-directories to hold the data and results that you will generate. At the beginning of the semester, you should have created a directory on your Desktop or Documents folder on your laptop (name it something like `bi104`) as a home directory for all of our project folders this semester.
+
+[^a_exp-design-analysis-1]: We will use "directory" and "folder" synonymously throughout this lab handbook
+
+Download the [01_Stats]() project folder. Once you have downloaded it, unzip the project directory into your `bi104` directory^[On a MacOS, your system it will automatically unzip the folder for you and you should be able to directly move the **entire unzipped directory** to your `bi104` folder. On a Windows OS you will need to right click and select `extract all`, then you should be able to specify which directory you want to unzip your file into.].
+
+Once you have done this, you can open the `Rproj` for this module either by double clicking on it which will launch `Rstudio` or by opening `Rstudio` and then using `File > Open Project` or by clicking on the `Rproject` icon in the top right of your program window and selecting `Open Project`.
+
+Once you have opened a project you should see the project name in the top right corner[^a_exp-design-analysis-2].
+
+[^a_exp-design-analysis-2]: Pro tip: If you run into issues where a `quarto` document won't render or file paths aren't working (especially if things were working previously) one of your first steps should be to double check that the correct `Rproj` is loaded.
+
+This unit which will introduce you to the scientific method, experimental, design, and statistics to provide you with an overview of the foundational aspects of scientific inquiry that you will apply to different research projects this semester. We will complete these activities in parallel to your first research project (\@sec-allelopathy) for which you will design a bioassay to test allelopathic effects of a plant on radish seeds.

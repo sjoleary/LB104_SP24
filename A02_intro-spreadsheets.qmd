@@ -1,0 +1,19 @@
+# Introduction to Data Management using spreadsheets {#sec-introduction-to-GoogleSheets}
+
+```{r}
+#| label: set-up
+#| include: false
+
+# set options
+knitr::opts_chunk$set(tidy = FALSE)
+options(htmltools.dir.version = FALSE)
+
+```
+
+
+Learning Objectives
+
+**After completing this activity you should be able to**
+
+* 
+

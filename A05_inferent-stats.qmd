@@ -1,0 +1,791 @@
+# Introduction to inferential statistics
+
+## Learning Objectives
+
+**After completing this activity, you should be able to**
+
+-   Describe how to quantify the uncertainty of an estimate.
+-   Describe the concept of statistical inference.
+-   Explain how sample size influences sample distributions.
+-   Define what sampling error is and explain the main causes.
+-   Define and calculate the standard error.
+-   Outline the key steps for statistical hypothesis testing.
+-   Perform a t-test using `R` to determine if two means are significantly different.
+-   Perform a $\chi^{2}$-test using `R` to determine if two frequencies are significantly different.
+
+Recall from our foray into describing penguin distributions and body mass on three Antarctic Islands that we discovered that Adelie, Chinstrap, and Gentoo Penguins are found on the islands in different frequencies and that they have different distributions of body weight.
+
+Especially, when we were exploring patterns in body mass, we emphasized the fact that we were calculating the sample mean $\bar{x}$ which is an **estimate** of the true population mean $\mu$. Even though we really want to know $\mu$, it is unlikely that we will ever know the true value because that would entail catching and measuring every. single. penguin. on each each of those islands. So generally, we are going to have to be satisfied with the estimate provided by calculating $\bar{x}$. As a result, it is important that we can assume that we have a reliable estimate based on a sufficiently large, randomly drawn sample. It is important that our sample estimate is accurate because we want to be able to draw conclusions about the population as a whole by making inferences based on our sample which includes making **generalizations** about the population and **testing hypotheses**. This is generally referred to as **inferential statistics**.
+
+Before we get started, we will need to load several `R` libraries.
+
+```{r}
+#| include: false
+
+# load libraries for reporting
+library(knitr)
+
+# load libraries for data wrangling
+library(dplyr)
+library(tidyr)
+library(tibble)
+
+# load libraries for plotting
+library(ggplot2)
+library(ggthemes)
+
+# load library for stats
+library(infer)
+
+# load dataset
+library(palmerpenguins)
+
+```
+
+## Sample size and sampling distributions
+
+Execute the code below to create a table with the sample size and mean body mass for each species in the data set.
+
+```{r}
+#| label: tbl-mean-mass
+#| tbl-cap: "Mean body weight for Adelie, Chinstrap, and Gentoo penguins in Antarctica."
+
+penguins %>%
+  group_by(species) %>%
+  summarize(sample_size = n(),
+            mean_mass = mean(body_mass_g, na.rm = TRUE)) %>%
+  kable(digits = 1)
+
+```
+
+::: {.callout-tip title="Consider this"}
+Notice that the sample sizes are quite different across the species. We have observed more than twice the amount of Adelie and Gentoo penguins compared to Chinstrap penguins.
+
+Argue whether you think this means that our estimate of the mean Chinstrap penguin body mass is less reliable compared to the value we have calculated for the other two species.
+:::
+
+To figure out whether or not you where correct, let's hop back on our snowmobiles, collect 30 Adelie penguins, and then calculate the sample mean.
+
+::: {.callout-tip title="Give it a try"}
+Let's assume that our data set contains ALL the Adelie penguins on the three islands and therefore our mean represents the true population mean $\mu$.
+
+Execute the code chunk below to randomly sample 30 Penguins from our data set and calculate the mean.
+
+```{r}
+
+penguins %>%
+  filter(species == "Adelie") %>%      # retain only Adelie penguins
+  slice_sample(n = 30) %>%             # specify number to randomly draw
+  summarize(mean_body_mass = mean(body_mass_g, na.rm = TRUE)) %>%
+  kable(digits = 1)
+  
+```
+
+Compare the sample mean you just calculated to the sample mean in the table above and to the values your classmates around you have calculated.
+:::
+
+::: {.callout-note title="Answer" collapse="true"}
+You should have noticed that your mean based on 30 individuals is different from the value you obtained based on all 152 observations. Because are randomly pulling 30 individuals, you would have pulled 30 different individuals compared to your classmates around you, so you should all end up with different values.
+:::
+
+We could compile all the different means calculated for different samples of 30 individuals into a histogram to look at the distribution of values. This is what is called a **sampling distribution**.
+
+::: {.callout-tip title="Give it a try"}
+Execute the code below to create 1000 samples, calculate the mean for each, and then plot it as a histogram.
+
+Describe your results and use this information to make a statement about how representative the sample mean $\bar{x}$ based on 30 individuals is compared to the true mean $\mu$ for all 152 individuals.
+
+```{r}
+#| label: fig-sampl-dist
+#| fig-cap: "Sampling distribution of mean body mass for 500 samples of 30 individuals."
+
+# create an empty data frame for results
+sample_means <- data.frame(sample = numeric(),
+                           mean = numeric())
+
+# create loop to draw 500 samples
+for(i in 1:1000){
+  
+  sample_means <- penguins %>%
+    filter(species == "Adelie") %>%                        # retain only Adelie penguins
+    slice_sample(n = 30) %>%                               # specify number to randomly draw
+    summarize(mean = mean(body_mass_g, na.rm = TRUE)) %>%  # calculate mean
+    mutate(sample = 1) %>%                                 # column with replicate number
+    bind_rows(sample_means)                                # add to results data frame
+  
+  
+}
+
+# plot distribution
+ggplot(sample_means, aes(x = mean)) +
+  geom_histogram(binwidth = 25,
+                 color = "black", fill = "darkorange") +
+  labs(x = "sample means",
+       y = "Number of samples") +
+  theme_classic()
+
+```
+:::
+
+::: {.callout-note title="Answer" collapse="true"}
+The histogram gives you an idea of the range of possible estimates based on 30 individuals. Your data should appear to be normally distributed, with the most commonly occurring values being around 3,700g which is the true population mean. Your estimates should ranges from approximately 3,500g to about 4,000g which means that your estimates are within 250-300g of your true mean body weight.
+:::
+
+Now that we know how to create a sampling distribution and we can interpret it to give us an idea of how well our sample mean $\bar{x}$ estimates the true mean $\mu$, we can explore how our sample size impacts how "good" our estimate is.
+
+::: {.callout-tip title="Give it a try"}
+Manipulate the code below to create sampling distributions for a very small, medium, and large sample size. Compare your three histograms to each other as well as to those of your lab mates around you, including if they used the same numbers as you to determine the role of sample size on the values you obtain for the sample mean $\bar{x}$.
+
+```{r}
+
+# PICK A SMALL VALUE ----
+
+sample_size <- 5 # THIS IS THE NUMBER YOU SHOULD CHANGE
+
+# create an empty data frame for results
+sample_means <- data.frame(sample = numeric(),
+                           mean = numeric())
+
+# run loop to draw a SMALL sample
+for(i in 1:1000){
+  
+  sample_means <- penguins %>%
+    filter(species == "Adelie") %>%                        
+    slice_sample(n = sample_size) %>%  
+    summarize(mean = mean(body_mass_g, na.rm = TRUE)) %>%  
+    mutate(sample = 1) %>%                                
+    bind_rows(sample_means)                               
+  
+}
+
+# plot distribution
+ggplot(sample_means, aes(x = mean)) +
+  geom_histogram(binwidth = 25,
+                 color = "black", fill = "darkorange") +
+  scale_x_continuous(limits = c(3000, 4500)) +
+  labs(x = "sample means for N = 5",
+       y = "Number of samples") + # add your sample size here
+  theme_classic()
+
+
+# PICK A MEDIUM VALUE ----
+
+sample_size <- 50 # THIS IS THE NUMBER YOU SHOULD CHANGE
+
+# create an empty data frame for results
+sample_means <- data.frame(sample = numeric(),
+                           mean = numeric())
+
+# run loop to draw a MEDIUM sample
+for(i in 1:1000){
+  
+  sample_means <- penguins %>%
+    filter(species == "Adelie") %>%                        
+    slice_sample(n = sample_size) %>%
+    summarize(mean = mean(body_mass_g, na.rm = TRUE)) %>%  
+    mutate(sample = 1) %>%                                
+    bind_rows(sample_means)                               
+  
+}
+
+# plot distribution
+ggplot(sample_means, aes(x = mean)) +
+  geom_histogram(binwidth = 25,
+                 color = "black", fill = "darkorange") +
+  scale_x_continuous(limits = c(3000, 4500)) +
+  labs(x = "sample means for N = 50",
+       y = "Number of samples") + # add your sample size here
+  theme_classic()
+
+
+# PICK A LARGE  VALUE ----
+
+sample_size <- 100 # THIS IS THE NUMBER YOU SHOULD CHANGE (remember you cannot go over 152)
+
+# create an empty data frame for results
+sample_means <- data.frame(sample = numeric(),
+                           mean = numeric())
+
+
+# run loop to draw a LARGE sample 
+for(i in 1:1000){
+  
+  sample_means <- penguins %>%
+    filter(species == "Adelie") %>%                        
+    slice_sample(n = 125) %>%  # THIS IS THE NUMBER YOU SHOULD CHANGE to change the sample size
+    summarize(mean = mean(body_mass_g, na.rm = TRUE)) %>%  
+    mutate(sample = 1) %>%                                
+    bind_rows(sample_means)                               
+  
+}
+
+# plot distribution
+ggplot(sample_means, aes(x = mean)) +
+  geom_histogram(binwidth = 25,
+                 color = "black", fill = "darkorange") +
+  scale_x_continuous(limits = c(3000, 4500)) +
+  labs(x = "sample means for N = 100",
+       y = "Number of samples") + # add your sample size here
+  theme_classic()
+
+```
+:::
+
+::: {.callout-note title="Answer" collapse="true"}
+In each case you should end up with a normal distribution and the means should be similar across all histograms and fall right around the mean we calculated for all 152 individuals (3,700g). The key distinction is that the smaller your sample size the wider the distribution, i.e. for larger samples the values that you obtain are increasingly less dispersed.
+:::
+
+## Standard error
+
+Getting back to our initial question of whether we can quantify how well our sample mean represents the population mean. From our exploration of sampling distributions we now know that the spread of the sampling distribution gives us an indication of how "good" our estimate is, the tighter that sampling distribution, the better our estimate. If we were to calculate the standard deviation of each of the sampling distributions we would expect that the sampling distributions based on larger sample sizes to have smaller standard deviations and those based on smaller sample sizes to have larger standard deviations.
+
+The standard deviation of a sampling distribution of $\bar{x}$ values is called the **standard error of the mean** or simply **standard error**[^04_inferent-stats-1]. The **standard error** provides us a metric to assess the level of precision of our sample estimate, the smaller the standard error the more likely that estimate is an accurate representation of the true population.
+
+[^04_inferent-stats-1]: You can of course, calculate the standard error for any sample statistic but we frequently just call it the standard error and assume that from the context it is clear which statistic we are referring to
+
+Typically, we would calculate the standard error by dividing the standard deviation by the square root of the number of sample data[^04_inferent-stats-2].
+
+[^04_inferent-stats-2]: Deriving this equation which allows you to determine the standard error without resampling is beyond the scope of our class so we'll just go straight to the solution.
+
+$$
+SE = \frac{s}{\sqrt{n}}
+$$ {#eq-se}
+
+for $s$ as the standard deviation and a sample size of $n$.
+
+We do not have a function already implemented in `R` to calculate this for us, but we can use the function `mutate()` to create a new column called `se` and then give `R` the equation to calculate it based on sample size and standard deviation.
+
+::: {.callout-tip title="Give it a try"}
+Execute the code below to calculate the sample size, mean, standard deviation, and standard error. Compare your results to confirm whether you were correct in your earlier assessment of whether the estimate of the mean Chinstrap penguin body mass is less reliable compared to the value we have calculated for the other two species.
+
+```{r}
+
+penguins %>%
+  group_by(species) %>%
+  summarize(sample_size = n(),
+            mean_mass = mean(body_mass_g, na.rm = TRUE),
+            sd = sd(body_mass_g, na.rm = TRUE)) %>%
+  mutate(se = sd/sqrt(sample_size)) %>%
+  kable(digits = 1)
+
+```
+:::
+
+::: {.callout-note title="Answer" collapse="true"}
+The standard error is lowest for Adelie penguins, which also have the largest sample size. However, we do see that the standard error for Chinstrap and Gentoo is very similar, despite the large difference in sample size.
+:::
+
+## Sampling Error
+
+Our experiment of re-sampling the Adelie penguins showed us that the sample size and whether a sample is randomly taken is really important for us to be able to make inferences of the population based on the sample because we are are making the assumption that our sample is representative of the population as a whole. We use to term **sampling error** to describe obtaining a sample that does not truly represent the population as a whole.
+
+::: {.callout-tip title="Consider this"}
+Hop back on your snowmobile with intent of gathering a sample of penguins. Before you get going, consider what you would need to due to avoid bias in your sample due to **sampling error**.
+:::
+
+::: {.callout-note title="Answer" collapse="true"}
+The main causes are:
+
+-   **small sample size**: You would want to make sure that you are snagging enough individuals from each species to ensure that you are capturing the full range of body sizes for each species. The larger you sample size, the more likely you not only have individuals representing that full range, you should also end up with proportionally the same number of individuals in each weight category in your sample as there are in the entire population.
+-   **non-random sampling**: You need to make sure that you are sampling in a non-random manner. If you think the tiny ones are cuter and start picking up those more frequently then you would end up with a biased sample. If you are lazy, and just check the areas near your station, you might end up biasing towards larger ones e.g. because that is a spot where more food is available. If you are trying to spot them from far off and then driving towards them instead of having e.g. a random sampling grid you might only be spotting the larger ones etc.
+-   **outliers** can cause sampling error especially if the sample size is small. This is generally not something you can avoid by your sampling strategy, generally you want to have a sample size that is large enough that you can identify outliers.
+:::
+
+When we are making inferences based on our data set either by generalizing from the sample to the population as a whole or when testing a specific hypothesis based on the data we've collected, we need to make sure that our conclusion are erroneous due to sampling error. Therefore, once we've calculated our descriptive statistics we will generally ask the question "**What is the probability that our results are the results of sampling error and do not reflect reality?**" and then use statistical tests to quantify that probability. The probability of results being due to sampling error increase the smaller our sample size is, the more variability that is observed, and the smaller the difference between metrics[^04_inferent-stats-3] being compared.
+
+[^04_inferent-stats-3]: We will look at the specific examples of testing whether means and frequencies are statistically different.
+
+## Hypothesis testing
+
+Hypothesis testing is a formal process to make inferences about a population based on sample data. It involves evaluating two competing hypotheses to determine if the results are due to sampling error alone or are representative of the population. The key steps are the same, regardless of the the specific test being applied.
+
+1.  Define your research question or goal.
+2.  Specify what measurements you plan to compare and collect the data.
+3.  State your your null and alternate hypothesis and predict the outcome assuming the null hypothesis is true.
+4.  Specify a significance threshold.
+5.  Generate sampling distributions and calculate your test statistic.
+6.  Get the p-value.
+7.  Interpret the results and draw conclusions.
+
+The `R` package `infer` contains a series of functions to that implements a workflow to perform statistical inference using this framework. Each function is a "verb" to execute a specific action/step of the process.
+
+-   `specify()`: specify the variable or relationship of variables you are interested in.
+-   `hypothesize()`: formulate your null hypothesis.
+-   `generate()`: generate a null distribution[^04_inferent-stats-4].
+-   `calculate()`: calculate the distribution of test statistics based on the generated data to form the null hypothesis
+-   `visualize()`: see where your observed values falls relative to the null distribution.
+-   `get_p_value()`: calculate p-values.
+
+[^04_inferent-stats-4]: data reflecting the null hypothesis
+
+Which statistical test you apply will depend on the type of data you are looking at[^04_inferent-stats-5] and whether they fulfill specific assumptions[^04_inferent-stats-6]. We are going to learn how to perform a t-test to evaluate the difference between two means and a $\chi^{2}$ test of independence to evaluate the difference between frequencies.
+
+[^04_inferent-stats-5]: For example, are we looking at continuous or numerical data.
+
+[^04_inferent-stats-6]: For example, we might assume that the data has a normal distribution.
+
+### T-test to evaluate the difference between two means
+
+#### Step 1: Define your research question or goal.
+
+Figure out what the larger question is you want to address based on observations you have made.
+
+For example, sexual dimorphism is common in birds. This means that we frequently observe differences in the morphology of males compared to females, this can include coloration[^04_inferent-stats-7] but also body size. As you have been riding around the Antarctica on your snowmobile you have not noticed any differences in terms of coloration but you have seen that there is a broad range of sizes exhibited by adult penguins.
+
+[^04_inferent-stats-7]: Look up a picture of a male compared to a female peacock.
+
+::: {.callout-tip title="Give it a try"}
+Formulate a research question or goal based on this observation about penguin body size in the Antarctica.
+:::
+
+::: {.callout-note title="Answer" collapse="true"}
+Evaluate these possible answers:
+
+-   What factors contribute to the observed variation in body sizes among adult penguins in Antarctica?
+-   Can observed variation in body sizes among adult penguins be attributed to sexual dimorphism?
+-   Are male Chinstrap penguins larger than female penguins?
+
+Notice that they vary in how specific they are, e.g. "what factors" is more general than placing your question in the context of "sexual dimorphism", i.e. you are picking a specific factor you think could be the cause. Similarly, you might want to start with a specific species, before looking at all the species.
+
+Let's pick this question:
+
+**Is the observed variation in body size among adult Chinstrap penguins due to sexual dimorphism?**
+
+You can also state it as a hypothesis:
+
+**Chinstrap penguins exhibit sexual dimorphism in terms of body size.**.
+:::
+
+#### Step 2: Specify what measurements you plan to compare and collect the data.
+
+Explicitly state which groups of individuals or objects you plan to sample and describe what you will measure to generate a data set that can answer your question. You will need to ensure that you are generating a sufficiently large, random sample. Then go out and gather the data.
+
+::: {.callout-tip title="Give it a try"}
+Describe how you will generate the data set you need to answer your question. Be as specific as possible.
+:::
+
+::: {.callout-note title="Answer" collapse="true"}
+First, we need to decide how we are going to measure "size" or "largeness" to quantify differences in body size, in this case you could include for example height or body mass. For our example, we will use body mass.
+
+Then you need to determine how you will obtain your sample in a way that ensure that you are creating a sample that is representative of the population as a whole. This includes making sure that your sample size is large enough. In this case, you might have multiple colonies on the island you are sampling so you would want to make sure to include individuals from every colony. Another consideration is that you might have outlier years with e.g. a low amount of food sources and so if you had the option to sample across multiple years that could improve the quality of your sample.
+
+In this case you are comparing two groups within a population (males and females) so you need to make sure that you have an approximately equal representation of males and females in your data set.
+:::
+
+You've returned from your field work and entered all your data. Let's take a quick look at the descriptive statistics of your results.
+
+We'll start by calculate in the mean and standard deviation of body mass for males and females.
+
+```{r}
+#| label: tbl-chinstrap-means
+#| tbl-cap: "Mean and standard deviation body mass for male and female Chinstrap penguins."
+
+# dataframe with gentoo penguin data
+chinstrap <- penguins %>%
+  filter(!is.na(sex) & species == "Chinstrap")
+  
+chinstrap %>%
+  group_by(sex) %>%
+  summarize(mean_mass = mean(body_mass_g),
+            sd_mass = sd(body_mass_g)) %>%
+  kable(digits = 1)
+
+```
+
+The males have a higher mean body mass, however, we do see that the standard deviation indicates that the spread of the data is wide enough that you could have males and females with the same weight. Let's plot a histogram to see if we are correct and there is an overlap in the weight distributions.
+
+```{r}
+#| label: fig-chinstrap-mass
+#| fig-cap: "Distribution of body mass for male and female Chinstrap penguins."
+
+
+ggplot(chinstrap, aes(x = body_mass_g, fill = sex)) +
+  geom_histogram(binwidth = 100,
+                 color = "black") +
+  scale_fill_manual(values = c("cyan4", "darkorange")) +
+  facet_grid(sex ~ species) +
+  labs(x = "body mass [g]",
+       y = "number of individuals") +
+  theme_classic() +
+  theme(legend.position = "bottom")
+
+```
+
+We do see that our distributions overlap, our sample sizes are on the smaller end - so the question we now have is whether or not the difference in means we observe is due to sampling error. Our next steps will let us quantify that.
+
+#### Step 3: State your your null and alternate hypothesis and predict the outcome assuming the null hypothesis is true.
+
+We have already developed our initial research hypothesis as **Chinstrap penguins exhibit sexual dimorphism in terms of body size.**. Now we need to restate this as a null ($H_{O}$) and alternate ($H_{a}$ or $H_{1}$) so we can mathematically test it by quantifying the probability that our results are due to chance alone.
+
+The **null hypothesis** $H_{O}$ states what our measurements will look like when there is no change or no effect in the population, or no relationship or no difference among groups being compared.
+
+At first, stating our hypothesis as "there is no difference" seems a bit odd because that's not normally what we are interested in. However, it is actually quite difficult to prove an idea but much easier to **disprove** and idea. Therefore, we want to formulate a hypothesis that we can falsify. If the sample provides enough evidence against the null hypothesis then we can **reject** the hypothesis, otherwise we **fail to reject** the null hypothesis[^04_inferent-stats-8].
+
+[^04_inferent-stats-8]: Be careful not to use phrases like "we proved" or we "accept" the null hypothesis.
+
+::: {.callout-tip title="Give it a try"}
+You can use a standard way of formulating your null hypothesis by identifying your **dependent** and **independent variable** of your experiment[^04_inferent-stats-9]. For the null hypothesis you will always state that the **Independent variable** does not affect your **dependent variable**.
+
+Define the null hypothesis for your research question and predict what your results should look like if the null hypothesis is correct.
+:::
+
+[^04_inferent-stats-9]: These are also referred to as the **response** and **explanatory** variables.
+
+::: {.callout-note title="Answer" collapse="true"}
+In this case our independent variable is body mass and the dependent variable is sex.
+
+-   $H_{O}$ Sex does not affect body mass.
+-   Prediction of the results: There is no difference in the mean body mass for males and females.
+:::
+
+The **alternate hypothesis** $H_{a}$ is the complement to the null hypothesis; they should be mutually exclusive in that only one can be true at a time. The alternative hypothesis is a claim that there is an effect in the population. When you formulate your alternative hypothesis you are usually going to use phrases like "there is an effect", "there is a difference", "there is a relationship".
+
+::: {.callout-tip title="Give it a try"}
+Similarly, you can use a standard way of formulating your alternate hypothesis by identifying your **dependent** and **independent variable** of your experiment. In this case, you will always state that the **Independent variable** does affect your **dependent variable**.
+
+Define the alternate hypothesis for your research question and predict what your results should look like if the null hypothesis is correct.
+:::
+
+::: {.callout-note title="Answer" collapse="true"}
+-   $H_{a}$ Sex affects body mass.
+-   Prediction of the results: There is a difference in the mean body mass for males and females.
+:::
+
+#### Step 4: Specify a significance threshold.
+
+Now that we have stated our null hypothesis we can assess the probability of obtaining our observed results if our null hypothesis is true. However, before we do that we need to decide how far off from the null hypothesis we will let our observations be before we reject the null hypothesis.
+
+We do this by specifying the significance level $\alpha$. This is our predetermined threshold for statistical significance.
+
+-   if our p-value is higher than $\alpha$ we fail to reject the null hypothesis and our results are not statistically significant.
+-   if our p-value is smaller than $\alpha$ we reject the null hypothesis and report our results as statistically significant.
+
+Typically, $\alpha$ is set to 0.05 (5%) but for a more conservative test it can be set to a lower value such as 0.01 (1%).
+
+#### Step 5: Calculate your test statistic and generate sampling distribution.
+
+Now we are ready to calculate our test statistic.
+
+A test statistic measures how far the empirical observations are from the expectations based on the null hypothesis. Even though the exact test statistic you apply will depend on the data and type of variable you are assessing, they are all based on comparing spread of the data within a category (within-group variance) to how different categories are from each other (between-group variance). For large between-group variance (little/no overlap between groups) the more unlikely it is that the differences between these groups is due to chance alone (small p-value). By contrast, for a high within-group and low between-group variance the more likely the differences you are observing are due to chance alone (high p-value).
+
+Given the assumption that our data has a normal distribution the correct test to apply is a **t-test**, this test will account for the sample size, the variability in the data, and the size of the difference of the means.
+
+$$
+t = \frac{|\bar{x}_{1}-\bar{x}_{2}|}{\sqrt{\frac{s_{2}^{p}}{n_{1}}+\frac{s_{2}^{p}}{n_{2}}}}
+$$
+
+where $\bar{x}_{1}$ and $\bar{x}_{2}$ are the means of the samples, $n_{1}$ and $n_{2}$ are the sample means and $s_{2}^{p}$ is the pooled estimate of variance for the two samples.
+
+Let's calculate $t$ for our data.
+
+```{r}
+
+# calculate the observed statistic
+observed_statistic <- chinstrap %>%
+  specify(response = body_mass_g,
+          explanatory = sex) %>%               # specify values we are interested in
+  calculate(stat = "diff in means",            # test statistic
+            order = c("male", "female"))       # order to subtract the mean values
+
+# print observed value
+observed_statistic
+
+```
+
+That gives us our observed test-statistic. However, we want to know how this value compares to the sampling distribution of the test statistic based on data that is generated according to the null hypothesis[^04_inferent-stats-10].
+
+[^04_inferent-stats-10]: We would refer to this as the null distribution.
+
+Recall, that our null hypothesis is that sex does not affect body mass. So we would generate a null distribution by drawing a random subsample from our data and then randomly redistributing our the values for sex and then calculating the test statistic for that sample. We keep repeating that process to create a distribution of values that we should observe for our test statistic assuming our null hypothesis is correct.
+
+```{r}
+
+null_dist <- chinstrap %>%
+  specify(response = body_mass_g,
+          explanatory = sex) %>%               # specify values we are interested in
+  hypothesize(null = "independence") %>%       # null hypothesis: sex and weight are independent
+  generate(reps = 1000,                        # generate 1000 samples for null distribution
+           type = "permute") %>%               # randomly assign sex to weight to break association
+  calculate(stat = "diff in means",            # statistic is t
+            order = c("male", "female"))       # order to subtract the mean values
+
+# print first few rows of null distribution
+head(null_dist)
+
+```
+
+Let's visualize our null distribution and see where our observed test statistic falls relative to that distribution.
+
+```{r}
+#| label: fig-null-dist-t
+#| fig-cap: "Null distribution for test statistic t. Observed test statistic is visualized by red line."
+
+# visualize the randomization-based null distribution and test statistic
+null_dist %>%
+  visualize() + 
+  shade_p_value(observed_statistic,
+                direction = "two-sided")
+
+```
+
+This visualization shows us that our observed test statistic is unlikely if there truly is no relationship between sex and body size, i.e. there is no difference in mean body size between male and female Adelie penguins.
+
+#### Step 6: Get the p-value.
+
+Once we have calculated a test-statistic and compare it to the null distribution, we can estimate the p-value as the probability that our observations or something more extreme than our observations will occur if the null hypothesis is true.
+
+```{r}
+
+# calculate p value from null distribution and observed statistic
+null_dist %>%
+  get_p_value(obs_stat = observed_statistic,
+              direction = "two-sided")
+
+```
+
+If there is no relationship between sex and body weight (null hypothesis) it is extremely unlikely that we would observe a test statistic as or more more extreme than the one calculated based on our data.
+
+::: {.callout-important title="Protip"}
+We used the `infer` package because it makes all the steps explicit and also helps us visualize what it means to compare the observed test statistic to be "likely" or "unlikely" given a sampling distribution. We calculated our p-value based on a randomization-based null distribution. Randomization-based p-values are straightforward to interpret at "under the null distribution we would expect to find a test-statistic as extreme as the one calculated x% of the time". In our case, our test statistic is so far outside of the distribution that we never observed it, despite 1,000 random samples.
+
+Alternatively, you can calculate t and compare it to a table of critical values based on degrees of freedom, implemented in `R` using the function `t.test()`.
+
+```{r}
+
+t.test(body_mass_g ~ sex, data = chinstrap)
+
+```
+
+Notice how our p-value is extremely small but not 0 as reported by the randomization-based p-value. Both are valid approaches.
+:::
+
+#### Step 7: Interpret the results and draw conclusions.
+
+At this point, we have not actually proven anything, rather we have gathered data that may or may not be likely given the particular null hypothesis. Our next step is to compare the p-value to the significance threshold that we defined earlier to determine if we will reject or fail to reject our null hypothesis.
+
+-   if our p-value is higher than $\alpha$ we fail to reject the null hypothesis and our results are not statistically significant.
+-   if our p-value is smaller than $\alpha$ we reject the null hypothesis and report our results as statistically significant.
+
+::: {.callout-tip title="Give it a try"}
+When you are writing a report, you would give a brief summary of your data and results of any statistical tests your performed in the **results** section. If our results are statistically significant, we interpret this as supporting the alternate hypothesis in the **discussion**.
+
+Write a brief summary (2-3 sentences) of how you would state your findings in the results section and then write 2-3 sentences of how you might interpret this results in your discussion.
+:::
+
+::: {.callout-note title="Answer" collapse="true"}
+We could state our results along the lines of
+
+> Mean body mass of female and male Chinstrap penguins is 3,527 +/- 285g and 3,939 +/- 363g, respectively. The difference in mean body mass is significant (p \< 0.05).
+
+You might report the exact p-value or as here that it is smaller than the significance threshold.
+
+In the discussion we would interpret these results in light of our hypothesis.
+
+> The observed significant difference of body mass for male and female penguins is consistent with our hypothesis that Chinstrap penguins exhibit sexual dimorphism in terms of body weight.
+
+In a stats class you are likely going to be asked to explicitly state "reject" or "fail to reject" to demonstrate your understanding of how hypothesis testing works, however, in a report you would use phrases like "is consistent with our hypothesis" or "supports our hypothesis" if results are significant. If results are not statistically significant, we would use phrases like "is inconsistent with our hypothesis" or "does not provide evidence for our hypothesis".
+:::
+
+### $\chi^{2}$ test to evaluate the difference between frequencies
+
+#### Step 1: Define your research question or goal.
+
+Let's look at another question we might ask.
+
+You observe that Biscoe and Dream island are quite different from each other in terms of geographic features and, critically, available areas that can be used as habitat differ. In each case, they co-occur with other species. You hypothesize that the proportion of penguins that are Adelie penguins are going to differ by island.
+
+:::
+
+#### Step 2: Specify what measurements you plan to compare and collect the data.
+
+We use a stratified sampling design that encompasses all the habitats on each island so that we obtain a sample that isn't biased toward one species or the other. Then we count the number of individuals that we observe for either Adelie or "other" penguins.
+
+Let's take a look at our data.
+
+```{r}
+#| label: tbl-counts-sp
+#| tbl-cap: "Comparison of number of observed Adelie and other penguins."
+
+# count number of adelie vs other species
+islands <- penguins %>%
+  filter(!island == "Torgersen") %>%
+  mutate(species = ifelse(species == "Adelie", "Adelie", "other"))
+
+# view counts per island
+islands %>%
+  group_by(island) %>%
+  count(species) %>%
+  pivot_wider(names_from = species, values_from = n) %>%
+  kable()
+
+```
+
+We probably want to convert the absolute counts into percent for easier comparison among the islands.
+
+```{r}
+#| label: tbl-perc-sp
+#| tbl-cap: "Comparison of proportion of observed Adelie and other penguins on Biscoe and Dream island."
+
+# view counts per island
+islands %>%
+  group_by(island) %>%
+  count(species) %>%
+  mutate(percent = n/sum(n)*100) %>%
+  select(-n) %>%
+  pivot_wider(names_from = species, values_from = percent) %>%
+  kable(digits = 2)
+
+
+```
+
+#### Step 3: State your your null and alternate hypothesis and predict the outcome assuming the null hypothesis is true.
+
+::: {.callout-tip title="Give it a try"}
+Use the standard way of formulating your null and alternate hypothesis that we established earlier to formulate your hypothesis and predict what your results should look like for each case.
+:::
+
+::: {.callout-note title="Answer" collapse="true"}
+The null hypothesis is a claim that there is no effect.
+
+-   $H_{O}$ The proportion of penguins that are Adelie penguins does not depend on the sampled island.
+-   Prediction of the results: The proportion of penguins that are Adelie penguins is the same on each island.
+
+The alternative hypothesis is a claim that there is an observed effect.
+
+-   $H_{a}$ There is a relationship between the observed island and the proportion of penguins that are Adelie penguins.
+-   Prediction of the results: The proportion of penguins that are Adelie penguins will differ depending on which island is observed.
+:::
+
+#### Step 4: Specify a significance threshold.
+
+We will specify our threshold of significance $\alpha$ as 0.05. This means that if our observed results have a less than 5% probability occurring assuming our null distribution we will reject our null hypothesis.
+
+#### Step 5: Calculate your test statistic and generate sampling distribution.
+
+In this case, we are comparing frequencies. The appropriate test to be using is a $\chi^{2}$ test of independence to test the association between two categorical variables (island and species).
+
+The $\chi^{2}$ test statistic will account for sample size and the size of difference in sample frequencies. The smaller the sample size and the difference in frequencies, the more likely our sample frequencies are different due to sampling error and not because the true population frequencies are different.
+
+Our data is in the format of what we call a 2x2 table.
+
+|       | Column 1 | Column 2 | Total |
+|-------|----------|----------|-------|
+| Row 1 | f11      | f12      | R1    |
+| Row 2 | f21      | f22      | R2    |
+| Total | C1       | C2       | n     |
+
+for $f_{ij}$ being the observation in the $i$th row and the $j$th column, $C_{1}$, $C_{2}$, $R_{1}$, and $R_{2}$ are the column and row totals and $n$ is the total number of observations.
+
+Then we can calculate $\chi^{2}$ as
+
+$$
+\chi^{2} = \frac{n(f_{11}f_{22}-f_{12}f_{21})^{2}}{C_{1}C_{2}R_{1}R_{2}}
+$$ Let's go ahead and calculate the observed test statistic.
+
+```{r}
+
+# calculate observed statistic
+observed_statistic <- islands %>%
+  specify(response = species,
+          explanatory = island) %>%
+  hypothesize(null = "independence") %>%
+  calculate(stat = "Chisq")
+
+# print test statistic
+observed_statistic
+
+```
+
+Our next step is to simulate a null distribution. We can do this like we did earlier using a permutation where we shuffle the response and explanatory variables so that each species value in a sample is matched with a random island. Then we calculate the test statistic and continue that process to build a distribution.
+
+```{r}
+
+# create null distribution
+null_dist <- islands %>%
+  specify(response = species,
+          explanatory = island) %>%
+  hypothesize(null = "independence") %>%
+  generate(reps = 1000, 
+           type = "permute") %>%
+  calculate(stat = "Chisq")
+
+# print first few lines
+head(null_dist)
+
+```
+
+Let's visualize our null distribution along with our observed test statistic. The distribution that we generated based on our data with be a histogram. Additionally, we can calculate a $\chi^{2}$-distribution based on theory. We will print that on top for comparison.
+
+```{r}
+
+# visualize the null distribution and test statistic!
+null_dist %>%
+  visualize(method = "both") + 
+  shade_p_value(observed_statistic,
+                direction = "greater")
+
+```
+
+Again, our observed statistic is improbable to observed if there was not relationship between island and proportion of Adelie penguins observed as stated by our null hypothesis.
+
+#### Step 6: Get the p-value.
+
+Our next step is to calculate the p-value.
+
+```{r}
+
+null_dist %>%
+  get_p_value(obs_stat = observed_statistic,
+              direction = "greater")
+
+```
+
+::: {.callout-important title="Protip"}
+Again, we used the implementation in the `infer` package using a randomized approach to generate a null distribution and determine a p-value.
+
+Alternatively, we can use the `pchisq()` function to have `R` look up the p-value in a critical value table. We need to specify the degrees of freedom as number of categories - 1. In this case, we are using a null distribution that is based on theory as opposed to randomizing our observed distribution.
+
+```{r}
+
+pchisq(observed_statistic$stat, 1, lower.tail = FALSE)
+
+```
+
+Additionally, we could create a 2x2 table to use as an input for the function `chisq.test()`.
+
+```{r}
+
+# create 2x2 table
+df <- islands %>%
+  group_by(island) %>%
+  count(species) %>%
+  pivot_wider(names_from = species, values_from = n) %>%
+  column_to_rownames("island")
+
+# apply chi sqared test
+chisq.test(df)
+
+```
+:::
+
+#### Step 7: Interpret the results and draw conclusions.
+
+Our last step is to compare our p-value to our $\alpha$ value. In this case, our p-value is smaller than our specified threshold of significance so we would reject our null hypothesis.
+
+::: {.callout-tip title="Give it a try"}
+Write a brief summary (2-3 sentences) of how you would state your findings in the results section and then write 2-3 sentences of how you might interpret this results in your discussion.
+:::
+
+::: {.callout-note title="Answer" collapse="true"}
+We could state our results along the lines of
+
+> Adelie penguins comprise 26.2% and 45.2% of penguins observed on Bisco and Dream island. This difference is statistically significant (p \< 0.05).
+
+You might report the exact p-value or as here that it is smaller than the significance threshold.
+
+In the discussion we would interpret these results in light of our hypothesis.
+
+> We observe Adelie penguins to be significantly more common on Dream Island (45%) compared to Bisco Island (26%). This is consistent with our hypothesis that differences in geographic parameters including the availability of breeding habitat is and important factor determining which penguin species are more commonly encountered.
+
+Note, that in your discussion you would like refer to other examples from the literature showing that availability of habitat and co-occurring species are important for these and/or other species. Then you would discuss that you did not specifically test for habitat conditions. In this or a later study you would likely follow up by quantifying the contributing factors in terms of geography, breeding and other habitat availability, which species the specifically co-occur with etc. and performing a more sophisticated test than what we have done here which really is just demonstrating the the demographics differ among islands, we cannot actually contribute it to specific factors.
+:::
