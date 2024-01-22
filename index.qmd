@@ -1,5 +1,7 @@
 ![](images/BI104.png){fig-align="center" fig-alt="Course logo BI104 General Biology"}
 
+# Course Logistics {#sec-course-logistics .unnumbered}
+
 Welcome to our lab handbook for `General Biology II (Spring 2024)` - it will be continuously updated throughout the semester. For the most part an electronic copy of this lab manual will be sufficient[^index-1], if you need to print anything for a class you will be prompted to do so on Canvas as part of your pre-lab assignments.
 
 [^index-1]: You can go "split screen" on your laptop which will allow you to cut and paste code if needed or if you have a tablet you can pull up the manual there which gives you a better simultaneous viewing experience.
@@ -38,9 +40,9 @@ Your lab grade comprises the following components:
 -   **Pre-lab assignments** (15%): Generally, you will complete reading/similar assignments before lab to familiarize yourself with key concepts before lab. Most weeks you will have quizzes, definitions, labeling/completion of key figures or similar assignments associated with your reading or other preparatory work for that week's in-lab work.
 -   **Participation** (5%): Your participation grade is based on engagement during discussions in lab, lab and field work and contribution to development and execution of your research projects.
 -   **Homework assignments** (20%): Out-of-lab assignments will include practice problem sets, write-ups of experimental designs, data collection/entry, or analysis or similar assignments. Frequently there will be time to start these during lab with the expectation of them to be completed and submitted before the the next lab period.
--   **Lab reports** (60%): Even though you will be working in groups throughout the semester and collaboration is encouraged, you will individually complete and submit 3 lab reports over the course of the semester.
+-   **Lab reports** (70%): Even though you will be working in groups throughout the semester and collaboration is encouraged, you will individually complete and submit 3 lab reports over the course of the semester.
 
-All lab prep work and graded assignments should be completed by the assigned deadlines.
+**All lab prep work and graded assignments should be completed by the assigned deadlines.**
 
 This semester will include some field-based activities. Your safety is always a priority and while it is always our goal to design activities that are accessible to everyone and minimize risk there are more factors that we cannot control outside of the lab. Help us out by using common sense, keeping an eye on your lab mates, and advocating for yourself. For field-based activities please make sure that you check the weather conditions ahead of time and then ensure you are appropriately dressed in terms of layers to stay warm or cool, with shoes that can get muddy or wet. If it is sunny/hot out make sure to wear sun screen and/or a head covering, bring water etc. if you have any allergies or other medical conditions that might require emergency treatment, please let your instructor know and carry any medication you might need on you (inhaler, EpiPen, etc). Occasionally there may be unavoidable weather-related last minute changes, please make sure to check your email/Canvas for last minute notifications. If you are doing any field work on your own outside of lab time, please be mindful of your safety, at the very least let somebody know where you are going and when you expect to be back, ideally bring a buddy with you.
 

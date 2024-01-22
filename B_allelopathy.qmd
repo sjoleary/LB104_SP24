@@ -21,7 +21,7 @@ Once you have opened a project you should see the project name in the top right 
 
 [^b_allelopathy-3]: Pro tip: If you run into issues where a `quarto` document won't render or file paths aren't working (especially if things were working previously) one of your first steps should be to double check that the correct `Rproj` is loaded.
 
-## Competition is a key factor shaping species distribution and abundance
+## Competition is a key factor shaping species distribution and abundance {#sec-competition-is-a-key-factor-shaping-species-distribution-and-abundance}
 
 A key question within ecology is how the **abiotic** and **biotic factors** within an ecosystem affect the distribution and abundance of individual populations. Because most ecosystems are limited in terms of resources the competition for those resources with other species **interspecific competition** is frequently a key factor in shaping population dynamics of a population, as there will be less of one or more resources available in the environment to support the population of a given species.
 
@@ -35,7 +35,7 @@ By contrast, with **interference competition** there is direct interaction betwe
 
 [^b_allelopathy-5]: allelo means "others", pathy means "cause harm"
 
-## Allelopathy is a form of interference competition
+## Allelopathy is a form of interference competition {#sec-allelopathy-is-a-form-of-interference-competition}
 
 One of the best known examples of allelopathy is black walnut (*Juglans nigra*) which releases a substance called hydroxyjuglone from various tissues. Oxidation of this substance in the soil produces juglone which inhibits the growth of certain other species in that same soil while not affecting others. For example, tomato plants will not grow well under black walnut trees while Kentucky bluegrass common ground cover for suburban lawns are unaffected.
 

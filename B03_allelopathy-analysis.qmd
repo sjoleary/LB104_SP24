@@ -11,9 +11,9 @@ Learning Objectives
 -   decide whether to apply a t-test or a $\chi^{2}$-test depending on what type of metrics you are comparing.
 -   distinguish between describing and interpreting results.
 
-We are going to explore your results by applying the key concepts you have learned about descriptive and inferential stats. After completing this component you will use the provided template to write a lab report. You should refer to your methods and this analysis `quarto` documents to complete your methods and results sections. You will be able to pull your analysis section directly from this document[^08_allelopathy-analysis-1] to produce the tables and/or figures you want to include in your report. Typically for your methods you would have sections describing your experimental design and data collection and how you did your analysis. You should make sure that you understand what we are doing here and why to describe each step in your report and then include the code to make that happen.
+We are going to explore your results by applying the key concepts you have learned about descriptive and inferential stats. After completing this component you will use the provided template to write a lab report. You should refer to your methods and this analysis `quarto` documents to complete your methods and results sections. You will be able to pull your analysis section directly from this document[^b03_allelopathy-analysis-1] to produce the tables and/or figures you want to include in your report. Typically for your methods you would have sections describing your experimental design and data collection and how you did your analysis. You should make sure that you understand what we are doing here and why to describe each step in your report and then include the code to make that happen.
 
-[^08_allelopathy-analysis-1]: cut and paste is your friend!
+[^b03_allelopathy-analysis-1]: cut and paste is your friend!
 
 In your results section, refer to your figures/tables that you include as you describe your results. From this and previous chapters, remember that you can use the `label` code chunk option to give your code chunk a name, for code chunks that produce a figure if you preface that name with `fig` it will automatically number your figures for you. Similarly, if it is a code chunk that produces a table, if you preface your label name with `tbl` it will automatically number your tables. You should use the `fig-cap` and `tbl-cap` code chunk options to include a figure/table caption. So for example if you are producing a bar plot for frequencies you could use `#| label: fig-bar` and then `#| fig-cap: "Descriptive  figure caption` to get a number figure in your report.
 
@@ -111,6 +111,8 @@ Suggest 2-3 ways that you can summarize your data in a meaningful way to describ
 We are going to calculate the total number and relative proportion of seeds that germinated for each treatment.
 :::
 
+Execute the code below to calculate some summary statistics for your germination data. Use the `#| tbl-cap` code chunk option to create a table caption. Note that we are using the `#| label` the code chunk option to give the code chunk a name starting with `tbl-`. By doing this your tables will be automatically numbered.
+
 ```{r}
 #| label: tbl-germination-success
 #| tbl-cap: "Summary of germination success after 48 hrs. Total number (n) and percent of seeds that germinated."
@@ -120,7 +122,7 @@ germination %>%
   count(germination) %>%              # count number seeds germinated
   mutate(percent = n/sum(n)*100) %>%
   kable(digits = 2)
-  
+
 ```
 
 This table gives you two summary statistics, but the table might not be the best way to present your data for easy comparison in a report.
@@ -151,18 +153,18 @@ ggplot(germination, aes(x = treatment,          # specify categories on x axis
 ```
 
 ::: {.callout-tip title="Give it a try"}
-Usually for your report you would chose to either include a table or a visualization that summarizes your data. In either case you would include a descriptive figure or table title/caption that describes how to interpret the figure[^08_allelopathy-analysis-2].
+Usually for your report you would chose to either include a table or a visualization that summarizes your data. In either case you would include a descriptive figure or table title/caption that describes how to interpret the figure[^b03_allelopathy-analysis-2].
 
-Then you describe your results referencing your figure/table, however, your reader should be able to have the full picture of your results even without seeing the actual figure/table. A good template to use is to start with the broad pattern and then highlight important details. A good description of results contextualizes them for the reader[^08_allelopathy-analysis-3]. You have already done all the thinking, guide your reader through what you've found.
+Then you describe your results referencing your figure/table, however, your reader should be able to have the full picture of your results even without seeing the actual figure/table. A good template to use is to start with the broad pattern and then highlight important details. A good description of results contextualizes them for the reader[^b03_allelopathy-analysis-3]. You have already done all the thinking, guide your reader through what you've found.
 
-Describe your results[^08_allelopathy-analysis-4]. Remember, at this point you should not be interpreting them.
+Describe your results[^b03_allelopathy-analysis-4]. Remember, at this point you should not be interpreting them.
 :::
 
-[^08_allelopathy-analysis-2]: As a rule of thumb, you should have enough information in the caption that the reader can understand the figure even without reading the methods/results
+[^b03_allelopathy-analysis-2]: As a rule of thumb, you should have enough information in the caption that the reader can understand the figure even without reading the methods/results
 
-[^08_allelopathy-analysis-3]: For example, instead of just listing out values provide context and help your reader see the patterns by using terms like "higher" "lower", "similar" or highlighting certain results as "notably, ...", "except for...".
+[^b03_allelopathy-analysis-3]: For example, instead of just listing out values provide context and help your reader see the patterns by using terms like "higher" "lower", "similar" or highlighting certain results as "notably, ...", "except for...".
 
-[^08_allelopathy-analysis-4]: Consider this thinking out loud in a way where you have a set of notes that you can then edit for your report.
+[^b03_allelopathy-analysis-4]: Consider this thinking out loud in a way where you have a set of notes that you can then edit for your report.
 
 ::: {.callout-note title="Answer" collapse="true"}
 Your description could look something like this:
@@ -223,9 +225,9 @@ Our next step is to calculate our observed test statistic:
 observed_statistic <- germination %>%        # define data to use
   specify(response = germination,            # specify response (dependent) variable
           success = "germinated",            # specify response that is success
-          explanatory = treatment,  ) %>%    # specify explanatory (independent) variable
+          explanatory = treatment) %>%       # specify explanatory (independent) variable
   hypothesize(null = "independence") %>%     # define null hypothesis
-  calculate(stat = "Chisq",                  # define test statistic to use 
+  calculate(stat = "Chisq",                  # define test statistic to use
             order = c("ctrl", "exp"))        # order to subtract explanatory variables
 
 # print test statistic
@@ -243,25 +245,25 @@ Now, let's simulate our null distribution and compare how our observed test stat
 null_dist <- germination %>%
   specify(response = germination,            # specify response (dependent) variable
           success = "germinated",            # specify response that is success
-          explanatory = treatment,  ) %>%    # specify explanatory (independent) variable
+          explanatory = treatment) %>%       # specify explanatory (independent) variable
   hypothesize(null = "independence") %>%     # define null hypothesis
   generate(reps = 1000,                      # number of samples to generate null distribution
            type = "permute") %>%             # shuffle to break association
-  calculate(stat = "Chisq",                  # define test statistic to use 
+  calculate(stat = "Chisq",                  # define test statistic to use
             order = c("ctrl", "exp"))        # order to subtract explanatory variables
 
 
 # visualize null distribution test statistic
 null_dist %>%
-  visualize(method = "both") + 
+  visualize(method = "both") +
   shade_p_value(observed_statistic,
                 direction = "greater")
 
 ```
 
-And for our last step, we need to get our p-value[^08_allelopathy-analysis-5]:
+And for our last step, we need to get our p-value[^b03_allelopathy-analysis-5]:
 
-[^08_allelopathy-analysis-5]: Note: for your report, you do not need to visualize your null distribution we are doing this to help us get a better feel for how statistical tests worth. You can combine content from code chunks to go straight to getting your p-value.
+[^b03_allelopathy-analysis-5]: Note: for your report, you do not need to visualize your null distribution we are doing this to help us get a better feel for how statistical tests worth. You can combine content from code chunks to go straight to getting your p-value.
 
 ```{r}
 #| label: calculate-p
@@ -379,14 +381,14 @@ length %>%                                # specify data
 ```
 
 ::: {.callout-tip title="Give it a try"}
-Describe your results[^08_allelopathy-analysis-6]. Make sure that you are being specific and adding context to make it easy for your reader to identify the key patterns.
+Describe your results[^b03_allelopathy-analysis-6]. Make sure that you are being specific and adding context to make it easy for your reader to identify the key patterns.
 
 As rule of thumb, you should describe your results so that your reader has all the key information they need even without seeing the data tables.
 
 Remember, at this point you should not be interpreting your results!
 :::
 
-[^08_allelopathy-analysis-6]: Consider this thinking out loud in a way where you have a set of notes that you can then edit for your report.
+[^b03_allelopathy-analysis-6]: Consider this thinking out loud in a way where you have a set of notes that you can then edit for your report.
 
 ::: {.callout-note title="Answer" collapse="true"}
 Your description could look something like this:
@@ -406,7 +408,7 @@ Again, data visualizations are an important tool to summarize and present your d
 
 ```{r}
 #| label: fig-length-histogram
-#| fig-cap: "Seedling length distribution after 1 week for radish seeds explosed to plant X (green) and not (orange)." 
+#| fig-cap: "Seedling length distribution after 1 week for radish seeds explosed to plant X (green) and not (orange)."
 
 ggplot(length, aes(x = length_mm, fill = treatment)) +
   geom_histogram(binwidth = 1,
@@ -418,9 +420,9 @@ ggplot(length, aes(x = length_mm, fill = treatment)) +
 
 ```
 
-Alternatively, we could create a bar plot where the height is scaled relative to the mean. This also allows us to add error bars that are scaled to the length of the standard deviation[^08_allelopathy-analysis-7].
+Alternatively, we could create a bar plot where the height is scaled relative to the mean. This also allows us to add error bars that are scaled to the length of the standard deviation[^b03_allelopathy-analysis-7].
 
-[^08_allelopathy-analysis-7]: This is a classic plot for experiments with multiple treatments
+[^b03_allelopathy-analysis-7]: This is a classic plot for experiments with multiple treatments
 
 ```{r}
 #| label: fig-length-bar
@@ -523,8 +525,8 @@ Our next step is to calculate our observed test statistic:
 # calculate observed statistic
 observed_statistic <- length %>%             # define data to use
   specify(response = length_mm,              # specify response (dependent) variable
-          explanatory = treatment,  ) %>%    # specify explanatory (independent) variable
-  calculate(stat = "diff in means",          # define test statistic to use 
+          explanatory = treatment) %>%       # specify explanatory (independent) variable
+  calculate(stat = "diff in means",          # define test statistic to use
             order = c("ctrl", "exp"))        # order to subtract explanatory variables
 
 # print test statistic
@@ -541,17 +543,17 @@ Now, let's simulate our null distribution and compare how our observed test stat
 # create null distribution
 null_dist <- length %>%
   specify(response = length_mm,              # specify response (dependent) variable
-          explanatory = treatment,  ) %>%    # specify explanatory (independent) variable
+          explanatory = treatment) %>%       # specify explanatory (independent) variable
   hypothesize(null = "independence") %>%     # define null hypothesis
   generate(reps = 1000,                      # number of samples to generate null distribution
            type = "permute") %>%             # shuffle to break association
-  calculate(stat = "diff in means",          # define test statistic to use 
+  calculate(stat = "diff in means",          # define test statistic to use
             order = c("ctrl", "exp"))        # order to subtract explanatory variables
 
 
 # visualize null distribution test statistic
 null_dist %>%
-  visualize() + 
+  visualize() +
   shade_p_value(observed_statistic,
                 direction = "greater")
 

@@ -20,7 +20,7 @@
 *You will need to come into the lab approx. 48 hours after you start the experiment. Your data should be collected no later than 60 hours after your initial set up. Ideally, each of you will count their own seeds, if there is an issue coming in to count seeds due to work/class schedule etc. please make sure you communicate this to your lab group and somebody else is able to count your seeds. You are responsible to make sure you remind them. If your germination rate for the entire group is not determined at approx. the same time you will not be able to analyze your data set properly.*
 
 1.  Open the GoogleSheet to record your data and and navigate to the tab for your lab group. Familiarize yourself with the data sheet and how you will enter your data.
-    -   **Column A**: enter the name of your plant you are testing; this will be the same for all of your group members[^07_allelopathy-methods-1].
+    -   **Column A**: enter the name of your plant you are testing; this will be the same for all of your group members[^b02_allelopathy-methods-1].
     -   **Column B:** Recall that the petri dishes set up by each group member are replicates that help us control for confounding variables and increase our sample size. Enter your lastname.
     -   **Column C:** Here you will record your treatment, choose either "ctrl" or "exp" from the dropdown menu as you enter information from your Control and Experiment petri dish respectively.
     -   **Column D:** We are going to arbitrarily number your seeds 1 - xx to distinguish them in the data set. You do not have to be able to associate the numbers back to your seeds.
@@ -28,19 +28,19 @@
     -   **Column F:** Record the date you set up your assays. This will be the same for all of your data points.
     -   **Column G:** Record the time you set up your assays. This doesn't have to be exact to the minute, within an hour is fine.
     -   **Column H:** Record the date you came in to record the germination status.
-    -   **Column I:** Record the time you finished recording your data[^07_allelopathy-methods-2].
+    -   **Column I:** Record the time you finished recording your data[^b02_allelopathy-methods-2].
 2.  Recover and open your first petri dish. Inspect it to see if there are any concerns about your assays, e.g., excessive drying, leaky boats, etc.; if so take a picture for your records and notify your instructor. Record whether you are checking seeds in a Control or Experiment dish in your datasheet.
-3.  Check each seed and record it as having germinated if it has a visible radicle[^07_allelopathy-methods-3]. You may need to move seeds around a bit[^07_allelopathy-methods-4] to see if they truly have germinated. Do NOT measure the length of seeds at this time.
+3.  Check each seed and record it as having germinated if it has a visible radicle[^b02_allelopathy-methods-3]. You may need to move seeds around a bit[^b02_allelopathy-methods-4] to see if they truly have germinated. Do NOT measure the length of seeds at this time.
 4.  Repeat the process with your second dish.
 5.  Double check your data entry to make sure you have included all the information (see point 1).
 
-[^07_allelopathy-methods-1]: This might seem unnecessary but is an example of building good data management habits that can save a lot of work and headaches down the line. Including it means that you could combine data with other groups at a later point and that way the data set itself includes this information if that information should be lost down the line.
+[^b02_allelopathy-methods-1]: This might seem unnecessary but is an example of building good data management habits that can save a lot of work and headaches down the line. Including it means that you could combine data with other groups at a later point and that way the data set itself includes this information if that information should be lost down the line.
 
-[^07_allelopathy-methods-2]: The reason why we are including this information on when the assays were set up and when you recorded your observations is that if your results are unusual or inconsistent you would be able to go. Frequently, scientists are working on multiple projects or you might have several people collaborating and data might not be analyzed right after it is recorded. Consider "future you" as your most important collaborator and keeping good records is being a good collaborator.
+[^b02_allelopathy-methods-2]: The reason why we are including this information on when the assays were set up and when you recorded your observations is that if your results are unusual or inconsistent you would be able to go. Frequently, scientists are working on multiple projects or you might have several people collaborating and data might not be analyzed right after it is recorded. Consider "future you" as your most important collaborator and keeping good records is being a good collaborator.
 
-[^07_allelopathy-methods-3]: This is the “primary” or “seed” root.
+[^b02_allelopathy-methods-3]: This is the “primary” or “seed” root.
 
-[^07_allelopathy-methods-4]: A pencil or similar is helpful.
+[^b02_allelopathy-methods-4]: A pencil or similar is helpful.
 
 ## Determine seedling lengths
 
@@ -53,8 +53,8 @@
     -   **Column D:** We are going to arbitrarily number your seedlings 1 - xx to distinguish them in the data set. You don't have to be able to associate the numbers back to your seedlings.
     -   **Column E:** We will record the length for all germinated seeds.
 2.  Retrieve your petri dishes with your seeds. Inspect them to see if there are any concerns about your assays, e.g., excessive drying, leaky boats, etc. If this is the case call your instructor over to inspect. If there are any issues make sure to take notes that you can refer to when you discuss your results.
-3.  Retrieve a small ruler to measure the length of your seedlings. Start with your control dish. Gently separate your seedlings and lay them out on a piece of paper. Straighten each seedling as much as you can and then measure the length. You may have to break or cut some seedlings to straighten them. Even if only a small amount of growth has occurred still measure and include those values. Record lengths in the Google Sheet in millimeters. In some cases, only a small bit of growth may have occurred (only a few mm of growth may be have occurred)[^07_allelopathy-methods-5].
+3.  Retrieve a small ruler to measure the length of your seedlings. Start with your control dish. Gently separate your seedlings and lay them out on a piece of paper. Straighten each seedling as much as you can and then measure the length. You may have to break or cut some seedlings to straighten them. Even if only a small amount of growth has occurred still measure and include those values. Record lengths in the Google Sheet in millimeters. In some cases, only a small bit of growth may have occurred (only a few mm of growth may be have occurred)[^b02_allelopathy-methods-5].
 4.  Repeat Step 2 for your experimental dish.
 5.  When you are finished, double check that you measured all your seedlings and recorded all your data. Then dump your paper towel and seedlings in the trash along with your tin foil boats and plant material. Rinse your petri dishes and set them up to dry.
 
-[^07_allelopathy-methods-5]: It is possible that some seeds that had not germinated when you first checked them have now germinated. Do not change your original germination data. We want to know how many seeds germinated within about 48-60 hours!
+[^b02_allelopathy-methods-5]: It is possible that some seeds that had not germinated when you first checked them have now germinated. Do not change your original germination data. We want to know how many seeds germinated within about 48-60 hours!

@@ -1,5 +1,15 @@
 # Introduction to inferential statistics
 
+```{r}
+#| label: set-up
+#| include: false
+
+# set options
+knitr::opts_chunk$set(tidy = FALSE)
+options(htmltools.dir.version = FALSE)
+
+```
+
 ## Learning Objectives
 
 **After completing this activity, you should be able to**
@@ -239,13 +249,13 @@ In each case you should end up with a normal distribution and the means should b
 
 Getting back to our initial question of whether we can quantify how well our sample mean represents the population mean. From our exploration of sampling distributions we now know that the spread of the sampling distribution gives us an indication of how "good" our estimate is, the tighter that sampling distribution, the better our estimate. If we were to calculate the standard deviation of each of the sampling distributions we would expect that the sampling distributions based on larger sample sizes to have smaller standard deviations and those based on smaller sample sizes to have larger standard deviations.
 
-The standard deviation of a sampling distribution of $\bar{x}$ values is called the **standard error of the mean** or simply **standard error**[^04_inferent-stats-1]. The **standard error** provides us a metric to assess the level of precision of our sample estimate, the smaller the standard error the more likely that estimate is an accurate representation of the true population.
+The standard deviation of a sampling distribution of $\bar{x}$ values is called the **standard error of the mean** or simply **standard error**[^a05_inferent-stats-1]. The **standard error** provides us a metric to assess the level of precision of our sample estimate, the smaller the standard error the more likely that estimate is an accurate representation of the true population.
 
-[^04_inferent-stats-1]: You can of course, calculate the standard error for any sample statistic but we frequently just call it the standard error and assume that from the context it is clear which statistic we are referring to
+[^a05_inferent-stats-1]: You can of course, calculate the standard error for any sample statistic but we frequently just call it the standard error and assume that from the context it is clear which statistic we are referring to
 
-Typically, we would calculate the standard error by dividing the standard deviation by the square root of the number of sample data[^04_inferent-stats-2].
+Typically, we would calculate the standard error by dividing the standard deviation by the square root of the number of sample data[^a05_inferent-stats-2].
 
-[^04_inferent-stats-2]: Deriving this equation which allows you to determine the standard error without resampling is beyond the scope of our class so we'll just go straight to the solution.
+[^a05_inferent-stats-2]: Deriving this equation which allows you to determine the standard error without resampling is beyond the scope of our class so we'll just go straight to the solution.
 
 $$
 SE = \frac{s}{\sqrt{n}}
@@ -291,9 +301,9 @@ The main causes are:
 -   **outliers** can cause sampling error especially if the sample size is small. This is generally not something you can avoid by your sampling strategy, generally you want to have a sample size that is large enough that you can identify outliers.
 :::
 
-When we are making inferences based on our data set either by generalizing from the sample to the population as a whole or when testing a specific hypothesis based on the data we've collected, we need to make sure that our conclusion are erroneous due to sampling error. Therefore, once we've calculated our descriptive statistics we will generally ask the question "**What is the probability that our results are the results of sampling error and do not reflect reality?**" and then use statistical tests to quantify that probability. The probability of results being due to sampling error increase the smaller our sample size is, the more variability that is observed, and the smaller the difference between metrics[^04_inferent-stats-3] being compared.
+When we are making inferences based on our data set either by generalizing from the sample to the population as a whole or when testing a specific hypothesis based on the data we've collected, we need to make sure that our conclusion are erroneous due to sampling error. Therefore, once we've calculated our descriptive statistics we will generally ask the question "**What is the probability that our results are the results of sampling error and do not reflect reality?**" and then use statistical tests to quantify that probability. The probability of results being due to sampling error increase the smaller our sample size is, the more variability that is observed, and the smaller the difference between metrics[^a05_inferent-stats-3] being compared.
 
-[^04_inferent-stats-3]: We will look at the specific examples of testing whether means and frequencies are statistically different.
+[^a05_inferent-stats-3]: We will look at the specific examples of testing whether means and frequencies are statistically different.
 
 ## Hypothesis testing
 
@@ -311,18 +321,18 @@ The `R` package `infer` contains a series of functions to that implements a work
 
 -   `specify()`: specify the variable or relationship of variables you are interested in.
 -   `hypothesize()`: formulate your null hypothesis.
--   `generate()`: generate a null distribution[^04_inferent-stats-4].
+-   `generate()`: generate a null distribution[^a05_inferent-stats-4].
 -   `calculate()`: calculate the distribution of test statistics based on the generated data to form the null hypothesis
 -   `visualize()`: see where your observed values falls relative to the null distribution.
 -   `get_p_value()`: calculate p-values.
 
-[^04_inferent-stats-4]: data reflecting the null hypothesis
+[^a05_inferent-stats-4]: data reflecting the null hypothesis
 
-Which statistical test you apply will depend on the type of data you are looking at[^04_inferent-stats-5] and whether they fulfill specific assumptions[^04_inferent-stats-6]. We are going to learn how to perform a t-test to evaluate the difference between two means and a $\chi^{2}$ test of independence to evaluate the difference between frequencies.
+Which statistical test you apply will depend on the type of data you are looking at[^a05_inferent-stats-5] and whether they fulfill specific assumptions[^a05_inferent-stats-6]. We are going to learn how to perform a t-test to evaluate the difference between two means and a $\chi^{2}$ test of independence to evaluate the difference between frequencies.
 
-[^04_inferent-stats-5]: For example, are we looking at continuous or numerical data.
+[^a05_inferent-stats-5]: For example, are we looking at continuous or numerical data.
 
-[^04_inferent-stats-6]: For example, we might assume that the data has a normal distribution.
+[^a05_inferent-stats-6]: For example, we might assume that the data has a normal distribution.
 
 ### T-test to evaluate the difference between two means
 
@@ -330,9 +340,9 @@ Which statistical test you apply will depend on the type of data you are looking
 
 Figure out what the larger question is you want to address based on observations you have made.
 
-For example, sexual dimorphism is common in birds. This means that we frequently observe differences in the morphology of males compared to females, this can include coloration[^04_inferent-stats-7] but also body size. As you have been riding around the Antarctica on your snowmobile you have not noticed any differences in terms of coloration but you have seen that there is a broad range of sizes exhibited by adult penguins.
+For example, sexual dimorphism is common in birds. This means that we frequently observe differences in the morphology of males compared to females, this can include coloration[^a05_inferent-stats-7] but also body size. As you have been riding around the Antarctica on your snowmobile you have not noticed any differences in terms of coloration but you have seen that there is a broad range of sizes exhibited by adult penguins.
 
-[^04_inferent-stats-7]: Look up a picture of a male compared to a female peacock.
+[^a05_inferent-stats-7]: Look up a picture of a male compared to a female peacock.
 
 ::: {.callout-tip title="Give it a try"}
 Formulate a research question or goal based on this observation about penguin body size in the Antarctica.
@@ -419,17 +429,17 @@ We have already developed our initial research hypothesis as **Chinstrap penguin
 
 The **null hypothesis** $H_{O}$ states what our measurements will look like when there is no change or no effect in the population, or no relationship or no difference among groups being compared.
 
-At first, stating our hypothesis as "there is no difference" seems a bit odd because that's not normally what we are interested in. However, it is actually quite difficult to prove an idea but much easier to **disprove** and idea. Therefore, we want to formulate a hypothesis that we can falsify. If the sample provides enough evidence against the null hypothesis then we can **reject** the hypothesis, otherwise we **fail to reject** the null hypothesis[^04_inferent-stats-8].
+At first, stating our hypothesis as "there is no difference" seems a bit odd because that's not normally what we are interested in. However, it is actually quite difficult to prove an idea but much easier to **disprove** and idea. Therefore, we want to formulate a hypothesis that we can falsify. If the sample provides enough evidence against the null hypothesis then we can **reject** the hypothesis, otherwise we **fail to reject** the null hypothesis[^a05_inferent-stats-8].
 
-[^04_inferent-stats-8]: Be careful not to use phrases like "we proved" or we "accept" the null hypothesis.
+[^a05_inferent-stats-8]: Be careful not to use phrases like "we proved" or we "accept" the null hypothesis.
 
 ::: {.callout-tip title="Give it a try"}
-You can use a standard way of formulating your null hypothesis by identifying your **dependent** and **independent variable** of your experiment[^04_inferent-stats-9]. For the null hypothesis you will always state that the **Independent variable** does not affect your **dependent variable**.
+You can use a standard way of formulating your null hypothesis by identifying your **dependent** and **independent variable** of your experiment[^a05_inferent-stats-9]. For the null hypothesis you will always state that the **Independent variable** does not affect your **dependent variable**.
 
 Define the null hypothesis for your research question and predict what your results should look like if the null hypothesis is correct.
 :::
 
-[^04_inferent-stats-9]: These are also referred to as the **response** and **explanatory** variables.
+[^a05_inferent-stats-9]: These are also referred to as the **response** and **explanatory** variables.
 
 ::: {.callout-note title="Answer" collapse="true"}
 In this case our independent variable is body mass and the dependent variable is sex.
@@ -492,9 +502,9 @@ observed_statistic
 
 ```
 
-That gives us our observed test-statistic. However, we want to know how this value compares to the sampling distribution of the test statistic based on data that is generated according to the null hypothesis[^04_inferent-stats-10].
+That gives us our observed test-statistic. However, we want to know how this value compares to the sampling distribution of the test statistic based on data that is generated according to the null hypothesis[^a05_inferent-stats-10].
 
-[^04_inferent-stats-10]: We would refer to this as the null distribution.
+[^a05_inferent-stats-10]: We would refer to this as the null distribution.
 
 Recall, that our null hypothesis is that sex does not affect body mass. So we would generate a null distribution by drawing a random subsample from our data and then randomly redistributing our the values for sex and then calculating the test statistic for that sample. We keep repeating that process to create a distribution of values that we should observe for our test statistic assuming our null hypothesis is correct.
 
@@ -593,8 +603,6 @@ In a stats class you are likely going to be asked to explicitly state "reject" o
 Let's look at another question we might ask.
 
 You observe that Biscoe and Dream island are quite different from each other in terms of geographic features and, critically, available areas that can be used as habitat differ. In each case, they co-occur with other species. You hypothesize that the proportion of penguins that are Adelie penguins are going to differ by island.
-
-:::
 
 #### Step 2: Specify what measurements you plan to compare and collect the data.
 
@@ -788,4 +796,151 @@ In the discussion we would interpret these results in light of our hypothesis.
 > We observe Adelie penguins to be significantly more common on Dream Island (45%) compared to Bisco Island (26%). This is consistent with our hypothesis that differences in geographic parameters including the availability of breeding habitat is and important factor determining which penguin species are more commonly encountered.
 
 Note, that in your discussion you would like refer to other examples from the literature showing that availability of habitat and co-occurring species are important for these and/or other species. Then you would discuss that you did not specifically test for habitat conditions. In this or a later study you would likely follow up by quantifying the contributing factors in terms of geography, breeding and other habitat availability, which species the specifically co-occur with etc. and performing a more sophisticated test than what we have done here which really is just demonstrating the the demographics differ among islands, we cannot actually contribute it to specific factors.
+:::
+
+## Homework
+
+Complete the questions below to review some of what you have learned about descriptive statistics. Render your document as an html-file and submit that document through Canvas. Double check that you are submitting the html file, not the quarto document.
+
+::: {.callout-tip title="Consider this"}
+Sampling error and standard error to important concepts that you should understand. Unfortunately, they have very similar names.
+
+-   In your own words, describe what sampling error is and what it tells us about a data set and how it should inform how you interpret your results.
+-   In your own words, describe what sampling error is, key factors that can contribute to sampling error being larger or smaller, and how it should inform how you interpret your results.
+:::
+
+::: {.callout-caution title="Your Answer Here"}
+:::
+
+::: {.callout-tip title="Consider this"}
+A statistical test usually gives us a "probability" or P-value.
+
+-   In your own words, describe what the p-value tells you.
+-   Argue whether you would expect the p-value from a statistical test to be higher or lower when sample sizes are small (Remember to explain *why*).
+-   Argue whether you would expect the p-value from a statistical test to be higher or lower when variability is high (Remember to explain *why)*.
+:::
+
+::: {.callout-caution title="Your Answer Here"}
+:::
+
+::: {.callout-tip title="Give it a try"}
+Some researchers want to know whether or not Chinstrap penguins exhibit sexual dimorphism in their flipper length in column `flipper_length_mm`.
+
+-   State your null and alternative hypothesis and predict what the results should look like if each is correct.
+-   Modify the code below to run the test and obtain a p-value.
+-   Interpret the results to draw conclusion about your research question.
+:::
+
+::: {.callout-caution title="Your Answer Here"}
+State your hypothesis:
+
+Null hypothesis
+
+-   
+
+-   prediction
+
+Alternative hypothesis
+
+-   
+
+-   prediction
+
+Calculate your test statistic and obtain your p-value. You need to fill in the correct response and explanatory variable (replace columnname with the columns that contain the correct information).
+
+```{r}
+#| eval: false
+
+# format data set
+Adelie <- penguins %>%
+  filter(!is.na(sex) & species == "Adelie")
+
+# calculate the observed statistic
+observed_statistic <- Adelie %>%
+  specify(response = columnname,  # specify response/dependent
+          explanatory = columnname) %>%         # specify explanatory/independ
+  calculate(stat = "diff in means",      # test statistic
+            order = c("male", "female")) # order to subtract the mean values
+
+# print observed value
+observed_statistic
+
+null_dist <- Adelie %>%
+  specify(response = columnname,
+          explanatory = columnname) %>%               # specify values we are interested in
+  hypothesize(null = "independence") %>%       # null hypothesis: sex and weight are independent
+  generate(reps = 1000,                        # generate 1000 samples for null distribution
+           type = "permute") %>%               # randomly assign sex to weight to break association
+  calculate(stat = "diff in means",            # statistic is t
+            order = c("male", "female"))       # order to subtract the mean values
+
+# calculate p value from null distribution and observed statistic
+null_dist %>%
+  get_p_value(obs_stat = observed_statistic,
+              direction = "two-sided")
+
+```
+
+Interpret your results:
+:::
+
+::: {.callout-tip title="Give it a try"}
+You want to know if the bill depth (in column `bill_depth_mm`) differs between Adelie and Chinstrap penguins.
+
+-   State your null and alternative hypothesis.
+-   Modify the code below to run the test and obtain a p-value.
+-   Interpret the results to draw conclusion about your research question.
+:::
+
+::: {.callout-caution title="Your Answer Here"}
+State your null and alternative hypothesis and predict the outcome for each:
+
+Null hypothesis
+
+-   
+
+-   Prediction
+
+Alternative hypothesis
+
+-   
+
+-   Prediction
+
+Modify the code to calculate the test statistic and p-value (replace the columnname with the appropriate metrics).
+
+```{r}
+#| eval: false
+
+# format data set
+df <- penguins %>%
+  filter(!is.na(sex) & species %in% c("Chinstrap", "Adelie"))
+
+# calculate the observed statistic
+observed_statistic <- df %>%
+  specify(response = columnname,         # specify response/dependent
+          explanatory = columnname) %>%  # specify explanatory/independ
+  calculate(stat = "diff in means",      # test statistic
+            order = c("Chinstrap", "Adelie")) # order to subtract the mean values
+
+# print observed value
+observed_statistic
+
+null_dist <- df %>%
+  specify(response = columnname,
+          explanatory = columnname) %>%        # specify values we are interested in
+  hypothesize(null = "independence") %>%       # null hypothesis: sex and weight are independent
+  generate(reps = 1000,                        # generate 1000 samples for null distribution
+           type = "permute") %>%               # randomly assign sex to weight to break association
+  calculate(stat = "diff in means",            # statistic is t
+            order = c("Chinstrap", "Adelie"))  # order to subtract the mean values
+
+# calculate p value from null distribution and observed statistic
+null_dist %>%
+  get_p_value(obs_stat = observed_statistic,
+              direction = "two-sided")
+
+```
+
+Interpret your results:
 :::

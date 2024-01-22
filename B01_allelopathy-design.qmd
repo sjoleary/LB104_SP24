@@ -1,10 +1,10 @@
 # Allelopathy Experimental Design {#sec-allelopathy-experimental-design}
 
-## Make an observation
+## Make an observation {#sec-make-an-observation}
 
-You will have made the observation that one of more parts of certain types of plants emit very distinct odors[^06_allelopathy-design-1].
+You will have made the observation that one of more parts of certain types of plants emit very distinct odors[^b01_allelopathy-design-1].
 
-[^06_allelopathy-design-1]: We would describe them as **odoriferous**.
+[^b01_allelopathy-design-1]: We would describe them as **odoriferous**.
 
 ::: {.callout-tip title="Give it a try"}
 Brainstorm specific examples of plants and specific plant parts other than flowers that are odoriferous.
@@ -16,7 +16,7 @@ Plant parts that are odoriferous could include leaves, fruits, bark etc - what a
 
 The fact that you can smell something suggest that they are releasing chemical compounds.
 
-## Formulate a hypothesis and predict your expected outcome.
+## Formulate a hypothesis and predict your expected outcome. {#sec-formulate-a-hypothesis-and-predict-your-expected-outcome.}
 
 ::: {.callout-tip title="Give it a try"}
 Brainstorm 2-3 hypothesis that could explain *why* plants may be releasing volatile chemical compounds and predict what you would expect to observe if your hypothesis is correct.
@@ -26,11 +26,11 @@ Brainstorm 2-3 hypothesis that could explain *why* plants may be releasing volat
 Based on the information in our introduction, one hypothesis could be that these volatile chemical compounds are phytotoxic and the plant emit them as a form of interference competition.
 :::
 
-## Design an experiment
+## Design an experiment {#sec-design-an-experiment}
 
-Specifically you will be designing a **bioassay**[^06_allelopathy-design-2] to test the allelopathic effects on radish seeds. Bioassays typically have a simple, easily repeatable design as you want to be able to assess your results within a few weeks.
+Specifically you will be designing a **bioassay**[^b01_allelopathy-design-2] to test the allelopathic effects on radish seeds. Bioassays typically have a simple, easily repeatable design as you want to be able to assess your results within a few weeks.
 
-[^06_allelopathy-design-2]: A **bioassay** is an experiment designed to determine the properties and effects of a drug or chemical on the bodies of living organisms by testing it under controlled laboratory conditions.
+[^b01_allelopathy-design-2]: A **bioassay** is an experiment designed to determine the properties and effects of a drug or chemical on the bodies of living organisms by testing it under controlled laboratory conditions.
 
 We will be using radish seeds to test effects, their seeds have sufficient nutrients to allow them to grow on their own without photosynthesizing for at least a week. We will be placing our bioassays in a cool, dark area to grow.
 
@@ -38,6 +38,8 @@ Make sure you take a look at the materials that are available to you and conside
 
 Finalize your design after a discussion on key concepts on experimental design. Make sure you complete the experimental design cheat sheet and submit it on Canvas.
 
-## Homework
+## Homework {#sec-homework}
 
 Complete the posted discussion questions and submit them on Canvas.
+
+Complete the questions posted on Canvas.
