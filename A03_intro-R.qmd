@@ -182,6 +182,12 @@ install.packages("tidyverse",
 
 ```
 
+::: {.callout-important title="Protip"}
+
+You can also install packages using the `Packages` tab in the bottom right pane. Select the `Packages` tab and then click on the `Install` button to pull up a dialogue box. Type the packages you want to install into the Packages box and confirm using `Install`.
+
+:::
+
 Let's check if you were able to successfully install those packages by ensuring you can load them. Any time you start a new `R session` (e.g. by closing `Rstudio` and restarting it), you will need to load your libraries beyond the base libraries that are automatically loaded using the `library()` function in order to be able to use the functions specific to that package[^a03_intro-r-7].
 
 [^a03_intro-r-7]: Troubleshooting tip: if you get an error along the lines of `function() cannot be found` the first thing you will want to do is check if your libraries are loaded!

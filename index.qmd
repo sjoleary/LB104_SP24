@@ -40,7 +40,7 @@ Your lab grade comprises the following components:
 -   **Pre-lab assignments** (15%): Generally, you will complete reading/similar assignments before lab to familiarize yourself with key concepts before lab. Most weeks you will have quizzes, definitions, labeling/completion of key figures or similar assignments associated with your reading or other preparatory work for that week's in-lab work.
 -   **Participation** (5%): Your participation grade is based on engagement during discussions in lab, lab and field work and contribution to development and execution of your research projects.
 -   **Homework assignments** (20%): Out-of-lab assignments will include practice problem sets, write-ups of experimental designs, data collection/entry, or analysis or similar assignments. Frequently there will be time to start these during lab with the expectation of them to be completed and submitted before the the next lab period.
--   **Lab reports** (70%): Even though you will be working in groups throughout the semester and collaboration is encouraged, you will individually complete and submit 3 lab reports over the course of the semester.
+-   **Lab reports** (60%): Even though you will be working in groups throughout the semester and collaboration is encouraged, you will individually complete and submit 3 lab reports over the course of the semester.
 
 **All lab prep work and graded assignments should be completed by the assigned deadlines.**
 

@@ -232,3 +232,14 @@ While passive voice is not grammatically incorrect, it can lead to awkward synta
 ### Use the correct Verb Tense {#sec-use-the-correct-verb-tense}
 
 For lab reports we use past, present, and future tenses in specific context and you should make sure you are being consistent in how you do this. You should be using the past tense when you are referring to events in the past, including results obtained in the past, and tasks you completed (methods section). You should use the present tense in the Introduction and Discussion section when you are presenting established knowledge and the implications of your results. You would only use future tense when you are talking about future steps you might take.
+
+
+## Academic Integrity & Plagiarism
+
+Our course policy speaks to the topic of Academic Dishonesty:
+
+> Academic dishonesty, including but not limited to cheating, plagiarism, or turning in someone else's work as your own will not be tolerated. Make sure you are properly citing the sources of ideas, figures, data, etc. in your lab reports. Plagiarism not only includes direct, word-for-word quotations without identifying it as a direct quote using quotation marks and citing the source but also paraphrasing other people's ideas, arguments, or structure without properly acknowledging them. Learning how to properly summarize and paraphrase information from an original source is an important skill, as we generally do not use word-for-word citations in the scientific reports in the natural sciences. While it is acceptable to use large language models (LLMs) such as ChatGPT and other artificial intelligence applications to assist you in correcting grammar, syntax or spelling or to generate synonyms, you should not use LLMs generate larger sections of text for you. If you are unsure if you are properly attributing components of your written assignments, please come talk to your lab instructor or Dr. O'Leary, we are happy to help. Evidence of academic dishonesty will result in a zero on that assignment along with an automatic notification of the Dean.
+
+For some of you this might set very clear boundaries, for others you might be unsure. In either case, you can use [The Geisel Libraries Academic Integrit & Plagiarism Tutoral](https://geiselguides.anselm.edu/academic-integrity/introduction) to understand the expectations St. Anselm College sets for our student body. You can both work through the tutorial as a whole or select individual topics that you would like to dive into using the tabs throughout.
+
+
