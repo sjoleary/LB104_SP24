@@ -171,12 +171,12 @@ Execute the code chunk below to install some libraries to get us started[^a03_in
 #| eval: false
 
 # install central packages in the tidyverse
-install.packages("tidyverse", 
-                 "janitor", 
+install.packages("tidyverse",
+                 "janitor",
                  "glue",
                  "here",
                  "tibble",
-                 "ggthemes", 
+                 "ggthemes",
                  "knitr",
                  "tidymodels")
 
@@ -268,7 +268,7 @@ For example, we might need to convert our length from millimeters (mm) to centim
 ```{r}
 
 # divide value of object by 10
-length_mm / 10 
+length_mm / 10
 
 ```
 
@@ -282,7 +282,9 @@ length_mm <- 567
 ```
 
 ::: {.callout-tip title="Give it a try"}
-Create a new object called `length_cm` with the length in centimeters. Then change the value of our object with the length in millimeters to 50. What do you think the value of `length_mm` will be now?
+Create a new object called `length_cm` with the length in centimeters.
+Then change the value of our object with the length in millimeters to 50.
+What do you think the value of `length_cm` will be now?
 :::
 
 ::: {.callout-note title="Answer" collapse="true"}
@@ -327,13 +329,13 @@ Execute this code line by line by placing your cursor above the first comment an
 
 ```{r}
 
-# total length fish 
-length_mm <- 436  
+# total length fish
+length_mm <- 436
 
-length_mm <- 436  # total length fish  
+length_mm <- 436  # total length fish
 
-# total length of fish 
-# this measurement is in millimeters 
+# total length of fish
+# this measurement is in millimeters
 length_mm <- 436
 
 ```
