@@ -2,7 +2,7 @@
 
 ## Bioassay set up
 
-*Even through you are working as part of a group, each of you will set up a control and a treatment assay, essentially these become replicates as part of your experimental design and you will combine your data across replicates to get a larger sample size and minimize effects of uncontrolled variables/confounding factors. Make sure that you read through the instructions before you get started and discuss with your group how you will implement them. Make sure that you keep communicating with your lab partners as you set up your experiment to make sure that you are being as consistent as possible.*
+*Even through you are working as part of a group, **each of you will set up a control and a treatment assay**, essentially these become replicates as part of your experimental design and you will combine your data across replicates to get a larger sample size and minimize effects of uncontrolled variables/confounding factors. Make sure that you read through the instructions before you get started and discuss with your group how you will implement them. Communicate with your lab partners as you set up your experiment to make sure that you are being as consistent as possible.*
 
 1.  Obtain two complete petri dishes. Double check that you have a matching top and bottom; when resting on a surface, the open rim of the bottom part of the dish should rest against the underside of the overlapping lid of the dish. If this is not the case, swap tops and bottoms or get a new set of dishes.
 2.  Cut four pieces of paper towel that will fit into the bottom of a petri dish. Then place two pieces of paper towel into the bottom of each of your two petri dishes. 
@@ -19,7 +19,7 @@
 
 *You will need to come into the lab approx. 48 hours after you start the experiment. Your data should be collected no later than 60 hours after your initial set up. Ideally, each of you will count their own seeds, if there is an issue coming in to count seeds due to work/class schedule etc. please make sure you communicate this to your lab group and somebody else is able to count your seeds. You are responsible to make sure you remind them. If your germination rate for the entire group is not determined at approx. the same time you will not be able to analyze your data set properly.*
 
-1.  Open the GoogleSheet to record your data and and navigate to the tab for your lab group. Familiarize yourself with the data sheet and how you will enter your data.
+1.  Open the `GoogleSheet` to record your data and and navigate to the tab for your lab group. Familiarize yourself with the data sheet and how you will enter your data.
     -   **Column A**: enter the name of your plant you are testing; this will be the same for all of your group members[^b02_allelopathy-methods-1].
     -   **Column B:** Recall that the petri dishes set up by each group member are replicates that help us control for confounding variables and increase our sample size. Enter your lastname.
     -   **Column C:** Here you will record your treatment, choose either "ctrl" or "exp" from the dropdown menu as you enter information from your Control and Experiment petri dish respectively.

@@ -1,9 +1,3 @@
----
-output: html_document
-editor_options: 
-  chunk_output_type: console
----
-
 # Disinfectants and Antiseptics
 
 After completing this lab, you should be able to:
@@ -475,7 +469,7 @@ ggplot(summary) +
 
 ```
 
-## Discussion 
+## Discussion
 
 ::: {.callout-warning title="Heads up"}
 As part of your lab report, you will need to discuss your results. Prepare for writing up your discussion by thinking through the following questions with your lab partner and the rest of your section. Remember to take notes as a starting point for your lab report (nothing is more intimidating than a blank page!).

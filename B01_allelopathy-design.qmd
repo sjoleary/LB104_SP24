@@ -41,5 +41,3 @@ Finalize your design after a discussion on key concepts on experimental design. 
 ## Homework {#sec-homework}
 
 Complete the posted discussion questions and submit them on Canvas.
-
-Complete the questions posted on Canvas.

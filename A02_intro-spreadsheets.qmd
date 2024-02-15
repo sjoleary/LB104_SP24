@@ -72,7 +72,7 @@ Best practices of maintaining the integrity of your raw data include
 
 -   **Make copies**: Always work with copies of the original data files. This ensures that any changes you make are isolated from the raw data.
 -   **Implement a structured workflow with detailed documentation**: Develop a repeatable workflow that includes data cleaning, transformation, and analysis steps. Maintain a clear and detailed documentation about the steps you've taken, the rationale behind each decisions, and any changes you've made to the data to ensure transparency.
--   **Create backups and use version control**: Regularly back up your data, including both the raw data and any processed versions, to prevent data loss. If you are taking data down on physical data sheets and then entering that into spreadsheets make sure you hang onto the physical data sheets. Use version control systems like Git to track changes to your data set. GoogleSheets also includes version control.
+-   **Create backups and use version control**: Regularly back up your data, including both the raw data and any processed versions, to prevent data loss. If you are taking data down on physical data sheets and then entering that into spreadsheets make sure you hang onto the physical data sheets. Use version control systems like Git to track changes to your data set. `GoogleSheets` also includes version control.
 
 ### Keep track of your formatting steps {#sec-keep-track-of-your-formatting-steps}
 
@@ -160,12 +160,12 @@ By contrast, quality control focuses on identifying errors that may have occurre
 
 Ensuring that we have accurate and consistent data collection methods, checking for and removing or correcting data entry errors, and validating data against predefined criteria is a critical step in (data) science. It is important that you keep a good record of the steps you took, rules you apply to discern "good" vs "bad" errors, and which data was removed to ensure transparency and repeatability.
 
-One important component of quality assurance is stopping from bad data being entered in the first place by creating a list of valid values which will then prohibit false values from being entered. For example, we might be working with different types of gear to catch sharks at different locations, longlines, gillnets, and hook-and-line. It would be easy to accidentally mistype one of these gear types or forget whether we are entering everything lowercase or using capitalization.
+One important component of quality assurance is stopping from bad data being entered in the first place by creating a list of valid values which will then prohibit false values from being entered. For example, we might be working with different types of gear to catch sharks at different locations, long-lines, gill nets, and hook-and-line. It would be easy to accidentally mistype one of these gear types or forget whether we are entering everything lowercase or using capitalization.
 
 ::: {.callout-tip title="Give it a try"}
 Learn how to create a dropdown menu for acceptable values for a categorical variable:
 
--   Create a GoogleSheet.
+-   Create a `GoogleSheet`.
 -   In cell A1 type `gear`. Then place your cursor in cell A2 and navigate to `Data` \> `Data Validation` which will bring up a dialog on the right sight of your screen. Click on `Add rule`.
 -   In the `Apply to range` box it will currently say `Sheet1!A2`, you can extend this to include all cells from `A2` to `A6` by modifying this to `Sheet1!A2:A6` (or by marking the area in the spreadsheet).
 -   Click on the `Criteria` Dropdown menu to see how many different types of options you have to set rules in terms of what is allowed to be entered into the cells to which you are applying this rule.
@@ -179,7 +179,7 @@ You can see how this option is helpful for categorical data where typos are an i
 
 Using these types of rules help minimize errors, however it is almost inevitable that something will sneak in eventually which is where quality control comes in.
 
-::: {.callout-warning title="Pay Attention"}
+::: {.callout-warning title="Heads Up"}
 Remember, before you implement any quality control measure you want to make sure that you make a copy of your data and save the original data as your raw, unaltered data set. You will want to make sure that the file name reflects that it is your raw data.
 
 Create a separate file that you will then clean, make sure that your filename includes some sort of versioning and/or a date so you have a good record of when you processed a data set. Then you want to make sure that your data are all values and not formulas which refer to specific cells. Once you start moving cells around this can screw with your data.
@@ -193,7 +193,7 @@ The goal of QC is to find erroneous data. This means that it is generally going 
 
 We can generally make the assumption that the vast majority of your data is correct. This means that if we sort the values in a column if there are a few errors they will stick out and in many cases they will sort at the very top or very bottom. For example, if your column is numeric anything that is a character will pop out or if you have null values or empty cells they will generally sort to the bottom of a column.
 
-::: {.callout-warning title="Pay Attention"}
+::: {.callout-warning title="Heads up"}
 Any time you are going to sort data, make sure that you are sorting the **entire data set** not just a single column or you will corrupt your data set and everything will end up scrambled.
 
 Generally, if you don't have any empty columns or too much missing data if you place the cursor in a cell with a value you can use the shortcut `Ctrl`/`Cmd` + `A` to select all.
@@ -235,7 +235,7 @@ Generally, want to make sure that we are storing our data in a universally acces
 -   Frequently journals or grant agencies require you to deposit your data in a data repository that only accepts certain formats which may not include Excel.
 
 ::: {.callout-tip title="Consider this"}
-Discuss whether you think Google Sheets has the same problems or if it is an acceptable format to avoid these issues.
+Discuss whether you think `GoogleSheets` has the same problems or if it is an acceptable format to avoid these issues.
 :::
 
 Text-based formats such as comma-delimited (`*.csv`) or tab-delimited (`*.txt` or `*.txv`) files overcome these issues. In CSV files, columns are separated by commas and in tab-delimited files by tabs[^a02_intro-spreadsheets-9]. The advantage of text files is that they can be opened in any plain text editors[^a02_intro-spreadsheets-10] but you can also import them into spreadsheet programs or command-line programs like `R`.

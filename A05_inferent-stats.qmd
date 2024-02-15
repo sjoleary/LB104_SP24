@@ -1,4 +1,4 @@
-# Introduction to inferential statistics
+# Introduction to inferential statistics {#sec-introduction-to-inferential-statistics}
 
 ```{r}
 #| label: set-up
@@ -809,18 +809,12 @@ Sampling error and standard error to important concepts that you should understa
 -   In your own words, describe what sampling error is, key factors that can contribute to sampling error being larger or smaller, and how it should inform how you interpret your results.
 :::
 
-::: {.callout-caution title="Your Answer Here"}
-:::
-
 ::: {.callout-tip title="Consider this"}
 A statistical test usually gives us a "probability" or P-value.
 
 -   In your own words, describe what the p-value tells you.
 -   Argue whether you would expect the p-value from a statistical test to be higher or lower when sample sizes are small (Remember to explain *why*).
 -   Argue whether you would expect the p-value from a statistical test to be higher or lower when variability is high (Remember to explain *why)*.
-:::
-
-::: {.callout-caution title="Your Answer Here"}
 :::
 
 ::: {.callout-tip title="Give it a try"}

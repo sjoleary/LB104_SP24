@@ -300,7 +300,7 @@ ggplot(penguins,                             # define data set to plot
 ```
 :::
 
-### Grouped (binned) frequency distributions {#sec-grouped-(binned-frequency-distributions}
+### Grouped (binned) frequency distributions {#sec-grouped-(binned-frequency-distributions-}
 
 What about the distribution of some of the other values in our data set? For example, we have measured the body mass of each individual[^a04_descript-stats-13]. Therefore, we probably want to know what the distribution of body size is for each of the penguin species.
 
@@ -833,12 +833,11 @@ Modify the figure by defining which data to plot on the x-axis and finding an ap
 #| label: fig-flipper
 #| fig-cap: "Add figure title and description here."
 
-ggplot(penguins, aes(x = columname, # define data set & variable on x-axis
+ggplot(penguins, aes(x = flipper_length_mm, # define data set & variable on x-axis
                      fill = species)) +     # color code by species
   geom_histogram(binwidth = 25,             # define bin width
                  color = "black") +
   facet_grid(. ~ species) +                # create separate plot per species
-  scale_fill_manual(values = col) +        # define color palette
   labs(x = "title",          # x-axis title
        y = "title") +      # y-axis title
   theme_classic() +
@@ -858,6 +857,7 @@ Execute the code chunk below to calculate a series of descriptive statistics sum
 
 ```{r}
 #| label: tbl-sum-stats
+#| tbl-cap: "Add descriptive table caption."
 
 penguins %>%                                                       # define data frame
   group_by(species) %>%                                            # create subsets by species

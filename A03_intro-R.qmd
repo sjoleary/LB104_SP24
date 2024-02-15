@@ -79,7 +79,7 @@ Open `Rstudio` and identify the four panes in the interface (default layout).
 
 The panes can be customized (`View` -\> `Panes` -\> `Pane Layout`) and you can move/re-size them using your mouse.
 
-::: {.callout-warning title="Pay Attention"}
+::: {.callout-warning title="Heads Up"}
 We are going to switch to have the Console in our top right and the Environment in the bottom left which makes it easier to see your code output and your script/quarto document at the same time.
 
 The easiest way to do this is to go to `View` -\> `Panes` -\> `Console on Right`.
@@ -123,7 +123,7 @@ For each of our units we will have a project folder[^a03_intro-r-2] with an `Rpr
 
 Using `Rprojects` allows us to set the working directory to the folder you are currently working out of which means that for everyone the file paths will be the same. You can open an `Rproj` file by double clicking it in a file manager which will then open an instance of `Rstudio`. Alternatively, you can use the Project Icon in the top right corner of the `Rstudio` IDE to open an existing `Rproject`. If you look in the bottom left hand pane in the Files tab, the bread crumbs should lead to your project folder which has now become your working directory, i.e. all paths are relative to this location. If you navigate away from your working directory (project directory) you can quickly get back to your project directory by clicking on the project icon in the Files pane or by clicking the cog icon (`More`) and selecting `Go to Working Directory`.
 
-::: {.callout-warning title="Pay Attention"}
+::: {.callout-warning title="Heads Up"}
 **Always make sure that you are in the correct `Rproject`.**
 
 We solve about 50% of problems with error messages about "files not being found" and things not running as they should by making sure that you are working out of the correct project folder and loaded `Rproject`. You can always check by looking if the name of your `Rproject` is next to the `Rproject` icon in the top right corner of `Rstudio`.
@@ -178,14 +178,13 @@ install.packages("tidyverse",
                  "tibble",
                  "ggthemes",
                  "knitr",
-                 "tidymodels")
+                 "tidymodels",
+                 "penguins")
 
 ```
 
 ::: {.callout-important title="Protip"}
-
 You can also install packages using the `Packages` tab in the bottom right pane. Select the `Packages` tab and then click on the `Install` button to pull up a dialogue box. Type the packages you want to install into the Packages box and confirm using `Install`.
-
 :::
 
 Let's check if you were able to successfully install those packages by ensuring you can load them. Any time you start a new `R session` (e.g. by closing `Rstudio` and restarting it), you will need to load your libraries beyond the base libraries that are automatically loaded using the `library()` function in order to be able to use the functions specific to that package[^a03_intro-r-7].
@@ -205,7 +204,7 @@ If you don't see any error messages in the console along the lines of `there is 
 
 You should generally make sure to keep your `R` packages up to date as new versions include important bugfixes and additional improvements. The easiest way to update packages is to use the `Update` button in the `Packages` tab in the bottom right panel. Over the course of the semester you should not have to do this, but when you install new packages you might get message that some of your packages need to be updated which you can then either choose to do at that point or ignore.
 
-::: {.callout-warning title="Pay Attention"}
+::: {.callout-warning title="Heads Up"}
 Be aware that updating packages might break some code you have previously written. For most of what we will be doing this should not be the case. If you used `R` for a previous course, make sure to update you packages at the beginning of this course and we should be set for the semester.
 :::
 
@@ -282,9 +281,7 @@ length_mm <- 567
 ```
 
 ::: {.callout-tip title="Give it a try"}
-Create a new object called `length_cm` with the length in centimeters.
-Then change the value of our object with the length in millimeters to 50.
-What do you think the value of `length_cm` will be now?
+Create a new object called `length_cm` with the length in centimeters. Then change the value of our object with the length in millimeters to 50. What do you think the value of `length_cm` will be now?
 :::
 
 ::: {.callout-note title="Answer" collapse="true"}

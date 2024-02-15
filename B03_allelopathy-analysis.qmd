@@ -4,10 +4,8 @@ Learning Objectives
 
 **After completing this activity you should be able to**
 
--   use `read_delim()`to read a tab-delimited file into `R` as a data.frame.
 -   assess what information is contained in a data set.
 -   decide what type of descriptive statistics to apply according to whether a variable is continuous or categorical.
--   use `ggplot()` to generate and modify barplots according to the type of data being visualized.
 -   decide whether to apply a t-test or a $\chi^{2}$-test depending on what type of metrics you are comparing.
 -   distinguish between describing and interpreting results.
 
