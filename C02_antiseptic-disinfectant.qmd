@@ -1,0 +1,490 @@
+---
+output: html_document
+editor_options: 
+  chunk_output_type: console
+---
+
+# Disinfectants and Antiseptics
+
+After completing this lab, you should be able to:
+
+-   Distinguish between the effects of disinfectants and antiseptics.
+-   Set up a zone of inhibition test to compare the effects of antiseptic and disinfectant treatments.
+
+## Introduction
+
+### Mutualistic and Pathogenic Bacteria
+
+In this second part of this unit we will test the efficacy of antimicrobial agents on controlling milk microbe growth. Bacteria are found almost everywhere on Earth, and most species are directly or indirectly beneficial to other organisms. These **mutualistic bacteria** are necessary to maintain optimum environments in animal and plant bodies, and in environmental systems. In fact, humans are so dependent upon mutualistic bacteria that numerically there are more bacterial cells in a healthy human body than human cells. Given that bacteria cells are so much smaller than human cells, by volume and mass we are still mostly composed of human cells[^c02_antiseptic-disinfectant-1].
+
+[^c02_antiseptic-disinfectant-1]: Don’t worry, you are still mostly you.
+
+However, even beneficial species, if they are reproducing at an uncontrolled rate, are potentially harmful or destructive to their environment. Furthermore, not all species of bacteria are beneficial to other organisms. Several species of bacteria and fungi are known to be **pathogenic**, that is, to cause disease in animals and plants. The growth of these pathogenic microbes must be controlled. Chemical agents have been developed that control bacterial and fungal growth. In today's lab your will initiate a new experiment that investigates the efficacy of two of these growth-controlling agents: antiseptics and disinfectants.
+
+### Antiseptics versus Disinfectants
+
+There are three major categories of chemical agents used to control bacterial growth: **antibiotics**, **antiseptics**, and **disinfectants**. Antibiotics are chemicals produced by species of bacteria or fungi that inhibit the growth of other bacteria or fungi. These chemicals are packaged into the familiar pills that doctors prescribe to treat infections. For this week's lab we will be experimenting with the other two categories of chemicals: antiseptics and disinfectants.
+
+-   **Antiseptics** are chemical agents that are used to control bacteria on living tissue, such as skin. Familiar examples include: Bactericidal soap, Baking soda, Hydrogen peroxide, Listerine, and Rubbing alcohol.
+-   **Disinfectants** are chemical agents used on inanimate objects, such as countertops. Familiar examples of these include: Ammonia, Clorox, Lysol, and Vinegar.
+
+## Methods
+
+::: {.callout-tip title="Consider this"}
+In this experiment, you will choose one antiseptic to compare to one disinfectant with regard to their relative efficacy at controlling microbial growth in a culture of the 4-day old plain milk treatment. For this experiment you will be working with a lab partner.
+
+Before you start, discuss your experimental set up with your lab partner.
+
+-   Discuss your pre-lab research into the effectiveness of various disinfectants and antiseptics.
+-   Read the instructions for how to set up your assays below and then choose which treatments to use for your experiment; you should agree on 1 antiseptic and 1 disinfectant.
+
+Take some notes below that you will be able to refer to when you write your lab report for your experiment; they will also serve as good starting point for your homework assignment. For your introduction note the initial observation(s), your broad research question/hypothesis and the specific hypothesis you are testing in your experiment. We have given you a protocol on how to set up your treatments, but make sure that you read through it and record what your dependent and independent variables are, what variables you are controlling for etc. Remember, collecting and analyzing your results is part of your methods so make sure you can describe that process for your lab report.
+:::
+
+::: {.callout-caution title="Your Answer Here"}
+**Initial Observation**
+
+\[Remember, your research into the topic falls into the category of your "initial observation" because it is what has motivated you to formulate a research question/hypothesis that you want to pursue.\]
+
+**Broad research question hypothesis**
+
+\[Remember, this should be the big question, you are going to investigate one specific aspect of this to contribute to the broad understanding of this question.\]
+
+**Specific research question you are investigating in your experiment**
+
+\[Be as specific as possible as two what you are testing!\]
+
+**Experimental Design**
+
+-   Independent (predictor or explanatory) variable:
+
+-   Dependent (response) variable:
+
+-   What data will you be collecting to quantify your dependent variable? How will you analyze it?
+
+-   Variables you are controlling for:
+
+    -   
+:::
+
+### Experimental Set-up
+
+::: {.callout-warning title="Heads up"}
+A bacterial lawn is like a lawn of grass - a uniform, even layer of organisms covering an entire surface. The success of your experiment hinges on the uniformity of your bacterial lawn. Before you get started, make sure that you have seen your instructor demo the technique!
+
+For this experiment, all the lab groups on your section will be swabbing from the same culture experiment so that you can combine your data for the analysis.
+:::
+
+-   On a fresh TGY media plate, use a sterile swab to prepare a bacterial lawn with bacteria from the previous 4 day plain milk culture plate.
+    -   Lift the agar plate lid to about a 45 degree angle, add a couple small drops of water, and swab the entire surface of the agar, taking care to swab the bacteria to the edges of the dish.
+    -   Rotate the plate 90 degrees and swab the agar again at right angles to the first swab.
+-   Using the provided forceps soaking in alcohol, place 5 pre-soaked antiseptic disks and 5 pre-soaked disinfectant disks on opposite sides of the plate.
+    -   Be sure to shake out any extra antiseptic or disinfectant solution from each disk before placing on the gel
+    -   Plan ahead to ensure disks on each half of the plate are evenly spread out.
+-   Keeping careful track of which treatment is which, cover and seal the petri plate with parafilm, then with a sharpie draw a line delineating between the two sides; note your group’s initials and indicate which side has antiseptic disks and which side has disinfectant disks\\
+-   Culture plates will be incubated at room temperature for several days and then refrigerated.
+
+### Collect zone of inhibition results for antimicrobial activity
+
+::: {.callout-warning title="Heads up"}
+We will be using a test that is widely used by microbiologists to quantify the effectiveness of antimicrobial agents such as antibiotics, antiseptics, or disinfectants on microbial growth. OUr experimental design follows the Kirby-Bauer or **Zone of Inhibition test**
+
+-   A bacterial or fungal strain of interest is grown in culture (we used 4-day old plain milk for all treatments)
+-   Using a sterile swab, a suspension of the culture is spread evenly over a sterile agar plate
+-   The antimicrobial agent is applied to the agar plate (we did this with soaked paper disks)
+-   The agar plate is incubated for a time and at a temperature suitable for the test microorganism
+
+The way the test works is that while the culture incubates, the antimicrobial agent leaches into the agar and then exerts a growth-inhibiting effect, which appears as a clear zone (the zone of inhibition) in the culture. The size of the zone of inhibition is usually related to the level of antimicrobial activity present in the sample or product – a larger zone of inhibition usually means that the antimicrobial is more potent.
+
+This means we can quantify the effectiveness of the different antiseptic and disinfectant treatments by comparing the average zone of inhibition around the two treatments.
+
+Before you get started, confirm the final version of your group's hypothesis and experimental design.
+
+-   Have you composed a clearly written, testable hypothesis statement for your antiseptic vs disinfectant experiment?
+-   Have you identified your predictor/explanatory variable and your response variable?
+-   What components of the experiment are control variables? Why was it important that every group in your section used bacteria from the same culture plate?
+:::
+
+1.  Open the `GoogleSheet` to record your data and use the tab to select your section.
+2.  In `Column A` add your group number.
+3.  Type in the chemical name in `Column B` and categorize it as either a disinfectant or antiseptic using the dropdown menu for `Column C`.
+4.  Use `Column D` to distinguish between your disks (number them 1-5) and add the zone of inhibition that you measured around that disk in column E.
+5.  Once all the groups in your lab section have added their data download the spreadsheet as a tab-delimited file using `File` -\> `Download` -\> `Tab-separated file`.
+6.  Use `Windows Explorer` or `Finder` to navigate to your download folder and move the tab-delimited file you just downloaded into the data folder for your `03_Succession` project folder. Make sure the file is named `zone-of-inhibition.tsv`[^c02_antiseptic-disinfectant-2].
+
+[^c02_antiseptic-disinfectant-2]: It will automatically have \*.tsv as the file ending; but you will likely have to change the filename to make sure there are no spaces.
+
+### Data analysis
+
+::: {.callout-warning title="Heads up"}
+We are going to explore your results by applying the key concepts you have learned about descriptive and inferential stats. After completing this component you will use the provided template to write a lab report.
+
+First, you will analyze your groups results to assess the hypothesis you decided to test with this experiment. Those are the results that you will report in your lab report.
+
+For your discussion, you will want to compare how effective your antiseptic and disinfectant are to others. Conveniently, your classmates have just generated data that will provide context for how your results compare to other disinfectants and antiseptics! We will analyze them here and describe the results and the you will be able to use that information for your discussion.
+
+Remember, nothing is worse than a blank piece of paper, so remember to take notes that you can use as a starting point for your lab report.
+:::
+
+Let's start by loading our libraries:
+
+```{r}
+#| label: setup
+#| include: false
+
+# load libraries for reporting
+library(knitr)
+
+# load libraries for data import
+library(readr)
+library(here)
+library(janitor)
+
+# load libraries for data wrangling
+library(dplyr)
+library(tidyr)
+library(tibble)
+
+# load libraries for plotting
+library(ggplot2)
+library(ggthemes)
+
+# load library for stats
+library(infer)
+
+```
+
+#### Get the data
+
+Let's start by reading in our data set as a `data.frame` that we can compute on in `R`.
+
+```{r}
+#| label: read-data
+
+# define your filename
+file <- "zone-of-inhibition_demo.tsv" # CHANGE THIS TO YOUR EXACT FILENAME, remember R is case sensitive
+
+# read in data
+inhibition <- read_delim(here("data", file), delim = "\t") %>%
+  clean_names()
+
+# take a look at columns in the data set
+glimpse(inhibition)
+
+```
+
+::: {.callout-tip title="Consider this"}
+Take a look at the `data.frame` object holding your data by clicking on it in the `Environment` pane (bottom left) or using `View(inhibition)`.
+
+Describe how your data is organized:
+
+-   what information is in each row?
+-   what information is in each column?
+
+Assess what type of data you have
+
+-   is it continuous or categorical?
+-   what groups are you comparing?
+-   what column contains your dependent variable?
+-   what column contains you independent variable?
+
+Then determine which descriptive statistics are appropriate to summarize this data set and how you would visualize your data.
+:::
+
+::: {.callout-note title="Answer" collapse="true"}
+Each row represents one disc that was soaked in either an antiseptic or disinfectant.
+
+Our response or dependent variable is continuous, we have a length measurement in mm.
+
+The independent or explanatory/predictor variable is a categorical variable, the chemicals that each group tested to see how they differ in terms of their impact on microbial group. We classified each as either a disinfectant or antiseptic (categorical variable).
+
+You will want to determine the mean and standard deviation of the zone of inhibition for both treatments. It could also be helpful to generate additional summary statistics including median, minimum and maximum values to get an overview of the data.
+
+In this case, we do not have a lot of measurements so a histogram is probably not very helpful, but a bar chart or similar comparing the mean and standard deviation is probably a helpful visualization to communicate our results.
+:::
+
+#### Summarize the data
+
+We will need to summarize our results to evaluate our findings.
+
+::: {.callout-tip title="Consider this"}
+Suggest 3-4 metrics to summarize your data in a meaningful way that will allow you to describe your results in the context of the hypothesis you are exploring with this experiment.
+
+Explain why you think these would be appropriate data analysis methods.
+:::
+
+::: {.callout-note title="Answer" collapse="true"}
+As we have continuous data, we can use the descriptive statistics we have discussed previously that allow us to assess the central tendency (mean, median, mode) and variability (variance, standard deviation) of our data.
+:::
+
+Let's start by putting together a table with summary statistics. Currently, the data set still contains everyone's data, so we will start by creating a subset of just your data.
+
+```{r}
+#| label: tbl-summary
+#| tbl-cap: "Summary statistics for zone of inhibition. Mean, median, standard deviation (sd), minimum (min) and maximum (max) length in millimeters for discs soaked in an antiseptic or disinfectant."
+
+# create vector with your group name (change this to YOUR group)
+grp <- "grp-1"
+
+inhibition %>%                            # specify data
+  filter(group == grp) %>%              # retain only rows for your group 
+  group_by(chemical) %>%                 # group by treatment
+  summarize(mean = mean(distance_mm),       # calculate mean
+            sd = sd(distance_mm),           # calculate standard deviation
+            median = median(distance_mm),   # determine median value
+            min = min(distance_mm),         # determine minimum value
+            max = max(distance_mm))         # determine maximum value
+
+```
+
+::: {.callout-tip title="Give it a try"}
+Decide which descriptive statistics give the best summary of your results and write up a brief description[^c02_antiseptic-disinfectant-3]. Make sure that you are being specific and adding context to make it easy for your reader to identify the key patterns.
+
+As rule of thumb, you should describe your results so that your reader has all the key information they need even without seeing the data tables; this means you should include specific values.
+
+Remember, at this point you should not be interpreting your results!
+:::
+
+[^c02_antiseptic-disinfectant-3]: Consider this thinking out loud in a way where you have a set of notes that you can then edit for your report.
+
+::: {.callout-note title="Answer" collapse="true"}
+Your description could look something like this:
+
+Broad pattern:
+
+> Overall, the zone of inhibition was smaller for discs soaked in the antiseptic X.
+
+Details
+
+> The mean zone of inhibition was 24.6 +/- 1.14mm for discs soaked in X compared to chemical Y, which is a disinfectant.
+:::
+
+Since you have included the values in your written description, you would not need to include a table. Figures are important tools for communicating data. an important tool to summarize and present your data. Let's start by visualizing our data with a histogram which emphasize the distribution of our values.
+
+We have previously plotted comparisons of means using a point range where the mean is represented by a point and the standard deviation by lines extending out from that point. This should help us compare our data for this experiment as well:
+
+```{r}
+#| label: fig-point-range
+#| fig-cap: "Mean zone of inhibition around discs soaked in disinfectant Y (blue) and antiseptic X (purple)."
+
+# pick colors
+colors <- c("orange", "purple")
+
+# create dataframe with mean and sd
+summary <- inhibition %>%
+  filter(group == grp) %>%
+  group_by(chemical) %>%
+  summarise(mean = mean(distance_mm),
+            sd = sd(distance_mm))
+
+# plot data
+ggplot(summary) +
+  geom_pointrange(aes(x = chemical,
+                    y = mean,
+                    ymin = mean-sd,
+                    ymax = mean+sd,
+                    color = chemical),
+                size = 1.2) +
+  scale_color_manual(values = colors) +
+  labs(x = "chemical tested", 
+       y = "zone of inhibition [mm]") +
+  theme_classic() +
+  theme(legend.position = "none")
+
+```
+
+As we know, our set of summary statistics and data visualization enable us to present the patterns in our data set. However, at this point we cannot make statement whether our observed differences in the zone of inhibition are within the range of variability in inhibition we would expect to see even if the two chemicals we tested does not have differential effect on microbial growth.
+
+::: {.callout-tip title="Consider this"}
+Argue which type of statistical test we should apply and outline the key steps you will need to take to perform the test.
+:::
+
+#### Test for significance
+
+We need to apply a $t$-test to evaluate the difference between means.
+
+::: {.callout-tip title="Give it a try"}
+State your null and alternative hypothesis and predict the outcome if each claim is true.
+:::
+
+::: {.callout-note title="Answer" collapse="true"}
+Your null hypothesis is a claim that there is no effect:
+
+-   $H_{0}$: There is no difference in the effect of chemical X (antiseptic) and chemical Y (disinfectant) on microbial growth.
+-   Prediction: There will be no difference in the zone of inhibition observed around the discs regardless of which chemical they were soaked in.
+
+The alternative hypothesis is a claim that there is an observed effect.
+
+-   $H_{0}$: Chemical Y (disinfectant) has a stronger effect on microbial growth compared to chemical X (antiseptic).
+-   Prediction: The observed zone of inhibition will be larger around the discs soaked in chemical Y compared to chemical X.
+:::
+
+::: {.callout-tip title="Consider this"}
+We will specify our significance threshold $\alpha$ as 0.05.
+
+Explain what this means and why it is important for us to specify this.
+:::
+
+::: {.callout-note title="Answer" collapse="true"}
+This means that if our observed results have a less than 5% probability occurring according to our null distribution we will reject our null hypothesis.
+:::
+
+Our next step is to calculate our observed test statistic:
+
+```{r}
+#| label: t-statistic
+
+# create subset with your data
+df <- inhibition %>%
+  filter(group == grp)
+
+# calculate observed statistic
+observed_statistic <- df %>%             # define data to use
+  specify(response = distance_mm,              # specify response (dependent) variable
+          explanatory = chemical) %>%       # specify explanatory (independent) variable
+  calculate(stat = "diff in means"          # define test statistic to use
+           )        # order to subtract explanatory variables
+
+# print test statistic
+observed_statistic
+
+```
+
+Now, let's simulate our null distribution and compare how our observed test statistic compares.
+
+```{r}
+#| label: fig-null-dist-t-test
+#| fig-cap: "Null distribution of t test statistic assuming presence of plant material has no effect on radish seed growth. The calculated t-square test statistic is indicated by the red line. Values observed in the null distribution that are more extreme that the t-statistic calculated for the empirical data set are shaded in red."
+
+# create null distribution
+null_dist <- df %>%
+  specify(response = distance_mm,              # specify response (dependent) variable
+          explanatory = chemical) %>%       # specify explanatory (independent) variable
+  hypothesize(null = "independence") %>%     # define null hypothesis
+  generate(reps = 1000,                      # number of samples to generate null distribution
+           type = "permute") %>%             # shuffle to break association
+  calculate(stat = "diff in means"
+            # define test statistic to use
+          )        # order to subtract explanatory variables
+
+
+# visualize null distribution test statistic
+null_dist %>%
+  visualize() +
+  shade_p_value(observed_statistic,
+                direction = "greater")
+
+```
+
+And for our last step, we need to determine our p-value.
+
+```{r}
+#| label: calculate-p-II
+
+# obtain p-value
+null_dist %>%
+  get_p_value(obs_stat = observed_statistic,
+              direction = "two sided")
+
+```
+
+::: {.callout-tip title="Give it a try"}
+Compare your p-value to the threshold of significance we defined above to determine how to interpret the results of your t-test.
+
+Then update the results you formulated earlier to add this information into your description of the results.
+
+Finally, write a few sentences as a draft of how you would include this in the discussion of your results, i.e. how you will interpret your results to draw a conclusion in the context of our broad research hypothesis that we designed this experiment to explore.
+:::
+
+::: {.callout-note title="Answer" collapse="true"}
+In this case our p-value is 0.004 which means that is a less than 0.4% probability that we would observe a test statistic at least this extreme given our null hypothesis.
+
+This value is smaller than our specified threshold of significance and therefore we will reject our null hypothesis and conclude that the difference in the observed germination rates is statistically significant and consistent with our hypothesis that plant X has an effect on the germination rate.
+
+We can augment our results to include this information:
+
+> Overall, the zone of inhibition was smaller for discs soaked in the antiseptic X. The mean zone of inhibition was 24.6 +/- 1.14mm for discs soaked in X compared to chemical Y at 33.2 +/- 1.92mm which is a disinfectant. The difference of approx 9mm is significant (p \< 0.05).
+
+In the discussion we would interpret our results:
+
+> The zone of inhibition was significant larger for chemical X which is a disinfectant. This is consistent with our hypothesis that disinfectants are more effective in inhibiting microbial growth compared to antiseptics.
+:::
+
+Remember, if your results are not statistically significant, you still need to write a set of conclusions! Even though we seem to think that "negative results" are "bad", "negative" just means that we did not observe an effect - but that is also a result because you can now exclude one possible explanation for your observation and move on to test the next one.
+
+Let's take a look at the data overall. We will produce a figure the mean zone of inhibition across all disinfectants and all antiseptics that were tested in your lab section. In addition, you should make sure to get the results from your lab mates that show whether or not the difference in the combination of chemicals they tested is significant.
+
+```{r}
+#| label: fig-point-range-all
+#| fig-cap: "Mean zone of inhibition around discs soaked in disinfectant (blue) and antiseptic (purple)."
+
+# pick colors
+colors <- c("orange", "purple")
+
+# create dataframe with mean and sd
+summary <- inhibition %>%
+  group_by(type) %>%
+  summarise(mean = mean(distance_mm),
+            sd = sd(distance_mm))
+
+# plot data
+ggplot(summary) +
+  geom_pointrange(aes(x = type,
+                    y = mean,
+                    ymin = mean-sd,
+                    ymax = mean+sd,
+                    color = type),
+                size = 1.2) +
+  scale_color_manual(values = colors) +
+  labs(x = "chemical tested", 
+       y = "zone of inhibition [mm]") +
+  theme_classic() +
+  theme(legend.position = "none")
+
+
+```
+
+We can also compare the individual chemicals tested.
+
+```{r}
+#| label: fig-point-range-all-by-chemical
+#| fig-cap: "Mean zone of inhibition around discs soaked in disinfectants (blue) and antiseptics (purple)."
+
+# pick colors
+colors <- c("orange", "purple")
+
+# create dataframe with mean and sd
+summary <- inhibition %>%
+  group_by(type, chemical) %>%
+  summarise(mean = mean(distance_mm),
+            sd = sd(distance_mm))
+
+# plot data
+ggplot(summary) +
+  geom_pointrange(aes(x = chemical,
+                    y = mean,
+                    ymin = mean-sd,
+                    ymax = mean+sd,
+                    color = type),
+                size = 1.2) +
+  scale_color_manual(values = colors) +
+  labs(x = "chemical tested", 
+       y = "zone of inhibition [mm]") +
+  theme_classic() +
+  theme(legend.position = "none")
+
+```
+
+## Discussion 
+
+::: {.callout-warning title="Heads up"}
+As part of your lab report, you will need to discuss your results. Prepare for writing up your discussion by thinking through the following questions with your lab partner and the rest of your section. Remember to take notes as a starting point for your lab report (nothing is more intimidating than a blank page!).
+
+-   Did your results support your hypothesis?
+-   Compare your results to that of the entire class (this is equivalent to "comparing your results to results in the literature")
+    -   Which antiseptic would be most effective for cleaning up spoiled milk?
+    -   Which disinfectant would be most effective for cleaning up spoiled milk?
+-   Come to a conclusion about the efficacy of disinfectants and antiseptics.
+    -   In which situations is it most appropriate to use a disinfectant?
+    -   In which situations is it most appropriate to use an antiseptic?
+:::

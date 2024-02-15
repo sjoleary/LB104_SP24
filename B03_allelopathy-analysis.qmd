@@ -572,7 +572,7 @@ null_dist %>%
 ```
 
 ::: {.callout-tip title="Give it a try"}
-Compare your p-value to the threshold of significance we defined above to determine how to interpret the results of your chi\^{2}\$-test.
+Compare your p-value to the threshold of significance we defined above to determine how to interpret the results of your t-test.
 
 Then update the results you formulated earlier to add this information into your description of the results.
 
@@ -582,7 +582,7 @@ Finally, write a few sentences as a draft of how you would include this in the d
 ::: {.callout-note title="Answer" collapse="true"}
 In this case our p-value is 0.001 which means that is a less than 0.1% probability that we would observe a test statistic at least this extreme give our null hypothesis.
 
-This value is smaller than our specified threshold of significance and therefore we will reject our null hypothesis and conclude that the difference in the observed germination rates is statistically significant and consistent with our hypothesis that plant X has an effect on the germination rate.
+This value is smaller than our specified threshold of significance and therefore we will reject our null hypothesis and conclude that the difference in the observed differences in seedling length are statistically significant and consistent with our hypothesis that plant X has an effect on the germination rate.
 
 We can augment our results to include this information:
 

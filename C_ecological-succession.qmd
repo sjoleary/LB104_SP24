@@ -1,16 +1,19 @@
-# Ecological Succession {#sec-ecological-succession}
-
-the thord prelab needs to be changed to HW to prep for the last week; it's currently in quiz format, I should switch it to single document that they submit for easier grading
+# Marvelous Microbial World of Milk {#sec-ecological-succession}
 
 After completing this unit, you should be able to
 
--   
+-   describe the general process of ecological succession and formulate a testable hypothesis about changes in the microbial community of spoiled milk.
+-   distinguish between antiseptics and disinfectants and formulate a testable hypothesis about their efficacy on milk microbes.
+-   distinguish between quantitative and qualitative data.
+-   apply microscopy techniques to distinguish between bacterial shapes, yeasts and molds.
+-   inoculate culture pretri dishes and make smear slides by heat fixing and staining bacteria.
+-   collect, analyze and interpret qualitative data on microbe community composition and quantitative data on zone inhibition.
 
 For each of our units we will have a project folder[^c_ecological-succession-1] with an `Rproject`, `*.qmd`-files to complete lab assignments and write your lab report along with sub-directories to hold the data and results that you will generate. At the beginning of the semester, you should have created a directory on your Desktop or Documents folder on your laptop and named it something like `bi104` as a home directory for all of our project folders this semester.
 
 [^c_ecological-succession-1]: We will use "directory" and "folder" synonymously throughout this lab handbook
 
-Download the 03_Succession project folder. Once you have downloaded it, unzip the project directory into your `bi104` directory[^c_ecological-succession-2].
+Download the `03_Succession` project folder using the link provided to you on Canvas. Once you have downloaded it, unzip the project directory into your `bi104` directory[^c_ecological-succession-2].
 
 [^c_ecological-succession-2]: On a MacOS, your system it will automatically unzip the folder for you and you should be able to directly move the **entire unzipped directory** to your `bi104` folder. On a Windows OS you will need to right click and select `extract all`, then you should be able to specify which directory you want to unzip your file into.
 
@@ -19,3 +22,5 @@ Once you have done this, you can open the `Rproj` for this module either by doub
 Once you have opened a project you should see the project name in the top right corner[^c_ecological-succession-3].
 
 [^c_ecological-succession-3]: Pro tip: If you run into issues where a `quarto` document won't render or file paths aren't working (especially if things were working previously) one of your first steps should be to double check that the correct `Rproj` is loaded.
+
+In this unit we will explore ecological succession in milk as well as designing an experiment to test the effects of **disinfectants** compared to **antiseptics** on microbial organisms.

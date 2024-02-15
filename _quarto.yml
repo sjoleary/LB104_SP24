@@ -26,9 +26,8 @@ book:
     
     - part: C_ecological-succession.qmd
       chapters:
-        - C01_introduction.qmd
-        - C02_succession-I.qmd
-        - C03_succession-II.qmd
+        - C01_ecol-succession.qmd
+        - C02_antiseptic-disinfectant.qmd
     
     - part: D_lichens.qmd
       chapters: 

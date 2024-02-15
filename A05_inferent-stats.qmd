@@ -805,7 +805,7 @@ Complete the questions below to review some of what you have learned about descr
 ::: {.callout-tip title="Consider this"}
 Sampling error and standard error to important concepts that you should understand. Unfortunately, they have very similar names.
 
--   In your own words, describe what sampling error is and what it tells us about a data set and how it should inform how you interpret your results.
+-   In your own words, describe what standard error is and what it tells us about a data set and how it should inform how you interpret your results.
 -   In your own words, describe what sampling error is, key factors that can contribute to sampling error being larger or smaller, and how it should inform how you interpret your results.
 :::
 
@@ -857,8 +857,8 @@ Adelie <- penguins %>%
 
 # calculate the observed statistic
 observed_statistic <- Adelie %>%
-  specify(response = columnname,  # specify response/dependent
-          explanatory = columnname) %>%         # specify explanatory/independ
+  specify(response = flipper_length_mm,  # specify response/dependent
+          explanatory = sex) %>%         # specify explanatory/independ
   calculate(stat = "diff in means",      # test statistic
             order = c("male", "female")) # order to subtract the mean values
 
@@ -866,8 +866,8 @@ observed_statistic <- Adelie %>%
 observed_statistic
 
 null_dist <- Adelie %>%
-  specify(response = columnname,
-          explanatory = columnname) %>%               # specify values we are interested in
+  specify(response = flipper_length_mm,
+          explanatory = sex) %>%               # specify values we are interested in
   hypothesize(null = "independence") %>%       # null hypothesis: sex and weight are independent
   generate(reps = 1000,                        # generate 1000 samples for null distribution
            type = "permute") %>%               # randomly assign sex to weight to break association
@@ -918,8 +918,8 @@ df <- penguins %>%
 
 # calculate the observed statistic
 observed_statistic <- df %>%
-  specify(response = columnname,         # specify response/dependent
-          explanatory = columnname) %>%  # specify explanatory/independ
+  specify(response = bill_depth_mm,         # specify response/dependent
+          explanatory = species) %>%  # specify explanatory/independ
   calculate(stat = "diff in means",      # test statistic
             order = c("Chinstrap", "Adelie")) # order to subtract the mean values
 
@@ -927,8 +927,8 @@ observed_statistic <- df %>%
 observed_statistic
 
 null_dist <- df %>%
-  specify(response = columnname,
-          explanatory = columnname) %>%        # specify values we are interested in
+  specify(response = bill_depth_mm,
+          explanatory = species) %>%        # specify values we are interested in
   hypothesize(null = "independence") %>%       # null hypothesis: sex and weight are independent
   generate(reps = 1000,                        # generate 1000 samples for null distribution
            type = "permute") %>%               # randomly assign sex to weight to break association

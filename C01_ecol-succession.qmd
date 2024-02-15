@@ -1,0 +1,210 @@
+# Ecological Succession {#sec-ecological-succession}
+
+After completing this lab, you should be able to:
+
+-   Practice microscopy techniques to distinguish between bacterial shapes, yeasts, and molds
+-   Record observations of environmental changes in milk of various ages (refrigerated, 1d, 4d, and 8d old) and two different compositions (plain and chocolate)
+-   Apply laboratory techniques to inoculate culture petri plates for each milk treatment
+-   Write a testable hypothesis statement as to the expected changes in the microbe community as milk ages, and the expected differences between the plain and chocolate milk treatments
+-   Apply laboratory techniques to make a smear slide by heat fixing and staining bacteria from milk culture plates
+-   Collect qualitative data on microbe community composition in the different milk treatments, compare results to the initial hypothesis, and summarize the findings.
+
+## Introduction
+
+### Ecological Succession
+
+Succession is a well-documented ecological phenomenon recently covered in the Community Ecology chapter in lecture. As a reminder, ecological succession is defined as a transition in species composition within a community following a disturbance or during the establishment of a community in an uninhabited environment. This sequential change in species composition in successional communities is in response to ongoing physical changes in the environment. These physical environmental changes are often brought about by the very species that composed earlier successional stages. As one community grows, it modifies the environment, and a different community develops as a result.
+
+### Milk Nutrients and Spoilage
+
+Milk is a highly nutritious food containing important macromolecules: carbohydrates (lactose, a milk sugar), proteins (casein, commonly referred to as curd), and lipids (butterfat). This high level of nutrition makes milk an excellent medium for the growth of bacteria and other microbes. To minimize the risk of spoilage, milk is pasteurized. Pasteurization is a process by which milk is heated to a specific temperature for a set period of time to kill harmful bacteria. Pasteurizing milk does not sterilize it (sterilizing kills all bacteria) but merely destroys the pathogenic bacteria, leaving many bacteria that will multiply very slowly at refrigerator temperatures. However, if left at room temperature, the surviving bacteria will quickly grow and bring about milk spoilage.
+
+### Milk Microbes
+
+Our next few weeks of lab experiments will examine microbial succession in milk, so let’s first define what we mean by microbe (aka microorganism). Simply stated, microbes are organisms that are too small to be seen without using a microscope. For the purposes of this lab, microbes include three broad groups of biological taxa: bacteria (type of prokaryote), yeasts (unicellular fungi), and molds (multicellular fungi). These three types of microbes can be distinguished by their size, cell type (prokaryotic v. eukaryotic), and whether they are unicellular or multicellular.
+
+![Yeast and bacteria cells at 400x magnification.](images/yeast-bacteria.png){#fig-bact-yeast fig-alt="larger yeast cells with organelles visible and much smaller irregular shaped bacterial cells." fig-align="left"}
+
+The first comparison to make is between bacteria and yeast (@fig-bact-yeast). Superficially, they appear similar in that they are both microscopic and unicellular. However, there are a couple important differences. Recall from your first semester of General Biology that Bacteria are prokaryotes, which means that they have the smallest cells and lack organelles. Yeasts are single-celled fungi, which are eukaryotes, and like other eukaryotes they have generally larger cells that contain organelles, such as a nucleus and mitochondria. Comparing @fig-bact-yeast and @fig-mold-yeast shows just how much of a size difference there is between the two at 400x magnification.
+
+The other important comparison to make is between colonies of bacteria or yeast versus mold (@fig-mold-yeast). As a *multicellular* fungus, mold is easy to distinguish from the *unicellular* bacteria or yeast under a microscope. Even without magnification, molds are easily identified by their "fuzzy" appearance, which is due to their body morphology of long, filamentous strands growing over top each other.
+
+![Mold and yeast in a petri dish.](images/fuzzy-mold.png){#fig-mold-yeast}
+
+::: {.callout-tip title="Give it a try"}
+Let's take a closer look at the type of microbes you will encounter during this lab. Get yourself set up with a microscope. Then, for each of the groups of microbes indicated obtain examine the indicated specimen create a set of sketches labeling the key features. You will use these as a reference to identify microbes present in your spoiled milk later on, so make sure that you are familiar with the key features. Place digital copies of your sketches in your `images` folder and insert them into this document as part of your introduction. When you use the insert image button in the visual editor of Rstudio you should also insert a descriptive title including the magnification used using the caption field.
+:::
+
+#### Fungal Mold
+
+1.  Without magnification, **visually examine** the mold colony of *Penicillium camemberti.*[^c01_ecol-succession-1]
+2.  Under low magnification using a dissection microscope **sketch** a portion of the mold colony and **label** fungal hyphae (thin filamentous body)
+
+[^c01_ecol-succession-1]: Species Note: We won’t see *P. camemberti* in our spoiled milk experiment, but the species is a good example of fungal mold that grows on dairy. This species creates the flavorful “rind” on soft-ripened cheeses such as Camembert and Brie.
+
+\[Insert your sketch here - don't forget to add a title/caption!\]
+
+#### Bacteria shapes: bacilli (rods), cocci (spheres), and spirilla (spirals)
+
+1.  Make sure you have had a demo on proper use and clean-up of oil immersion.
+2.  With a compound microscope, **examine** prepared slide #380 of bacterial shapes using the oil immersion technique for highest magnification.
+3.  **Sketch** examples of the different bacterial forms, **labelling** each.
+
+\[Insert your sketches here - don't forget to add a title/caption!\]
+
+#### Yeast cells
+
+1.  Using a compound microscope, **examine** prepared slide #378 of yeast *Candida albicans*[^c01_ecol-succession-2].
+2.  **Sketch** several yeast cells and
+3.  List features that distinguish yeast cells from bacterial cells.
+
+[^c01_ecol-succession-2]: Species Note: We also won’t see *C. albicans* in our spoiled milk experiment, but the species is a good example of a common yeast. The species lives naturally in small amounts in all human bodies. When the yeast overgrows it causes infections, such as thrush (oral bumps) or vaginal yeast infections.
+
+\[Insert your sketches here - don't forget to add a title/caption!\]
+
+\[Contrast key features of bacteria and yeast cells for easy reference to distinguish them\]
+
+### Succession in Milk
+
+Biologists have discovered that, as pasteurized milk ages, changing conditions in the milk bring about a predictable, orderly succession of microbial communities. As anyone who has opened a bottle of spoiled milk will know, there are a couple distinctive physical attributes of spoiled milk - a strong sour odor is produced and the liquid coagulates into semisolid chunks (a process called curdling) - all in all, a very unpleasant experience. These physical changes are caused by various microbes in the milk. These microbes have been well-studied and the following facts will be useful as you write your hypothesis statement during lab class as to the expected changes in the microbe community as milk ages.
+
+1.  Refrigerated, unspoiled milk has a pH of \~6.5
+2.  *Streptococcus* (round-shaped cocci) and *Lactobacillus* (rod-shaped bacilli) bacteria naturally occur in milk and survive pasteurization
+3.  *Streptococcus* and *Lactobacillus* both ferment lactose sugar into lactic acid and acetic acid
+4.  *Streptococcus* bacteria thrive in milk with pH \> 5.5
+5.  *Lactobacillus* bacteria grow in milk with pH \> 4.5
+6.  Two common bacteria that always manage to get into milk from the environment, *Pseudomonas* and *Achromobacter* (both rod-shaped bacilli), digest butterfat and produce a putrid smell
+7.  An acidic environment causes casein to solidify, or curd
+8.  Yeasts and molds grow well in acidic environments
+
+## Formulate a Hypothesis
+
+::: {.callout-tip title="Consider this"}
+Write a clearly worded and testable hypothesis as to the expected changes in the microbe community as milk ages, and the expected differences between the plain and chocolate milk treatments.
+
+Consider your observations of the physical characteristics of the different milk treatments (pH, odor, consistency), as well as the 8 facts listed in the Succession in Milk paragraph above to inform your hypothesis writing to explain your reasoning.
+:::
+
+::: {.callout-caution title="Your Answer Here"}
+**Hypothesis 1: Ecological Succession in milk over time.**
+
+*Explain your reasoning behind your hypothesis:*
+
+**Hypothesis 2: Ecological succession in plain vs chocolate milk**
+
+*Explain your reasoning behind your hypothesis:*
+:::
+
+## Methods {#sec-methods}
+
+### Experimental Design
+
+We will be comparing the ecological succession of microbes at different ages for plain and chocolate milk.
+
+::: {.callout-tip title="Give it a try"}
+Use the table below ( @tbl-results) to describe the age, type, and physical characteristics for each milk treatment using the following categories and values:
+
+-   Milk Type: plain, chocolate
+-   Milk age
+-   pH (use a test strip to determine)
+-   odor: No, moderate, strong sour smell
+-   consistency: liquid, coagulation slight, moderate, chunky
+:::
+
+Since we are interested in microbes that grow in milk specifically, we will be using a culture medium designed specifically for testing milk.  The medium is called TGY agar, a name that is a shorthand for its constituent parts: Tryptone casein (protein), Glucose (carbohydrate), Yeast extract (source of vitamins), and agar (a solidifying agent).  TGY is a jelly-like nutrient that is designed specifically to grow milk microbes as it includes all the major macromolecules discussed earlier that are found in milk.
+
+::: {.callout-warning title="Heads up"}
+Together with your lab partner you will be assigned to culture microbes from one of 8 different milk treatments. Be sure to check with your lab instructor for which treatment has been assigned to your group.
+
+Make sure you have watch your lab instructor demo the lawn technique to create a microbial lawn on your plate before you get started.
+:::
+
+Inoculate TGY agar plate cultures of each milk type via lawn technique:
+
+-   Use a sterile swab to transfer several drops of milk culture to one edge of a sterile TGY plate\
+    (be sure to transfer from both the liquid and solid portions of the milk culture)
+-   Using the same swab, spread the milk to create a microbial lawn over about one-third of the plate
+-   Again using the same swab, pull down several wavy streaks of the microbes from this lawn
+-   Dispose of the used swab in a red autoclave bag
+-   Seal culture plates with parafilm, note your group’s initials and milk treatment with a sharpie
+
+The plates will be incubated by the instructor at room temperature for several days, then moved to refrigeration until next week’s lab time.
+
+### Data Collection
+
+::: {.callout-important title="Heads up"}
+For this lab we will be collecting **quantitative data.** This means that we will determine presence/absence of microbes in the different milk treatments[^c01_ecol-succession-3]. Follow the procedure below to create slide smear and heat fix the bacteria to identify and record the microbes present in your milk treatment.
+
+Every lab group will take a close look at their milk treatment and identify the presence of microbial groups. Remember to share the data with the other lab groups (and take a look at their slides, too) so that you have a complete data set of observed organisms in each milk treatment to analyze.
+:::
+
+[^c01_ecol-succession-3]: By contrast, for **quantitative data** we would be counting the number of individuals or determining the density to allow us to compare relative abundance of the different microbe types.
+
+**Prepare microscope slide of colony microbes**
+
+1.  Create a slide smear
+
+    -   On a clean slide, add a small drop of water (this must later air dry, so keep the drop *small*).
+    -   Using a fresh toothpick, scrape a small portion of bacteria from your culture plate and mix the scraping in the drop of water on the slide.
+    -   Use the toothpick to spread the bacteria-water mixture into a thin film, dab up extra moisture, then allow slide to air dry. Do not begin heat fixation until slide is [dry]{.underline} or the water will boil and damage bacteria.
+
+2.  Heat “fix” the bacteria: Hold the dried slide with a clothespin and pass it over a propane torch flame 3 times at a 45 degree angle. This should warm the slide, but not cook the bacteria; slide should never be too hot to touch
+
+3.  Stain the bacteria
+
+    -   Place slide on the support in staining tub and apply a few drops of safranin stain to the smear
+    -   Leave the stain to set for 2 minutes
+    -   Wash the stain off with a gentle stream of water from a squirt bottle so that the stain goes into the staining tub
+    -   Blot the stained slide gently with a paper towel (do not rub hard or bacteria will be removed)
+
+4.  Observe and record microbes present in each milk type by examining your culture plate and bacterial smear slide to record observations in the table below (@tbl-results).
+
+    -   Under compound microscope, examine bacterial smears for presence of different shapes/types: bacilli, cocci, or yeasts (use oil immersion technique for higher magnification, if needed)
+
+    -   Under dissecting scope, examine culture plates for bacterial colony types, yeasts, or molds
+
+## Results
+
+| Milk Type | Milk Age | pH  | odor | consistency | organisms present |
+|-----------|----------|-----|------|-------------|-------------------|
+|           |          |     |      |             |                   |
+|           |          |     |      |             |                   |
+|           |          |     |      |             |                   |
+|           |          |     |      |             |                   |
+|           |          |     |      |             |                   |
+|           |          |     |      |             |                   |
+|           |          |     |      |             |                   |
+|           |          |     |      |             |                   |
+|           |          |     |      |             |                   |
+
+: Add Caption {#tbl-results}
+
+::: {.callout-tip title="Consider this"}
+Use @tbl-results to write a short parapgraph describing the changing sequence of organisms and corresponding environmental changes during the succession of *plain* milk.
+:::
+
+::: {.callout-caution title="Your Answer Here"}
+\[Remember, at this point you are only describing your results, do not interpret them yet.\]
+:::
+
+::: {.callout-tip title="Consider this"}
+Use @tbl-results to write a short parapgraph describing the changing sequence of organisms and corresponding environmental changes during the succession of *chocolate* milk.
+:::
+
+::: {.callout-caution title="Your Answer Here"}
+\[Remember, at this point you are only describing your results, do not interpret them yet.\]
+:::
+
+## Discussion
+
+::: {.callout-tip title="Consider this"}
+Discuss your results in light of your hypothesis. Write a paragraph that states the broad research question and specific question experiment you executed during this lab and answers the following questions:
+
+-   Do the changes you described in your results section match your hypothesis?
+
+-   How does the succession in plain and chocolate milk compare? What are potential reasons for similarities and differences you observed?
+:::
+
+::: {.callout-caution title="Your Answer Here"}
+In this study, I investigated \[broad question asked/hypothesis tested\]. To achieve this, I \[specific data set + analysis used\]. I found that \[key results\] which \[statement about how this does or does not support your hypothesis\].
+:::
