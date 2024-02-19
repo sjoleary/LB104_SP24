@@ -2,11 +2,11 @@
 
 After completing this lab, you should be able to:
 
--   Practice microscopy techniques to distinguish between bacterial shapes, yeasts, and molds
--   Record observations of environmental changes in milk of various ages (refrigerated, 1d, 4d, and 8d old) and two different compositions (plain and chocolate)
--   Apply laboratory techniques to inoculate culture petri plates for each milk treatment
--   Write a testable hypothesis statement as to the expected changes in the microbe community as milk ages, and the expected differences between the plain and chocolate milk treatments
--   Apply laboratory techniques to make a smear slide by heat fixing and staining bacteria from milk culture plates
+-   Practice microscopy techniques to distinguish between bacterial shapes, yeasts, and molds.
+-   Record observations of environmental changes in milk of various ages (refrigerated, 1d, 4d, and 8d old) and two different compositions (plain and chocolate).
+-   Apply laboratory techniques to inoculate culture petri plates for each milk treatment.
+-   Write a testable hypothesis statement as to the expected changes in the microbe community as milk ages, and the expected differences between the plain and chocolate milk treatments.
+-   Apply laboratory techniques to make a smear slide by heat fixing and staining bacteria from milk culture plates.
 -   Collect qualitative data on microbe community composition in the different milk treatments, compare results to the initial hypothesis, and summarize the findings.
 
 ## Introduction
@@ -21,18 +21,42 @@ Milk is a highly nutritious food containing important macromolecules: carbohydra
 
 ### Milk Microbes
 
-Our next few weeks of lab experiments will examine microbial succession in milk, so let’s first define what we mean by microbe (aka microorganism). Simply stated, microbes are organisms that are too small to be seen without using a microscope. For the purposes of this lab, microbes include three broad groups of biological taxa: bacteria (type of prokaryote), yeasts (unicellular fungi), and molds (multicellular fungi). These three types of microbes can be distinguished by their size, cell type (prokaryotic v. eukaryotic), and whether they are unicellular or multicellular.
+Our next few weeks of lab experiments will examine microbial succession in milk, so let’s first define what we mean by microbe (aka microorganism). Simply stated, microbes are organisms that are too small to be seen without using a microscope. For the purposes of this lab, microbes include three broad groups of biological taxa:
+
+-   bacteria (type of prokaryote)
+-   yeasts (unicellular fungi),
+-   molds (multicellular fungi).
+
+These three types of microbes can be distinguished by their
+
+-   size
+-   cell type (prokaryotic v. eukaryotic)
+-   whether they are unicellular or multicellular.
 
 ![Yeast and bacteria cells at 400x magnification.](images/yeast-bacteria.png){#fig-bact-yeast fig-alt="larger yeast cells with organelles visible and much smaller irregular shaped bacterial cells." fig-align="left"}
 
 The first comparison to make is between bacteria and yeast (@fig-bact-yeast). Superficially, they appear similar in that they are both microscopic and unicellular. However, there are a couple important differences. Recall from your first semester of General Biology that Bacteria are prokaryotes, which means that they have the smallest cells and lack organelles. Yeasts are single-celled fungi, which are eukaryotes, and like other eukaryotes they have generally larger cells that contain organelles, such as a nucleus and mitochondria. Comparing @fig-bact-yeast and @fig-mold-yeast shows just how much of a size difference there is between the two at 400x magnification.
 
-The other important comparison to make is between colonies of bacteria or yeast versus mold (@fig-mold-yeast). As a *multicellular* fungus, mold is easy to distinguish from the *unicellular* bacteria or yeast under a microscope. Even without magnification, molds are easily identified by their "fuzzy" appearance, which is due to their body morphology of long, filamentous strands growing over top each other.
-
 ![Mold and yeast in a petri dish.](images/fuzzy-mold.png){#fig-mold-yeast}
 
+The other important comparison to make is between colonies of bacteria or yeast versus mold (@fig-mold-yeast). As a *multicellular* fungus, mold is easy to distinguish from the *unicellular* bacteria or yeast under a microscope. Even without magnification, molds are easily identified by their "fuzzy" appearance, which is due to their body morphology of long, filamentous strands growing over top each other.
+
 ::: {.callout-tip title="Give it a try"}
-Let's take a closer look at the type of microbes you will encounter during this lab. Get yourself set up with a microscope. Then, for each of the groups of microbes indicated obtain examine the indicated specimen create a set of sketches labeling the key features. You will use these as a reference to identify microbes present in your spoiled milk later on, so make sure that you are familiar with the key features. Place digital copies of your sketches in your `images` folder and insert them into this document as part of your introduction. When you use the insert image button in the visual editor of Rstudio you should also insert a descriptive title including the magnification used using the caption field.
+Let's take a closer look at the type of microbes you will encounter during this lab. You will use this document to compile all your observations, results, and discussion questions and submit it as a homework assignment. Make sure you are keeping good notes throughout and that you take the time to go back over and edit them before you submit.
+
+Get yourself set up with a microscope. Then, for each of the groups of microbes indicated obtain examine the indicated specimen to create a set of sketches with labeled key features. You will use these as a reference to identify microbes present in your spoiled milk later on, so make sure that you are familiar with the key features.
+
+Place digital copies of your sketches in your `images` folder - you can sketch them on paper and take pictures, or for you high-tech digital notetakers sketch them on a tablet. Then insert them into this document as part of your introduction. When you use the insert image button in the visual editor of Rstudio you should also insert a descriptive title including the magnification used using the caption field.
+
+If you are using an iPhone very likely your default output is HEIC which is an apple-specific high efficiency file format. They are great if you are keeping pictures on your phone - not so great when you are sharing them, especially cross platform. You can make a small change on your iphone options to create a readily shareable and outside-of-apple-products-usable file format.
+
+1. Open the Camera section in the Settings app
+
+2. Under Formats, select "most compatible" instead of "high efficiency"
+
+Now, when you take a new photo or video it will be saved as JPEG instead of HEIF/HEIC.
+
+
 :::
 
 #### Fungal Mold
@@ -77,7 +101,23 @@ Biologists have discovered that, as pasteurized milk ages, changing conditions i
 7.  An acidic environment causes casein to solidify, or curd
 8.  Yeasts and molds grow well in acidic environments
 
-## Formulate a Hypothesis
+## Methods {#sec-methods}
+
+### Experimental Design
+
+We will be comparing the ecological succession of microbes at different ages for plain and chocolate milk.
+
+::: {.callout-tip title="Give it a try"}
+Use the table below ( @tbl-results) to describe the age, type, and physical characteristics for each milk treatment using the following categories and values:
+
+-   Milk Type: plain, chocolate
+-   Milk age
+-   pH (use a test strip to determine)
+-   odor: No, moderate, strong sour smell
+-   consistency: liquid, coagulation slight, moderate, chunky
+:::
+
+### Formulate a Hypothesis
 
 ::: {.callout-tip title="Consider this"}
 Write a clearly worded and testable hypothesis as to the expected changes in the microbe community as milk ages, and the expected differences between the plain and chocolate milk treatments.
@@ -95,22 +135,6 @@ Consider your observations of the physical characteristics of the different milk
 *Explain your reasoning behind your hypothesis:*
 :::
 
-## Methods {#sec-methods}
-
-### Experimental Design
-
-We will be comparing the ecological succession of microbes at different ages for plain and chocolate milk.
-
-::: {.callout-tip title="Give it a try"}
-Use the table below ( @tbl-results) to describe the age, type, and physical characteristics for each milk treatment using the following categories and values:
-
--   Milk Type: plain, chocolate
--   Milk age
--   pH (use a test strip to determine)
--   odor: No, moderate, strong sour smell
--   consistency: liquid, coagulation slight, moderate, chunky
-:::
-
 Since we are interested in microbes that grow in milk specifically, we will be using a culture medium designed specifically for testing milk.  The medium is called TGY agar, a name that is a shorthand for its constituent parts: Tryptone casein (protein), Glucose (carbohydrate), Yeast extract (source of vitamins), and agar (a solidifying agent).  TGY is a jelly-like nutrient that is designed specifically to grow milk microbes as it includes all the major macromolecules discussed earlier that are found in milk.
 
 ::: {.callout-warning title="Heads up"}
@@ -119,7 +143,7 @@ Together with your lab partner you will be assigned to culture microbes from one
 Make sure you have watch your lab instructor demo the lawn technique to create a microbial lawn on your plate before you get started.
 :::
 
-Inoculate TGY agar plate cultures of each milk type via lawn technique:
+Inoculate TGY agar plate with the cultures for the milk type you have been assigned to via lawn technique:
 
 -   Use a sterile swab to transfer several drops of milk culture to one edge of a sterile TGY plate\
     (be sure to transfer from both the liquid and solid portions of the milk culture)
@@ -133,14 +157,14 @@ The plates will be incubated by the instructor at room temperature for several d
 ### Data Collection
 
 ::: {.callout-important title="Heads up"}
-For this lab we will be collecting **quantitative data.** This means that we will determine presence/absence of microbes in the different milk treatments[^c01_ecol-succession-3]. Follow the procedure below to create slide smear and heat fix the bacteria to identify and record the microbes present in your milk treatment.
+For this lab we will be collecting **qualitative data.** This means that we will determine presence/absence of microbes in the different milk treatments[^c01_ecol-succession-3]. Follow the procedure below to create slide smear and heat fix the bacteria to identify and record the microbes present in your milk treatment.
 
 Every lab group will take a close look at their milk treatment and identify the presence of microbial groups. Remember to share the data with the other lab groups (and take a look at their slides, too) so that you have a complete data set of observed organisms in each milk treatment to analyze.
 :::
 
 [^c01_ecol-succession-3]: By contrast, for **quantitative data** we would be counting the number of individuals or determining the density to allow us to compare relative abundance of the different microbe types.
 
-**Prepare microscope slide of colony microbes**
+**Prepare microscope slide of colony microbes & collect results**
 
 1.  Create a slide smear
 
@@ -198,7 +222,7 @@ Use @tbl-results to write a short parapgraph describing the changing sequence of
 ## Discussion
 
 ::: {.callout-tip title="Consider this"}
-Discuss your results in light of your hypothesis. Write a paragraph that states the broad research question and specific question experiment you executed during this lab and answers the following questions:
+Discuss your results in light of your hypothesis.s Write a paragraph that states the broad research question and specific question experiment you executed during this lab by completing the template below and then address the following questions:
 
 -   Do the changes you described in your results section match your hypothesis?
 
