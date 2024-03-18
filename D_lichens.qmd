@@ -1,2 +1,32 @@
-
 # Lichens as Bioindicators {#sec-lichens-as-bioindicators}
+
+After completing this unit, you should be able to
+
+-   describe how bioindicator organisms can be used to assess land-use change, air pollution and other environmental impacts.
+-   describe how data gathered from multiple large-scale monitoring efforts (e.g. National Ecological Observatory Network (NEON), National Land Cover Data (NLCD), air quality (US EPA)) can be combined to investigate ecological questions at different spatial scales.
+-   use insights from large-scale monitoring efforts to formulate a hypotheses at a local scale.
+-   describe how abiotic and biotic factors impact the presence, abundance and distribution of lichen on local and regional scales.
+-   describe how to make abiotic and biotic measurements in a field setting.
+-   describe different methods for species identification and morpho-species classification.
+
+For each of our units we will have a project folder[^d_lichens-1] with an `Rproject`, `*.qmd`-files to complete lab assignments and write your lab report along with sub-directories to hold the data and results that you will generate. At the beginning of the semester, you should have created a directory on your Desktop or Documents folder on your laptop and named it something like `bi104` as a home directory for all of our project folders this semester.
+
+[^d_lichens-1]: We will use "directory" and "folder" synonymously throughout this lab handbook
+
+Download the `04_Lichen` project folder using the link provided to you on Canvas. Once you have downloaded it, unzip the project directory into your `bi104` directory[^d_lichens-2].
+
+[^d_lichens-2]: On a MacOS, your system it will automatically unzip the folder for you and you should be able to directly move the **entire unzipped directory** to your `bi104` folder. On a Windows OS you will need to right click and select `extract all`, then you should be able to specify which directory you want to unzip your file into.
+
+Once you have done this, you can open the `Rproj` for this module either by double clicking on it which will launch `Rstudio` or by opening `Rstudio` and then using `File > Open Project` or by clicking on the `Rproject` icon in the top right of your program window and selecting `Open Project`.
+
+Once you have opened a project you should see the project name in the top right corner[^d_lichens-3].
+
+[^d_lichens-3]: Pro tip: If you run into issues where a `quarto` document won't render or file paths aren't working (especially if things were working previously) one of your first steps should be to double check that the correct `Rproj` is loaded.
+
+In this unit we will explore how abiotic and biotic factors impact the presence, abundance, and distribution of lichens in diverse landscapes. First, we will explore a continental-scale data set derived from long-term monitoring stations in the NEON[^d_lichens-4] to identify relationships between lichen presence and percent cover and environmental and land-use variables including air quality, habitat type, and tree cover. Then you will generate a hypotheses on how you expect abiotic and biotic factors to impact lichen distribution on a local scale and we will perform a survey on the Saint Anselm campus to assess lichen percent cover to test your hypotheses and score local air quality using lichens as bioindicators.
+
+[^d_lichens-4]: National Ecological Observation Network
+
+## Acknowledgements
+
+This Unit is based on the Lichen EREN module and contains modified versions of their distributed materials.

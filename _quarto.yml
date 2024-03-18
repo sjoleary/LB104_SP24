@@ -31,9 +31,10 @@ book:
     
     - part: D_lichens.qmd
       chapters: 
-        - D01_spatial-analysis.qmd
-        - D02_lichen-data-collection.qmd
-        - D03_lichen-analysis.qmd
+        - D01_continental-scale.qmd
+        - D02_local-hypothesis.qmd
+        - D03_local-survey.qmd
+        - D04_lichen-analysis.qmd
 
     - part: Z_supplements.qmd
       chapters:

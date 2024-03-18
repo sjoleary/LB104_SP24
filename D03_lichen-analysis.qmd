@@ -1,1 +1,0 @@
-# Lichen data analysis {#sec-lichen-data-analysis}

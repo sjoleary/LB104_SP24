@@ -1,13 +1,13 @@
-# Disinfectants and Antiseptics
+# Disinfectants and Antiseptics {#sec-disinfectants-and-antiseptics}
 
 After completing this lab, you should be able to:
 
 -   Distinguish between the effects of disinfectants and antiseptics.
 -   Set up a zone of inhibition test to compare the effects of antiseptic and disinfectant treatments.
 
-## Introduction
+## Introduction {#sec-introduction}
 
-### Mutualistic and Pathogenic Bacteria
+### Mutualistic and Pathogenic Bacteria {#sec-mutualistic-and-pathogenic-bacteria}
 
 In this second part of this unit we will test the efficacy of antimicrobial agents on controlling milk microbe growth. Bacteria are found almost everywhere on Earth, and most species are directly or indirectly beneficial to other organisms. These **mutualistic bacteria** are necessary to maintain optimum environments in animal and plant bodies, and in environmental systems. In fact, humans are so dependent upon mutualistic bacteria that numerically there are more bacterial cells in a healthy human body than human cells. Given that bacteria cells are so much smaller than human cells, by volume and mass we are still mostly composed of human cells[^c02_antiseptic-disinfectant-1].
 
@@ -15,14 +15,14 @@ In this second part of this unit we will test the efficacy of antimicrobial agen
 
 However, even beneficial species, if they are reproducing at an uncontrolled rate, are potentially harmful or destructive to their environment. Furthermore, not all species of bacteria are beneficial to other organisms. Several species of bacteria and fungi are known to be **pathogenic**, that is, to cause disease in animals and plants. The growth of these pathogenic microbes must be controlled. Chemical agents have been developed that control bacterial and fungal growth. In today's lab your will initiate a new experiment that investigates the efficacy of two of these growth-controlling agents: antiseptics and disinfectants.
 
-### Antiseptics versus Disinfectants
+### Antiseptics versus Disinfectants {#sec-antiseptics-versus-disinfectants}
 
 There are three major categories of chemical agents used to control bacterial growth: **antibiotics**, **antiseptics**, and **disinfectants**. Antibiotics are chemicals produced by species of bacteria or fungi that inhibit the growth of other bacteria or fungi. These chemicals are packaged into the familiar pills that doctors prescribe to treat infections. For this week's lab we will be experimenting with the other two categories of chemicals: antiseptics and disinfectants.
 
 -   **Antiseptics** are chemical agents that are used to control bacteria on living tissue, such as skin. Familiar examples include: Bactericidal soap, Baking soda, Hydrogen peroxide, Listerine, and Rubbing alcohol.
 -   **Disinfectants** are chemical agents used on inanimate objects, such as countertops. Familiar examples of these include: Ammonia, Clorox, Lysol, and Vinegar.
 
-## Methods
+## Methods {#sec-methods}
 
 ::: {.callout-tip title="Consider this"}
 In this experiment, you will choose one antiseptic to compare to one disinfectant with regard to their relative efficacy at controlling microbial growth in a culture of the 4-day old plain milk treatment. For this experiment you will be working with a lab partner.
@@ -46,7 +46,7 @@ Take some notes below that you will be able to refer to when you write your lab 
 
 **Specific research question you are investigating in your experiment**
 
-\[Be as specific as possible as two what you are testing!\]
+\[Be as specific as possible as to what you are testing!\]
 
 **Experimental Design**
 
@@ -61,7 +61,7 @@ Take some notes below that you will be able to refer to when you write your lab 
     -   
 :::
 
-### Experimental Set-up
+### Experimental Set-up {#sec-experimental-set-up}
 
 ::: {.callout-warning title="Heads up"}
 A bacterial lawn is like a lawn of grass - a uniform, even layer of organisms covering an entire surface. The success of your experiment hinges on the uniformity of your bacterial lawn. Before you get started, make sure that you have seen your instructor demo the technique!
@@ -78,7 +78,7 @@ For this experiment, all the lab groups on your section will be swabbing from th
 -   Keeping careful track of which treatment is which, cover and seal the petri plate with parafilm, then with a sharpie draw a line delineating between the two sides; note your group’s initials and indicate which side has antiseptic disks and which side has disinfectant disks.
 -   Culture plates will be incubated at room temperature for several days and then refrigerated.
 
-### Collect zone of inhibition results for antimicrobial activity
+### Collect zone of inhibition results for antimicrobial activity {#sec-collect-zone-of-inhibition-results-for-antimicrobial-activity}
 
 ::: {.callout-warning title="Heads up"}
 We will be using a test that is widely used by microbiologists to quantify the effectiveness of antimicrobial agents such as antibiotics, antiseptics, or disinfectants on microbial growth. OUr experimental design follows the Kirby-Bauer or **Zone of Inhibition test**
@@ -108,7 +108,7 @@ Before you get started, confirm the final version of your group's hypothesis and
 
 [^c02_antiseptic-disinfectant-2]: It will automatically have \*.tsv as the file ending; but you will likely have to change the filename to make sure there are no spaces.
 
-### Data analysis
+### Data analysis {#sec-data-analysis}
 
 ::: {.callout-warning title="Heads up"}
 We are going to explore your results by applying the key concepts you have learned about descriptive and inferential stats. After completing this component you will use the provided template to write a lab report.
@@ -148,7 +148,7 @@ library(infer)
 
 ```
 
-#### Get the data
+#### Get the data {#sec-get-the-data}
 
 Let's start by reading in our data set as a `data.frame` that we can compute on in `R`.
 
@@ -197,7 +197,7 @@ You will want to determine the mean and standard deviation of the zone of inhibi
 In this case, we do not have a lot of measurements so a histogram is probably not very helpful, but a bar chart or similar comparing the mean and standard deviation is probably a helpful visualization to communicate our results.
 :::
 
-#### Summarize the data
+#### Summarize the data {#sec-summarize-the-data}
 
 We will need to summarize our results to evaluate our findings.
 
@@ -293,7 +293,7 @@ As we know, our set of summary statistics and data visualization enable us to pr
 Argue which type of statistical test we should apply and outline the key steps you will need to take to perform the test.
 :::
 
-#### Test for significance
+#### Test for significance {#sec-test-for-significance}
 
 We need to apply a $t$-test to evaluate the difference between means.
 
@@ -348,7 +348,7 @@ Now, let's simulate our null distribution and compare how our observed test stat
 
 ```{r}
 #| label: fig-null-dist-t-test
-#| fig-cap: "Null distribution of t test statistic assuming presence of plant material has no effect on radish seed growth. The calculated t-square test statistic is indicated by the red line. Values observed in the null distribution that are more extreme that the t-statistic calculated for the empirical data set are shaded in red."
+#| fig-cap: "Null distribution of t-test statistic assuming type of chemical has no effect on the size of the zone of inhibition. The calculated t-square test statistic is indicated by the red line. Values observed in the null distribution that are more extreme that the t-statistic calculated for the empirical data set are shaded in red."
 
 # create null distribution
 null_dist <- df %>%
@@ -392,7 +392,7 @@ Finally, write a few sentences as a draft of how you would include this in the d
 ::: {.callout-note title="Answer" collapse="true"}
 In this case our p-value is 0.004 which means that is a less than 0.4% probability that we would observe a test statistic at least this extreme given our null hypothesis.
 
-This value is smaller than our specified threshold of significance and therefore we will reject our null hypothesis and conclude that the difference in the observed germination rates is statistically significant and consistent with our hypothesis that plant X has an effect on the germination rate.
+This value is smaller than our specified threshold of significance and therefore we will reject our null hypothesis and conclude that the difference in the chemical being tested is statistically significant and consistent with our hypothesis that the type of chemical (antiseptic/disinfection) being used impacts the size of the zone of inhibition.
 
 We can augment our results to include this information:
 
@@ -436,6 +436,7 @@ ggplot(summary) +
 
 
 ```
+
 And we should determine if these differences are statistically different from each other:
 
 ```{r}
@@ -465,10 +466,10 @@ inhibition %>%
 
 ```
 
-## Discussion
+## Discussion {#sec-discussion}
 
 ::: {.callout-warning title="Heads up"}
-As part of your lab report, you will need to discuss your results. Prepare for writing up your discussion by thinking through the following questions with your lab partner and the rest of your section. Remember to take notes as a starting point for your lab report (nothing is more intimidating than a blank page!).
+As part of your lab report, you will need to discuss your results. Prepare for writing up your discussion by thinking through the following questions with your lab partner and the rest of your labb section. Remember to take notes as a starting point for your lab report[^c02_antiseptic-disinfectant-4].
 
 -   Did your results support your hypothesis?
 -   Compare your results to that of the entire class (this is equivalent to "comparing your results to results in the literature")
@@ -478,3 +479,5 @@ As part of your lab report, you will need to discuss your results. Prepare for w
     -   In which situations is it most appropriate to use a disinfectant?
     -   In which situations is it most appropriate to use an antiseptic?
 :::
+
+[^c02_antiseptic-disinfectant-4]: Nothing is more intimidating than a blank page!

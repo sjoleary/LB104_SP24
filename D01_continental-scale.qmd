@@ -1,0 +1,90 @@
+# Continental-scale investigation of lichen {#sec-spatial-analysis}
+
+```{r}
+#| label: set-up
+#| include: false
+
+# set options
+knitr::opts_chunk$set(
+  tidy = FALSE, 
+  message = FALSE,
+  warning = FALSE)
+
+options(htmltools.dir.version = FALSE)
+
+```
+
+## Learning Objectives {#sec-learning-objectives}
+
+**After completing this activity, you should be able to**
+
+-   
+
+## Introduction
+
+The distribution and abundance of species are affected by the abiotic (non-living) and biotic (living) environment. Land-use modification and other anthropogenic drivers of environmental change including air pollution affect landscape, local, and micro-site conditions. This, in turn, influences the ability of a given species to survive or thrive in an area. In this modules we are going to explore how abiotic and biotic variables affect the presence and abundance of lichens at various spatial scales.
+
+### Lichens are ubiquitous, composite organisms with distinct habitat requirements
+
+Lichens are composite organisms, which means that they are made up of two independent organisms living in symbiosis[^d01_continental-scale-1]. @fig-lichen-thallus shows the generalized structure of a lichen. Lichens are mutualistic symbionts, meaning that both the fungus (the **mycobiont**) and algae or cyanobacteria (the **photobiont**) benefit from the close association. The algae or cyanobacteria are photosynthetic, so the fungus benefits from the carbon compounds (sugars) that the algae or cyanobacteria produce. In turn, the algae or cyanobacteria gain protection, nutrients, and moisture from the fungus.
+
+[^d01_continental-scale-1]: Symbiotic interactions are long-term interactions between two organisms in close physical proximity in which at least one partner benefits while the other organisms is either helped, harmed, or the interaction has no effect.
+
+[![Generalized structure of a lichen thallus (non-reproductive tissues or vegetative parts): upper cortex (outer covering provided by the fungus), algal or cyanobacteria layer (photobiont), and medulla (stores nutrients produced by the photobiont).](images/lichen-thallus.gif){#fig-lichen-thallus}](https://archive.bigelow.org/mitzi/spray_3.html)
+
+Lichens can be classified based on the structure of their **thallus** - their nonreproductive tissues or vegetative parts. Luckily,
+
+There are three main types of lichens (@fig-lichen-morphotypes)
+
+-   **Crustose lichens** are crust like and strongly adhere to the substrate; their color varies
+
+-   **Foliose lichens** are leaf-like; they are 2 dimensional (i.e they have top and bottom "sides); they are flat and leafy like lettuce with ridges or bumpy.
+
+-   **Fruticose lichen** are branched-upright or or **pendulous** (hanging down loosely); they are
+
+    3-dimensional and look hair-like or upright and shrubby
+
+![Three main types of lichens: crustose (thin, crust-like, very tightly attached to substrate), foliose (flat and leaf-like; 2-dimensional), and fruticose (upright, like tiny trees or shrubs, or hanging down like a miniature vine).](images/lichen-morpho-classification.jpg){#fig-lichen-morphotypes}
+
+Lichens are widespread and can be found in harsh climates, from hot deserts to cold alpine summits. However, within those ecosystems, they are found in specific **habitats** (natural environments in which they live). The key requirements for lichen habitat are: **water, air, nutrients, light**,and **substrate type**. 
+
+-   **Water.** Lichens easily absorb water and water vapor through the outler layer of cells (**cortex)**, but lack mechanisms to conserve water during drought periods. The water content of lichens is determined by their surrounding environment[^d01_continental-scale-2]: lichens lose water, dry up, and become dormant during dry periods, and rehydrate and become photosynthetically-active when moisture is available.
+-   **Air.** Not only do lichens absorb water from surrounding air, lichens also absorb nutrients and pollutants. As a results, they are sensitive to many air-borne pollutants, and the presence and abundance of some species of lichen are reduced in areas high in atmospheric pollution. For example, sulfur dioxide (SO2) combines with moisture in the atmosphere to form sulfurous acid (H2SO3) or sulfuric acid (H2SO4). High levels of SO2 pollution are associated with decreased lichen respiration and photosynthesis, deactivation of enzymes resulting in reduced metabolic activity and reduced membrane integrity.
+-   **Nutrients.** Nutrients (e.g., nitrogen, carbon, oxygen) are needed for cellular processes that support lichen growth and survival. Lichens obtain their nutrients from air and water, and, to a lesser extent, their substrate.
+-   **Light.** Lichens are able to fix energy and carbon using photosynthesis and, thus, they require light + carbon dioxide + water.
+-   **Substrate.** Lichens require a substrate to attach to, and can be found on both natural (e.g., trees, rocks, soil) and artificial substrates (e.g., tombstones, buildings, abandoned equipment). Furthermore, characteristics of the substrate can influence how lichens interact with other aspects of their habitat. For example, substrate pH (e.g., limestone, tree bark with high (basic) pH) can counteract the acidity of SO2 pollution, so that in high pollution areas lichens may be found only on sites with high (basics) pH.
+
+[^d01_continental-scale-2]: Here's a fun scrabble word: This means they are **poikilohydrous.**
+
+### Lichens are bioindicators used to assess ecosystem health
+
+Lichens are ubiquitous in urban and rural areas, and are also an important group of **bioindicators** - an organism whose presence, absence, and/or abundance in an area gives an indication of the degree of health of that ecosystem. For example, some organisms are very sensitive to pollution in the environment (@fig-pollution), so if pollutants are present, that organism may be absent, or may have different morphology or physiology, or may change its behavior. In contrast, other organisms are less sensitive to pollution in the environment. Documenting which of these bioindicator organisms are present, absent, and/or abundant in an area can be valuable in assessing ecosystem health and understanding whether or not an ecosystem may be impaired by pollution.
+
+![Examples of species with different levels of sensitivity to pollution.](images/lichen-pollution-indicator.jpg){#fig-pollution}
+
+Similarly, some species of lichens are very sensitive to atmospheric pollution (e.g., nitrogen, sulfur, lead), whereas other species of lichens are tolerant to those pollutants. Notably, the degree of sensitivity of a lichen to air pollution varies roughly with their growth form. This makes lichens ideal to use as bioindicators for air pollution. For this lab, we will be using a modified version of the Hawksworth and Rose (1970) air quality index. This air quality index is based on the type of lichen(s) present, and ranges from 1 to 10, with 1 indicating the poorest air quality and 10 indicating the best air quality (@tbl-air-pollution). In general, lichens that are least sensitive to air quality are crustose, and lichens most sensitive to pollution are fruticose, with foliose lichens in between those two extremities. Two species of fruticose lichen, *Lobaria pulmonaria* and *Teloschistes exilis*, are extremely sensitive to air pollution and, thus, if either species are present, the air quality is considered very high.
+
+|                                                                                                   |                  |                       |
+|-----------------------------------------|----------------|----------------|
+| **Lichen Type**                                                                                   | **Air Quality**  | **Air Quality Score** |
+| No lichens present                                                                                | very poor        | 1                     |
+| Crustose only                                                                                     | poor             | 3                     |
+| Foliose present, but no fruticose                                                                 | moderate to good | 6                     |
+| Fruticose present                                                                                 | good             | 9                     |
+| Lobaria pulmonaria or Teloschistes exilis present; fruticose lichens, very sensitive to pollution | very high        | 10                    |
+
+: Modified Hawksworth air quality index {#tbl-air-pollution}
+
+### Long-term monitoring networks allow us to ask questions at continental-scales
+
+The National Ecological Observation Network (NEON) is a network of long-term monitoring stations with the goal of enabling a better understanding and forecasting of climate change, land use change, and impacts of invasive species on a continental scale. NEON field sites encompass 20 ecoclimate domains[^d01_continental-scale-3] representing distinct regions of vegetation, landforms, and ecosystem dynamics capturing the full range of US ecological & climate diversity. Each domain has at least one field site where a wide range of sensor measurements and field observations are used to generate comprehensive data on plants, animals, soil nutrients, freshwater systems, and the atmosphere using observational sampling during growing season, year-round high resolution data using automated instruments and airborne remote sensing surveys every two to five years. The goal of this long-term data collection is to capture temporal change and spatial diversity at site, regional, and continental-level scales.
+
+[^d01_continental-scale-3]: Think of the eco-domains as being very similar to the concept of partitioning the biosphere into biomes. Specifically, NEON statistically partitioned the continental US, Hawaii and Puerto Rico into eco-domains that represent distinct regions with characteristic vegetation, landforms, and ecosystem dynamics
+
+Long-term monitoring networks and standardized sampling protocols as implemented in NEON contribute to the reliability, comparability, and utility of environmental and scientific data, supporting better decision-making and understanding of complex systems. Especially in the context of understanding phenomena at large temporal and spatial scales, long-term monitoring enables identification of trends and patterns over extended periods, helping researchers and policymakers understand changes and make informed decisions. Long-term data collection helps establish baseline conditions, which is essential for assessing the impact of disturbances or human activities over time. In turn, ongoing continuous monitoring then provides the ability to detect changes in environmental variables or ecosystems early on, which is crucial for addressing emerging issues or threats. Similarly, it enhances the reliability and accuracy of data by providing a comprehensive understanding of variability and reducing the impact of short-term fluctuations or anomalies.
+
+Standardized sampling plays a critical role in long-term monitoring as it ensures consistency in data collection methods, making it easier to compare results across different studies, locations, and time periods. Specifically, the standardization allows for meaningful comparisons between different sites or regions, facilitating a broader understanding of patterns and trends on a larger scale. This contributes to the overall quality assurance of data by minimizing variations introduced by different sampling techniques or methodologies. Additionally, standardization often leads to more efficient use of resources, as researchers can adopt established protocols rather than developing new methods for each study.
+
+## Analysis & Results
+
+## Discussion

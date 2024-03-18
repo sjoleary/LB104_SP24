@@ -50,13 +50,11 @@ Place digital copies of your sketches in your `images` folder - you can sketch t
 
 If you are using an iPhone very likely your default output is HEIC which is an apple-specific high efficiency file format. They are great if you are keeping pictures on your phone - not so great when you are sharing them, especially cross platform. You can make a small change on your iphone options to create a readily shareable and outside-of-apple-products-usable file format.
 
-1. Open the Camera section in the Settings app
+1.  Open the Camera section in the Settings app
 
-2. Under Formats, select "most compatible" instead of "high efficiency"
+2.  Under Formats, select "most compatible" instead of "high efficiency"
 
 Now, when you take a new photo or video it will be saved as JPEG instead of HEIF/HEIC.
-
-
 :::
 
 #### Fungal Mold
@@ -66,7 +64,7 @@ Now, when you take a new photo or video it will be saved as JPEG instead of HEIF
 
 [^c01_ecol-succession-1]: Species Note: We won’t see *P. camemberti* in our spoiled milk experiment, but the species is a good example of fungal mold that grows on dairy. This species creates the flavorful “rind” on soft-ripened cheeses such as Camembert and Brie.
 
-\[Insert your sketch here - don't forget to add a title/caption!\]
+\[Insert your sketch here - don't forget to add a descriptive title including magnification!\]
 
 #### Bacteria shapes: bacilli (rods), cocci (spheres), and spirilla (spirals)
 
@@ -74,7 +72,7 @@ Now, when you take a new photo or video it will be saved as JPEG instead of HEIF
 2.  With a compound microscope, **examine** prepared slide #380 of bacterial shapes using the oil immersion technique for highest magnification.
 3.  **Sketch** examples of the different bacterial forms, **labelling** each.
 
-\[Insert your sketches here - don't forget to add a title/caption!\]
+Insert your sketch here - don't forget to add a descriptive title including magnification!\]
 
 #### Yeast cells
 
@@ -84,9 +82,9 @@ Now, when you take a new photo or video it will be saved as JPEG instead of HEIF
 
 [^c01_ecol-succession-2]: Species Note: We also won’t see *C. albicans* in our spoiled milk experiment, but the species is a good example of a common yeast. The species lives naturally in small amounts in all human bodies. When the yeast overgrows it causes infections, such as thrush (oral bumps) or vaginal yeast infections.
 
-\[Insert your sketches here - don't forget to add a title/caption!\]
+Insert your sketch here - don't forget to add a descriptive title including magnification
 
-\[Contrast key features of bacteria and yeast cells for easy reference to distinguish them\]
+\[Contrast key features of bacteria and yeast cells for easy reference to distinguish them. If you did not include this as annotations on your sketches, make a few notes here.\]
 
 ### Succession in Milk
 
