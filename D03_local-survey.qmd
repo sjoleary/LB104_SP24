@@ -1,0 +1,151 @@
+# Saint Anselm Campus Lichen Survey {#sec-saint-anselm-campus-lichen-survey}
+
+```{r}
+#| label: set-up
+#| include: false
+
+# set options
+knitr::opts_chunk$set(
+  tidy = FALSE, 
+  message = FALSE,
+  warning = FALSE)
+
+options(htmltools.dir.version = FALSE)
+
+```
+
+## Prepare your lichen sampling grid {#sec-prepare-your-sampling-grid}
+
+Collect the following items to make your sampling grid:
+
+-   Lichen sampling grid template
+-   Quart freezer baggie
+-   Tape (to hold the baggie and grid in place)
+-   permanent marker
+
+Work with your lab partner to create a sampling grid to determine lichen coverage in the field:
+
+1.  Take the double-layer freezer baggie, and separate the two layers.
+2.  Place the freezer baggie on top of the lichen sampling grid template.
+3.  Secure the template and freezer baggie to a flat surface, so that they don’t move.
+4.  Using the Sharpie permanent marker, trace grid circles and lines . Try to avoid making any smudges. (Do not rush or you may cause the freezer baggie to slip.)
+5.  Let the ink dry.
+
+## Field Sampling Protocol {#sec-field-sampling-protocol}
+
+*You will be given a physical copy of the field sampling protocol along with data sheets to take with you into the field.*
+
+\[Map TBD\]
+
+This map shows our 5 sample areas (A - F). You will sample the area corresponding to your section. Section F is the area that we will survey when we initially familiarize you with the methods. Each group (1 - 8) will sample five trees using the process described on the following pages. **Trees should be a minimum of approximately 30 cm (12 in) diameter**.
+
+::: {.callout-warning title="Heads up"}
+Make sure to follow the instructions and record all of your data in the data sheets contained in your sampling packet, add notes and comments on your data sheets and then digitize your data in the collective data sheet and upload your images to the corresponding results folder (Section \> Group #).
+
+If you are going to be the person taking and uploading pictures, please make sure you have your camera settings set so your pictures will be exported as jpg.
+
+It should take you about 10-12 minutes to sample each tree. Please be conscientious when you are collecting the data; we would like to add our data set to the EREN Lichen project which means that your care in gathering and uploading your data matters.
+:::
+
+### Equipment Checklist {#sec-equipment-checklist}
+
+Before you head out, make sure you have gathered all the necessary equipment.
+
+1.  Clipboard
+2.  Field Data sheets
+3.  Handheld Compass and/or digital compass/app with the ability to determine latitude and longitude (e.g. Trail Sense app)
+4.  Smartphone with camera setting to export pictures as jpg (if you have an iPhone you may have to change this setting)
+5.  Lichen Air quality scoring table
+6.  Measuring Tape
+7.  Quart freezer sampling grid
+8.  Pens, Dry erase markers
+9.  Chisel
+10. Brown paper bag
+11. Tree ID booklets, SEEK smartphone app
+
+### Sampling Protocol {#sec-sampling-protocol}
+
+#### Step 1. Choose a tree to sample and identify the tree species.
+
+-   Pick a tree in your assigned sample area that is at least 30 cm (approx 1ft) in diameter.
+-   Determine if your tree is **deciduous** or **coniferous** and record that on your data sheet.
+-   If possible, use the tree identification key and/or smartphone app “Seek” to **identify the tree** to species level (we are likely sampling too early in the year to identify trees using their leaves)
+-   **Take pictures** that will allow us to identify/confirm the tree species down the line.
+    -   Photo 1: Leaves or leaf buds.
+    -   Photo 2: Characteristic bark.
+
+#### Step 2. Measure tree diameter, in centimeters.
+
+-   Tree diameter (**diameter at breast height; dbh**) is measured at 1.37 m (4.5 ft) above ground level.
+-   Use the **tape-measure** to determine 1.37m above ground on the tree trunk.
+-   **Measure** and **record** the **circumference** of your tree in your data sheet.
+-   **Convert** the circumference to **diameter** (diameter = circumference/pi) and **record** it on your data sheet.
+-   Double check that you measured and recorded the values in cm!
+
+#### Step 3. Determine latitude and longitude and the north-facing aspect of the tree.
+
+*Note**: Aspect** refers to the orientation (direction) that a surface faces.*
+
+-   Use a compass or compass app on your smartphone to identify North.
+-   Then, move to the tree.
+-   Standing with the compass in your hand, your back to the tree, and facing away from the tree - move around to determine which part of the trunk faces North (0<sup>0</sup>).
+-   Use a compass or similar app to **determine latitude** and **longitude** of your tree and **record** it in your data sheet.
+
+#### Step 3. Record the canopy cover
+
+-   Stand at the base of the tree, at the north side of the tree.
+-   Open up your camera app.
+-   With your back to the tree, hold the phone overhead (making sure it is parallel to the ground), and take the photo (*Photo 3*).
+-   This picture will allow us to determine the canopy cover at a later point in time and add it to our data set.
+
+#### Step 4. Record percent lichen at the north, east, south, and west faces of the tree.
+
+-   Take the clear lichen sampling grid, and place the top of the grid at 1.37 m (4.5 ft) above the ground at the north-facing aspect of the tree.
+-   The sampling grid has 10 rows of 10 circles. Count the number of circles that have lichens. You can use a dry erase marker to help you keep track of the count.
+-   **Record** the value on your datasheet.
+-   **Repeat** for the east, south, and west-facing aspects of your tree.
+
+#### Step 5. Document the lichen diversity and abundance on your tree.
+
+*Note: We are planning on using the data generated during this lab to contribute to the EREN lichen project. To make this possible, it is important that you take and upload the photos in the specific order outlined in this sampling protocol. Photos 1-2 should be identifying features of your tree, Photo 3 is the canopy coverage from the north-facing aspect and Photos 4 - 8 document the lichens on the tree and can be used for more precise species identification than what we are using for this lab down the line. You can take these images while you are recording the lichen coverage but make sure to take the sampling grid down before taking the picture so the lichens are clearly visible.*
+
+-   Photo 4: Look around the tree and find the dominant lichen. Find a good example of the dominant lichen and take a picture.
+-   Photo 5: Take an image of where you took the first lichen sampling grid reading, on the North face of the tree without the grid covering it. You will probably capture a bit more than the area you sampled with the grid - that is okay!
+-   Photo 6: Take an image of where you took the east-facing lichen grid sample.
+-   Photo 7: Take an image of where you took the south-facing lichen grid sample.
+-   Photo 8: Take an image of where you took the west-facing lichen grid sample.
+
+#### Step 6. Determine the Hawksworth Rose index score based on the Lichen morphotypes present on your tree.
+
+-   Carefully **observe** the lichen on the tree and assess which **morphotypes** are present (reference your sketches/annotations of key characteristics of crustose, foliose, and fruticose lichens as needed). Be sure to look over all areas of the tree (that are visible to you from the base of the tree) to determine the air quality index value. It is not restricted to where you measured it with the lichen sampling grid.
+-   **Determine** and **record** the EREN Lichen air quality index score (modified Hawksworth Rose index score). Only enter one value into this field. For example, if you only have crustose lichen present, then it would be a score of 3. If you have both crustose and foliose lichens present, the index score will be 6. If you have crustose, foliose, and fruticose lichens present, the index score will be 9.
+    -   No lichens present = 1
+    -   Crustose lichens only = 3
+    -   Foliose lichens present, but no fruticose = 6
+    -   Fruticose lichens present = 9
+    -   *Lobaria pulmonaria* or *Teleschistes exilis* present = 10
+
+## Upload your images and digitize your datasheets {#sec-upload-your-images-and-digitize-your-datasheets}
+
+### **Upload you images to the shared google drive** {#sec-upload-you-images-to-the-shared-google-drive}
+
+After you return from the field make sure to upload the photos you took in the field in our shared google drive in the `results` folder under the corresponding `section-letter > group-#` folder. We are assuming that your pictures are in the sequence tree 1 - tree 5 and in the specified sequence of photo 1 - 8. Ideally rename your photos with the file name `section-letter_grp-#tree-#_photo-#.jpq`
+
+### Enter your data in the shared spreadsheet {#sec-enter-your-data-in-the-shared-spreadsheet}
+
+Open the shared spreadsheet in the `data` folder named `lichen-survey` and enter your data from the spreadsheets. Hover over each column header to see the notes on how to enter information.
+
+::: {.callout-warning title="Heads up"}
+We are going to share the data set across all sections so each group can compare differences across microhabitats. In order to give us time to QC/QA the data so it's ready to go for the Tuesday labs next make Please complete your data entry within 48 hours of returning from the field.
+:::
+
+## Determine the bark pH
+
+Trees differ in their bark pH, which can play a role in determining the lichen present on those species. For example Oak, Birch, Alter, Sweet Chestnut, Rowan, Hawthorn, Hornbeam, Pine and Spruce typically have low pH (acid bark), while Elm and Field Maple have high pH (base-rich bark) and Hazel, Ash, Sycamore, Willow and Lime trees have a medium pH.
+
+Determine the pH of your sample using the following procedure:
+
+1.  When you return from the field, leave your bark samples on the back bench to dry overnight in their labeled brown paper bags.
+2.  The next day, return to the lab, label a glass petri dish/finger bowl and add your bark samples. Fill it with enough distilled water to cover the bark sample and leave to soak for 12 - 24 hours.
+3.  After an appropriate amount of soak time use the pH indicator strips to measure the pH of the water.
+4.  Update the `GoogleSheet` for your tree to include the dry time, soak time, and measured bark pH.
