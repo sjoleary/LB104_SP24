@@ -51,7 +51,7 @@ Lichens are betters than fungi at obtaining carbohydrate (food) in harsh environ
 Lichens are classified into three major groups according to their growth habits. **Crustose** lichens are encrusted in rocks or wood, **fruticose** lichens are branched and emergent from the substrate, and **foliose** lichens are membranous and leaf like.
 
 ::: {.callout-tip title="Give it a try"}
-Let's take a closer look at the three major groups of lichens you will encounter during lab. You will use this document to compile your sketches and local hypotheses you would like to investigate and submit it as a homework assignment. Make sure you are keeping good notes throughout and that you take the time to go back over and edit them before you submit.
+Let's take a closer look at the three major groups of lichens you will encounter during lab. You will use this document to compile your sketches and formulate a local hypotheses you would like to investigate and submit it as a homework assignment. Make sure you are keeping good notes throughout and that you take the time to go back over and edit them before you submit.
 
 Examine the indicated specimen to create a set of sketches with labeled key features. Each of your sketches should be approximately 1/2 page. You will use these sketches as a reference to identify lichen in the field so make sure that you are familiar with the key features.
 
@@ -69,9 +69,9 @@ Now, when you take a new photo or video it will be saved as JPEG instead of HEIF
 #### Ascocarp lichen cross section. {#sec-ascocarp-lichen-cross-section.}
 
 1.  Obtain a compound microscope and examine slide 375 (ascocarp cross-section).
-2.  Make a sketch labeling fungal hyphae and algae.
+2.  Make a sketch labeling **fungal** **hyphae** and **algae**.
 
-\[Inset your sketch here\]
+\[Delete this line and inset your sketch here\]
 
 #### Foliose lichen {#sec-foliose-lichen}
 
@@ -79,7 +79,7 @@ Now, when you take a new photo or video it will be saved as JPEG instead of HEIF
 2.  Under low magnification using a dissection microscope examine key features.
 3.  Make a sketch labeling/annotating key features that make it distinct from the other morphotypes.
 
-\[Inset your sketch here\]
+\[Delete this line and inset your sketch here\]
 
 #### Fructicose lichen {#sec-fructicose-lichen}
 
@@ -87,7 +87,7 @@ Now, when you take a new photo or video it will be saved as JPEG instead of HEIF
 2.  Under low magnification using a dissection microscope examine key features.
 3.  Make a sketch labeling/annotating key features that make it distinct from the other morphotypes.
 
-\[Inset your sketch here\]
+\[Delete this line and inset your sketch here\]
 
 #### Crustose lichen {#sec-crustose-lichen}
 
@@ -95,7 +95,7 @@ Now, when you take a new photo or video it will be saved as JPEG instead of HEIF
 2.  Under low magnification using a dissection microscope examine key features.
 3.  Make a sketch labeling/annotating key features that make it distinct from the other morphotypes.
 
-\[Inset your sketch here\]
+\[Delete this line and inset your sketch here\]
 
 ### Lichens as bioindicators {#sec-lichens-as-bioindicators}
 
@@ -118,7 +118,7 @@ Refer back to last weeks lab and consider the key habitat requirements of lichen
 
 Together with your lab partner create a list of abiotic and biotic variables that may affect the presence and abundance of lichens, in general, or the type of lichens present in a specific habitat.
 
-Last week, we explored large-scale patterns across sites. Take a look at your list and consider what variables might additionally be important at a local scale. Specifically, consider Saint Anselm Campus which contains a range of different microhabitats and brainstorm which variables might play an important role in determining the presence/absence or type of lichens found on trees across campus.
+Last week, we explored large-scale patterns across sites. Take a look at your list and consider what variables might additionally be important at a local scale. Specifically, consider Saint Anselm Campus which contains a range of different microhabitats (you can also refer to the National Land Cover Database classifications) and brainstorm which variables might play an important role in determining the presence/absence or type of lichens found on trees across campus.
 
 Organize your list by whether these variables are abiotic or biotic and determine if there are other categories that you can use to organize/categorize your variables.
 
@@ -126,25 +126,27 @@ Take some notes on your discussion with your lab partner and be prepared to shar
 :::
 
 ::: {.callout-caution title="Your Answer Here"}
-\[Take some notes\]
+\[Delete this line and replace it with your brainstorming results\]
 :::
 
 Next week, we will perform a lichen survey on the Saint Anselm campus
 
 ::: {.callout-tip title="Consider this"}
-Together with your lab partner take a look at the sample areas and read over the field sampling protocol to get an overview of the process[^d02_local-hypothesis-1] and the variables that we will be measuring.
+Together with your lab partner take a look at the sample areas[^d02_local-hypothesis-1] and read over the field sampling protocol to get an overview of the process[^d02_local-hypothesis-2] and the variables that we will be measuring.
 
 Make a note of any component of the field sampling protocol that you are unsure of.
 
-Compare the variables that we will be measuring to the list that you just generated that you think can play a key role in determining presence/absence, distribution, and type of lichen present on the Saint Anselm campus. If necessary add additional variables to that list.
+Compare the variables that we will be measuring to the list that you just generated above that you think can play a key role in determining presence/absence, distribution, and type of lichen present on the Saint Anselm campus. If necessary add additional variables to that list.
 :::
 
-[^d02_local-hypothesis-1]: We will test out the methods later during lab so you are ready to go next week
+[^d02_local-hypothesis-1]: Even though you will be completing the survey in one specific area you will be analyzing the data set across all locations. This means you should be noting differences across those locations and considering how you think this might generate differences in lichen distribution.
+
+[^d02_local-hypothesis-2]: We will test out the methods later during lab so you are ready to go next week
 
 Now you are ready to generate two local hypotheses that you would like to test with the data that we will generate next week. We will combine data across sections so that we can make comparisons across different microhabitats.
 
 ::: {.callout-tip title="Give it a try"}
-Together with your lab partner identify two local research hypotheses that you would like to test based off of the list of variables that you generated. Record your thought process and hypothesis in the callout-box below.
+Together with your lab partner identify two local research hypotheses that you would like to test based off of the list of variables that you generated. Record your thought process/reasoning and hypothesis in the callout-box below. We have added a scaffold to help you think through this process.
 
 A good way to come up with two hypothesis is to identify an explanatory variable that could play a key role determining presence/absence or distribution of lichens (i.e. what factors can explain why lichen are more/less common in certain microhabitats?) and an explanatory variable that could play a key role in determining the type of lichen species found in certain microhabitats?
 
@@ -168,11 +170,11 @@ Our broad research question is how abiotic and biotic factors impact the presenc
 
 -   Explanatory (Independent) Variable (indicate if it is a categorical or continuous variable):
 
--   Describe what you expect the relationship to be and how will you assess this (data visualization, descriptive/inferential statistics):
+-   In 3-5 sentences, describe what you expect the relationship to be and how will you assess this (data visualization, descriptive/inferential statistics):
 
--   Describe your rationale (explain why you expect to see this relationship):
+-   In 3-5 sentences, describe your rationale (explain why you expect to see this relationship):
 
--   Write Out Your Complete Hypothesis (Remember, this is a research hypothesis, not a statistical hypothesis):
+-   In 2-3 sentences, write out your complete hypothesis (remember, this is a research hypothesis, not a statistical hypothesis):
 
 **Second research question you want to explore/hypothesis you want to test:**
 
@@ -180,11 +182,11 @@ Our broad research question is how abiotic and biotic factors impact the presenc
 
 -   Explanatory (Independent) Variable (indicate if it is a categorical or continuous variable):
 
--   Describe what you expect the relationship to be and how will you assess this (data visualization, descriptive/inferential statistics):
+-   In 3-5 sentences, describe what you expect the relationship to be and how will you assess this (data visualization, descriptive/inferential statistics):
 
--   Describe your rationale (explain why you expect to see this relationship):
+-   In 3-5 sentences, describe your rationale (explain why you expect to see this relationship):
 
--   Write Out Your Complete Hypothesis (Remember, this is a research hypothesis, not a statistical hypothesis):
+-   In 2-3 sentences, write out your complete hypothesis (remember, this is a research hypothesis, not a statistical hypothesis):
 :::
 
 Remember to go back over your notes and make sure everything is complete before you render your document as to html and submit as your homework assignment.

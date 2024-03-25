@@ -1,0 +1,415 @@
+
+# Lichen Data Analysis {#sec-lichen-data-analysis}
+
+```{r}
+#| label: set-up
+#| include: false
+#| message: false
+#| error: false
+#| warning: false
+
+# load libraries for reporting
+library(knitr)
+
+# load libraries for data import
+library(readr)
+library(here)
+library(janitor)
+
+# load libraries for data wrangling
+library(dplyr)
+library(tidyr)
+library(tibble)
+library(tidyselect)
+
+# load libraries for plotting
+library(ggplot2)
+library(ggthemes)
+library(OpenStreetMap)
+library(sf)
+library(osmdata)
+library(ggmap)
+
+# load library for stats
+library(infer)
+
+# pick a set of colors (you have up 6 sample locations)
+colors <- c("darkgreen", "cyan", "purple", 
+            "darkorange", "gold", "darkred",
+            "darkblue", "pink")
+
+
+set.seed(42)
+
+# set options
+knitr::opts_chunk$set(
+  tidy = FALSE, 
+  message = FALSE,
+  warning = FALSE)
+
+options(htmltools.dir.version = FALSE)
+
+```
+
+## Get set up to anayze your data
+
+::: {.callout-warning title="Heads up"}
+
+Two weeks ago, each of you formulated two hypotheses of important abiotic and biotic variables determining presence/absence, distribution, and type of lichen present in local microhabitats. This means that each of you will be analyzing different aspects of your data set. As such we will have you working directly in your lab report to analyze your data and describe your results. Before you go today, make sure you can render your report (i.e. all the tables and figures are being produced and your code is running smoothly). 
+
+Take some notes during class room discussions for you to be able to use when you finalize your introduction, methods, results, and discussion section and turn in your report.
+
+:::
+
+Before you get started you will need to download your data set from our shared drive. As usual, go to the `GoogleSheet`, select `File` -> `Download` and then `Tab Seperated Values (tsv)`. Then rename the file to `lichen-survey.tsv` and move to your `data` folder in your current project folder.
+
+Additionally, we have generated a sample map using the code below that includes all of our sampled trees. You should download the file from the `results` files on the google drive and move it into your current `Rproject` folder, and then insert in your methods section in the `Study Area/Site Description` section.
+
+```{r}
+#| label: fig-map
+#| fig-cap: "Sample Area Saint Anselm Campus Lichen survey. Individual dots represent sampled trees. Colors correspond to sample areas."
+#| message: false
+#| error: false
+#| warning: false
+
+lichen <- read_delim("data/lichen-survey_dummy.tsv") %>%
+  clean_names()
+
+# get lat/long for plot boundaries
+min_lat <- min(lichen$latitude)
+max_lat <- max(lichen$latitude)
+
+min_long <- min(lichen$longitude)
+max_long <- max(lichen$longitude)
+
+# pull major street features
+big_streets <- opq(bbox = c(min_long-0.05, min_lat-0.05, max_long+0.05, max_lat+0.05)) %>%
+  add_osm_feature(key = "highway", 
+                  value = c("motorway", "primary", "motorway_link", "primary_link")) %>%
+  osmdata_sf()
+
+# pull medium sized streets
+med_streets <- opq(bbox = c(min_long-0.05, min_lat-0.05, max_long+0.05, max_lat+0.05)) %>%
+  add_osm_feature(key = "highway", 
+                  value = c("secondary", "tertiary", "secondary_link", "tertiary_link")) %>%
+  osmdata_sf()
+
+# pull small streets
+small_streets <- opq(bbox = c(min_long-0.05, min_lat-0.05, max_long+0.05, max_lat+0.05)) %>%
+  add_osm_feature(key = "highway", 
+                  value = c("residential", "living_street",
+                            "unclassified",
+                            "service", "footway")) %>%
+  osmdata_sf()
+
+# pull rivers
+rivers <- opq(bbox = c(min_long-0.05, min_lat-0.05, max_long+0.05, max_lat+0.05)) %>%
+  add_osm_feature(key = "waterway", value = "river") %>%
+  osmdata_sf()
+
+# pull railways
+railway <- opq(bbox = c(min_long-0.05, min_lat-0.05, max_long+0.05, max_lat+0.05)) %>%
+  add_osm_feature(key = "railway", value="rail") %>%
+  osmdata_sf()
+
+# compile plot
+ggplot() +
+  geom_sf(data = rivers$osm_lines,
+          inherit.aes = FALSE,
+          color = "steelblue",
+          size = .8,
+          alpha = .3) +
+  geom_sf(data = railway$osm_lines,
+          inherit.aes = FALSE,
+          color = "black",
+          size = .2,
+          linetype="dotdash",
+          alpha = .5) +
+  geom_sf(data = med_streets$osm_lines,
+          inherit.aes = FALSE,
+          color = "black",
+          size = 1.5,
+          alpha = 1) +
+  geom_sf(data = small_streets$osm_lines,
+          inherit.aes = FALSE,
+          color = "#666666",
+          size = 1,
+          alpha = 1) +
+  geom_sf(data = big_streets$osm_lines,
+          inherit.aes = FALSE,
+          color = "black",
+          size = 2,
+          alpha = 1) +
+  coord_sf(xlim = c(min_long-0.0025, max_long+0.0025), 
+           ylim = c(min_lat-0.001, max_lat+0.001),
+           expand = FALSE) +
+  geom_point(data = lichen, 
+             aes(x = longitude, y = latitude, color = sample_location), 
+             size = 1.5, alpha = 1) +
+  scale_color_manual(values = c("darkgreen", "cyan", "purple", 
+                                "darkorange", "gold", "darkred")) +
+  theme_bw() +
+  theme(legend.position = "bottom")
+
+ggsave("results/sample-locations.jpg", dpi = 300)
+
+```
+
+## Introduction
+
+Write an **introduction** of relevant background information providing context for your central question/hypothesis question and the objectives of your study.
+
+For this lab, you should be able to structure your introduction in two paragraphs.
+
+-   Paragraph 1: Introduce the broad topic/general research question you are asking, including why this is an important question to be asking. Give a brief overview of the current state of understanding of the research question. Make sure you introduce any key terms/concepts to set up the context of a large question/scientific field or overarching theme. You are not required to do a literature review, you should be able to describe the broad scope using "generally accepted knowledge". Go back to the research you did for your homework assignment to look into differences of disinfectant and antiseptics. If you do use outside references make sure you add a reference section and properly cite them.
+-   Paragraph 2: Narrow your scope down to your specify study. Describe why your question is relevant and how it furthers the understanding of this question: Even though you cannot fully answer the big question you laid out, you can contribute to part of the answer by filling a knowledge gap or clarifying existing conflicting results. You would want to add a justification of why you decided to pick the two chemicals that you did.
+
+Remember to make a clear statement of your hypothesis and research objectives to transition to your methods.
+
+> In this study, we investigated \[CENTRAL QUESTION OR HYPOTHESIS\]. To do this we used \[DESCRIPTION OF HOW/WHAT DATA WAS GENERATED\] to \[OBJECTIVES: METRICS THAT WERE CALCULATED/WHY\].
+
+## Methods
+
+Compose a **methods** section that describe your study design, how you collected, processed, and analyzed the data.
+
+Your methods section should be written in paragraph form with enough detail for somebody else to reproduce what you did, explain why you made specific choices. Remember to use past tense
+
+Use subsections and make them explicit using headers to help your reader understand what you did.
+
+-   Study Area: Describe our study area, where it is located and the different areas we sampled.
+-   Experimental design: Concisely describe how you set up your experiment in terms of sample size, replicates, what measurements where taken to produce the data set that was then analyzed.
+-   Data Analysis: include how you manipulated data, specific calculations, descriptive statistics to summarize data (what metrics you produced), statistical tests. Our Data Analysis consists of two parts, use descriptive headers to structure this section.
+
+
+### Study Area
+
+Briefly describe our study area in 3-5 sentences here. Remember to describe the **ENTIRE** survey, not just the area that you explored.
+
+
+### Experimental Design
+
+Describe your experimental design; include a brief summary of how we measured lichen coverage on each tree as well as other variables that were recorded.
+
+### Data Analysis
+
+Briefly describe the data analysis that you performed to test the two hypotheses that your formulated.
+
+::: {.callout-warning title="Heads up"}
+
+Use the code chunks below to analyze your data. These code chunks will produce the tables and figures that you will then describe in the results section.
+
+In your lab report template, there are several code chunks that will let you test the relationship between two continuous variables or between a categorical and continuous variable, depending on the hypotheses that your are testing. 
+
+**MODIFY YOUR CODE CHUNKS ACCORDINGLY AND THEN DELETE THE CODE CHUNKS YOU ARE NOT USING.**
+
+:::
+
+```{r}
+#| label: read-data
+#| eval: false
+#| message: false
+#| error: false
+#| warning: false
+
+# define your filename
+file <- "lichen-survey.tsv" # MAKE SURE THIS MATCHES YOUR EXACT FILENAME
+
+# read in data
+lichen <- read_delim(here("data", file), delim = "\t") %>%
+  clean_names()
+
+# pick a set of colors (you have up 6 sample locations)
+colors <- c("darkgreen", "cyan", "purple", 
+            "darkorange", "gold", "darkred",
+            "darkblue", "pink")
+
+```
+
+Use this code chunk type to generate **descriptive statistics for continuous variables** you are interested in; remember to give your table a title, and then delete any remaining code chunks you do not need.
+
+```{r}
+#| label: tbl-summary-table-lichen-coverage
+#| tbl-cap: "Descriptive statistics of lichen coverage summed across north, south, east, and west side of the tree for each sample location."
+#| message: false
+#| error: false
+#| warning: false
+
+# MODIFY THIS SECTION ----
+
+# specify column name to group data & calculate descriptive stats
+col_grp <- "sample_location"
+
+# specify  column that contains data to summarize (response variable)
+col_response <- "coverage_total"
+
+# DO NOT MAKE MODIFICATIONS BELOW HERE ----
+
+# calculate summary stats for continuous variable
+lichen %>%
+  group_by(!!sym(col_grp)) %>%
+  summarize(mean = mean(!!sym(col_response)),
+            sd = sd(!!sym(col_response)),
+            min = min(!!sym(col_response)),
+            max = max(!!sym(col_response))) %>%
+  kable()
+
+```
+
+Use these code chunks to analyze **relationships between two continuous variables**. Remember to add a figure caption and x-axis/y-axis labels.
+
+```{r}
+#| label: fig-continuous-continuous-I
+#| fig-cap: "Relationship of bark pH and overall lichen abundance."
+#| message: false
+#| error: false
+#| warning: false
+
+# MODIFY THIS SECTION ----
+
+# specify the column that contains your explanatory (independent) variable
+col_explanatory <- "bark_ph"
+x_axis_title <- "Bark pH"
+
+# specify the column that contains your response (dependent) variable 
+col_response <- "coverage_total"
+y_axis_title <- "total lichen coverage"
+
+# DO NOT MAKE MODIFICATIONS BELOW HERE ----
+
+# create plot
+ggplot(lichen,
+       aes(x = !!sym(col_explanatory),
+           y = !!sym(col_response))) +
+  stat_smooth(method = "lm") +
+  geom_point() +
+  labs(x = x_axis_title,
+       y = y_axis_title) +
+  theme_classic()
+
+# test relationship
+lm(formula = reformulate(col_explanatory, col_response),
+                 data = lichen) %>% 
+  summary()
+
+```
+
+To compare differences in **coverage depending on the side of the tree** we have to do a little bit of manipulation of the data frame^[Shamefully, our dataset is not completely tidy - e.g coverage_west is not a variable, it should really be separate columns one for the direction/side of the tree and a second for the coverage. That would have made data entry an pain in the neck.] - for all other tests of categorical predictor vs continuous outcome variable you can use the code chunk below this one. Make sure to add a figure caption and x/y-axis title but otherwise you do not need to modify any code.
+
+```{r}
+#| label: fig-side-of-tree
+#| fig-cap: "Mean lichen coverage for north, east, west, and south aspect of sampled trees."
+#| message: false
+#| error: false
+#| warning: false
+
+# MODIFY THIS SECTION ----
+x_axis_title <- "Tree aspect"
+y_axis_title <- "lichen relative abundance"
+
+
+# DO NOT MAKE MODIFICATIONS BELOW HERE ----
+
+# create tidy data set with coverage by direction
+df <- lichen %>%
+  select(coverage_north, coverage_east, coverage_south, coverage_west) %>%
+  pivot_longer(names_to = "tree_side", values_to = "coverage", 1:4) %>%
+  separate(tree_side, into = c("tmp", "direction"), sep = "_") %>%
+  select(-tmp)
+
+# calculate summary stats
+summary <- df %>%
+  group_by(direction) %>%
+  summarize(mean = mean(coverage),
+            sd = sd(coverage))
+
+# create plot
+ggplot(summary) +
+  geom_pointrange(aes(x = direction,
+                    y = mean,
+                    ymin = mean-sd,
+                    ymax = mean+sd,
+                    color = direction),
+                size = 1.2) +
+  scale_color_manual(values = colors) +
+  labs(x = x_axis_title, 
+       y = y_axis_title) +
+  theme_classic() +
+  theme(legend.position = "none")
+
+# test relationship
+aov(coverage ~ direction,
+    data = df) %>%
+  summary()
+
+```
+
+Use this code chunks to analyze relationships between a **categorical predictor variable and a continuous response**. Remember to add a figure caption an x-axis/y-axis titles. Delete any remaining code chunks that you do not need.
+
+```{r}
+#| label: fig-cat-continuous-I
+#| fig-cap: "Comparison of total lichen coverage per tree for all campus sample locations."
+#| message: false
+#| error: false
+#| warning: false
+
+# MODIFY THIS SECTION ----
+
+# specify the column that contains your explanatory (independent) variable
+col_explanatory <- "sample_location"
+x_axis_title <- "campus sample location"
+
+# specify the column that contains your response (dependent) variable 
+col_response <- "coverage_total"
+y_axis_title <- "lichen relative abundance"
+
+# DO NOT MAKE MODIFICATIONS BELOW HERE ----
+
+summary <- lichen %>%
+  group_by(!!sym(col_explanatory)) %>%
+  summarize(mean = mean(!!sym(col_response)),
+            sd = sd(!!sym(col_response)))
+
+# create plot
+ggplot(summary) +
+  geom_pointrange(aes(x = !!sym(col_explanatory),
+                    y = mean,
+                    ymin = mean-sd,
+                    ymax = mean+sd,
+                    color = !!sym(col_explanatory)),
+                size = 1.2) +
+  scale_color_manual(values = colors) +
+  labs(x = x_axis_title, 
+       y = y_axis_title) +
+  theme_classic() +
+  theme(legend.position = "none")
+
+# test relationship
+aov(reformulate(col_explanatory, col_response),
+    data = lichen) %>%
+  summary
+
+```
+
+## Results
+
+Present your **results** based the descriptive and inferential statistics you applied to analyze your data set.
+
+Focus on describing trends and patterns and report which findings are significant. Highlight notable results, when you mention anomalous and unexpected results make sure you pick up on those in the discussion. Remember that you should not be interpreting your data by comparing them to results from other studies, or interpreting them in the context of your research hypothesis.
+
+Make sure your tables/figures have captions/titles, are numbered, and referenced in the text. Your tables and figures are being produced in the section above. You visualizations should complement your results and serve the narrative. Before you submit your report, take a look at the rendered html document to make sure that everything looks as expected.
+
+## Discussion
+
+Compose a **discussion** that evaluates the context, acknowledges constraints, and justifies conclusions.
+
+Transition from your results section by reiterating the original (broad) question you asked with short description of how you specifically investigated it, your key results, and then interpreting/discussing those.
+
+> In this study, I investigated \[broad question asked/hypothesis tested\]. To achieve this, I \[specific data set + analysis used\]. I found that \[key results\] which \[statement about how this does or does not support your hypothesis\].
+
+Make sure you include these key sections (see lab manual and grading rubric for details in terms of expectations):
+
+-   Interpret your results and compare them to your expectations and other studies - again, you do not have to do a literature research; compare your results to those of your class mates as "other studies".
+-   Discuss constraints/limitations, inconsistencies, other possible explanations.
+-   Discuss implications of your results.
+-   Future steps
+-   Conclusions
