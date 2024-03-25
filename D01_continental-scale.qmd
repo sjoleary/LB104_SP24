@@ -334,7 +334,7 @@ ggplot(summary) +
                     color = !!sym(col_explanatory)),
                 size = 1.2) +
   labs(x = x_axis_title, 
-       y = x_axis_title) +
+       y = y_axis_title) +
   coord_flip() +
   theme_classic() +
   theme(legend.position = "none")
