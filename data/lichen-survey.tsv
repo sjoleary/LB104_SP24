@@ -1,0 +1,182 @@
+date	observers	Section	site	sample-location	group	tree	latitude	longitude	tree-type	tree-species	circumference_cm	dbh_cm	tree-density	coverage-north	coverage-east	coverage-south	coverage-west	coverage-total	air-quality-index	bark-dry-time	bark-soak-time	bark-ph	notes
+2024-04-23	Emmy and Gracie	A	SAC	A	grp-1	2	42.986820	-71.500708	deciduous		85	27.1	small-group	65	50	67	91	273	6	27.5	23	4	
+2024-04-23	Emmy and Gracie	A	SAC	A	grp-1	3	42.986925	-71.500679	deciduous		145	46.2	small-group	24	42	100	97	263	6	27.5	23	4	
+2024-04-23	Emmy and Gracie	A	SAC	A	grp-1	4	42.986844	-71.500407	deciduous		192	61.1	free-standing	0	0	0	0	0	1	27.5	23	5	
+2024-04-23	Emmy and Gracie	A	SAC	A	grp-1	5	42.986948	-71.499092	deciduous		400	127.3	free-standing	7	13	49	30	99	3	27.5	23	5	
+2024-04-23	Emmy and Gracie	A	SAC	A	grp-1	6	42.986460	-71.499673	deciduous		133	42.3	free-standing	15	11	56	4	86	6	27.5	23	5	
+2024-04-23	Will and Abby	A	SAC	A	grp-2	2	42.986155	-71.501095	deciduous		120	38.2	continuous-forest	0	10	1	0	11	3				
+2024-04-23	Will and Abby	A	SAC	A	grp-2	3	42.986176	-71.501284	deciduous		107	34.1	continuous-forest	0	0	0	0	0	1				
+2024-04-03	Will and Abby	A	SAC	A	grp-2	4	42.986207	-71.501322	deciduous		71	22.6	continuous-forest	0	14	12	17	43	3				
+2024-04-03	Will and Abby	A	SAC	A	grp-2	5	42.986133	-71.501935	deciduous		230	73.2	continuous-forest	15	11	3	7	36	3				
+2024-04-03	Will and Abby	A	SAC	A	grp-2	6	42.986069	-71.501977	deciduous		186	59.2	continuous-forest	3	3	3	0	9	3				
+2024-04-23	Laurentien & Maria	A	SAC	A	grp-3	2	42.983705	-71.500300	deciduous		70	22.3	continuous-forest	3	0	2	3	8	3	27	23.5	5	
+2024-04-23	Laurentien & Maria	A	SAC	A	grp-3	3	42.985840	-71.500470	coniferous		120	38.2	continuous-forest	10	0	0	0	10	3	27	23.5	5.5	
+2024-04-23	Laurentien & Maria	A	SAC	A	grp-3	4	42.985000	-71.500000	deciduous		88	28.0	continuous-forest	0	0	0	5	5	3	27	23.5	4	
+2024-04-23	Laurentien & Maria	A	SAC	A	grp-3	5	42.985878	-71.500591	coniferous		82	26.1	continuous-forest	2	5	0	0	7	3	27	23.5	4.5	
+2024-04-23	Laurentien & Maria	A	SAC	A	grp-3	6	42.986209	-71.501002	deciduous		75	23.9	small-group	9	20	5	2	36	3	27	23.5	4	
+2024-04-23	Adam, Jamison	A	SAC	A	grp-4	2	42.986882	-71.497709	deciduous		101	32.1	free-standing	72	60	76	56	264	6	30	24	5.5	
+2024-04-23	Adam, Jamison	A	SAC	A	grp-4	3	42.987064	-71.499022	deciduous		395	125.7	free-standing	39	13	33	26	111	6	30	24	4	
+2024-04-23	Adam, Jamison	A	SAC	A	grp-4	4	42.986648	-71.498834	deciduous		105	33.4	free-standing	78	71	55	51	255	6	30	24	4.5	
+2024-04-23	Adam, Jamison	A	SAC	A	grp-4	5	42.986691	-71.499223	deciduous		125	39.8	free-standing	79	78	65	68	290	6	30	24	5	
+2024-04-23	Adam, Jamison	A	SAC	A	grp-4	6	42.986251	-71.499698	deciduous		155	49.3	free-standing	52	49	42	55	198	6	30	24	4.5	
+2024-04-23	Grace and Megan	A	SAC	A	grp-5	2	42.986817	-71.501084	deciduous		180	57.3	small-group	81	7	2	84	174	3	24	24	5	
+2024-04-23	Grace and Megan	A	SAC	A	grp-5	3	42.986441	-71.501767	deciduous		125	39.8	continuous-forest	10	13	5	10	38	6	24	24	4	
+2024-04-23	Grace and Megan	A	SAC	A	grp-5	4	42.986604	-71.501554	deciduous		90	28.6	continuous-forest	9	12	3	6	30	6	24	24	5	Water changed color to yellow
+2024-04-23	Grace and Megan	A	SAC	A	grp-5	5	42.986721	-71.501429	deciduous		112	35.7	continuous-forest	9	11	16	4	40	6	24	24	5	
+2024-04-23	Grace and Megan	A	SAC	A	grp-5	6	42.986719	-71.501232	deciduous		131	41.7	continuous-forest	8	23	7	3	41	6	24	24	4	
+2024-04-23	Chloe, Peyton & Meryn	A	SAC	A	grp-6	2	42.982951	-71.500961	deciduous		123	39.2	small-group	0	0	3	3	6	6	24	36	4	
+2024-04-23	Chloe, Peyton & Meryn	A	SAC	A	grp-6	3	42.982951	-71.500983	deciduous		139	44.2	small-group	0	0	0	0	0	1	24	36	5	
+2024-04-23	Chloe, Peyton & Meryn	A	SAC	A	grp-6	4	42.985746	-71.501127	deciduous		189	60.2	continuous-forest	0	0	1	7	8	6	24	36	5	
+2024-04-23	Chloe, Peyton & Meryn	A	SAC	A	grp-6	5	42.985859	-71.501308	deciduous		90	28.6	continuous-forest	9	0	1	5	15	6	24	36	4	
+2024-04-23	Chloe, Peyton & Meryn	A	SAC	A	grp-6	6	42.985651	-71.501183	deciduous		91	29.0	continuous-forest	29	0	2	2	33	6	24	36	5	
+2024-04-23	Meryn and Sam	A	SAC	A	grp-7	2	42.986880	-71.501383	deciduous		162	51.6	free-standing	33	90	0	2	125	6	24	24	4.5	
+2024-04-23	Meryn and Sam	A	SAC	A	grp-7	3	42.986885	-71.502141	deciduous		188	59.8	free-standing	0	0	0	0	0	1	24	24	4.5	
+2024-04-23	Meryn and Sam	A	SAC	A	grp-7	4	42.987070	-71.502718	deciduous		58	18.5	small-group	15	20	20	23	78	6	24	24	5	
+2024-02-23	Meryn and Sam	A	SAC	A	grp-7	5	42.986891	-71.501638	deciduous		86.5	27.5	free-standing	1	1	1	0	3	6	24	24	4	
+2024-02-23	Meryn and Sam	A	SAC	A	grp-7	6	42.986787	-71.501654	coniferous		170	54.1	small-group	1	1	2	0	4	6	24	24	4	
+2024-04-23	McLaughlin/Leighton	B	SAC	B	grp-1	2	42.981481	-71.510093	deciduous		142.03	45.2	continuous-forest	77	100	91	92	360	6	24	24	4	
+2024-04-23	McLaughlin/Leighton	B	SAC	B	grp-1	3	42.981474	-71.510075	deciduous		160.02	50.9	continuous-forest	0	0	0	0	0	1	24	24	4	
+2024-04-23	McLaughlin/Leighton	B	SAC	B	grp-1	4	42.981480	-71.509935	deciduous		117.35	37.4	continuous-forest	7	4	0	2	13	3	24	24	4	
+2024-04-23	McLaughlin/Leighton	B	SAC	B	grp-1	5	42.981601	-71.509486	coniferous		310.89	99.0	continuous-forest	0	0	0	0	0	1	24	24	3.5	
+2024-04-23	McLaughlin/Leighton	B	SAC	B	grp-1	6	42.981699	-71.509277	coniferous		185.92	59.2	continuous-forest	0	0	1	0	1	3	24	24	4	
+2024-04-23	Hall/Figueroa/Cusack	B	SAC	B	grp-2	2	42.981158	-71.510976	deciduous		144.78	46.1	continuous-forest	3	7	24	16	50	3	24	24	4.5	
+2024-04-23	Hall/Figueroa/Cusack	B	SAC	B	grp-2	3	42.981930	-71.511315	deciduous		200.66	63.9	continuous-forest	2	8	2	1	13	3	24	24	4	
+2024-04-23	Hall/Figueroa/Cusack	B	SAC	B	grp-2	4	42.981160	-71.511274	deciduous		114.9	36.6	continuous-forest	2	1	11	16	30	3	24	24	4	
+2024-04-23	Hall/Figueroa/Cusack	B	SAC	B	grp-2	5	42.981308	-71.511518	deciduous		88.9	28.3	continuous-forest	2	4	0	0	6	3	24	24	4	
+2024-04-23	Hall/Figueroa/Cusack	B	SAC	B	grp-2	6	42.981477	-71.511574	deciduous		76.2	24.3	continuous-forest	0	7	16	5	28	6	24	24	4.5	
+2024-04-23	Frano/Poppleton/Anderson	B	SAC	B	grp-4	2	42.981029	-71.510584	deciduous		127	40.4	continuous-forest	21	14	2	15	52	6	24.5	24	5	
+2024-04-23	Frano/Poppleton/Anderson	B	SAC	B	grp-4	3	42.980749	-71.510711	deciduous		104.14	33.1	continuous-forest	11	9	17	2	39	6	24.5	24	5	
+2024-04-23	Frano/Poppleton/Anderson	B	SAC	B	grp-4	4	42.980783	-71.510665	deciduous		177.8	56.6	continuous-forest	29	13	24	10	76	6	24.5	24	4	
+2024-04-23	Frano/Poppleton/Anderson	B	SAC	B	grp-4	5	42.980722	-71.509030	deciduous		147.32	46.9	continuous-forest	33	20	13	19	85	6	24.5	24	4	
+2024-04-23	Frano/Poppleton/Anderson	B	SAC	B	grp-4	6	42.980547	-71.510505	deciduous		193.04	61.4	continuous-forest	4	6	21	20	51	6	24.5	24	4	
+2024-04-23	Jordan/Wenzel	B	SAC	B	grp-5	2	42.981025	-71.510112	deciduous		109.5	34.9	continuous-forest	7	10	6	5	28	6	44	24	4.5	
+2024-04-23	Jordan/Wenzel	B	SAC	B	grp-5	3	42.980933	-71.509900	coniferous		128.5	40.9	continuous-forest	7	5	17	19	48	6	44	24	4	
+2024-04-23	Jordan/Wenzel	B	SAC	B	grp-5	4	42.980790	-71.510260	deciduous		146	46.5	continuous-forest	19	7	5	11	42	6	44	24	4.5	
+2024-04-23	Jordan/Wenzel	B	SAC	B	grp-5	5	42.980770	-71.510207	deciduous		94	29.9	continuous-forest	3	31	15	9	58	6	44	24	4	
+2024-04-23	Jordan/Wenzel	B	SAC	B	grp-5	6	42.980613	-71.510398	deciduous		124	39.5	continuous-forest	4	10	26	6	46	6	44	24	4.5	
+2024-04-23	Smith/Duteau	B	SAC	B	grp-6	2	42.981243	-71.509969	deciduous		180	57.3	continuous-forest	6	7	7	13	33	6	21	24.5	4	
+2024-04-23	Smith/Duteau	B	SAC	B	grp-6	3	42.981257	-71.509587	deciduous		120	38.2	continuous-forest	3	1	1	4	9	6	21	24.5	5.5	
+2024-04-23	Smith/Duteau	B	SAC	B	grp-6	4	42.981281	-71.509977	deciduous		120	38.2	continuous-forest	1	5	1	13	20	6	21	24.5	5	
+2024-04-23	Smith/Duteau	B	SAC	B	grp-6	5	42.981304	-71.509899	deciduous		150	47.7	continuous-forest	9	8	0	0	17	6	21	24.5	5	
+2024-04-23	Smith/Duteau	B	SAC	B	grp-6	6	42.981252	-71.509526	deciduous		105	33.4	continuous-forest	1	5	9	0	15	6	21	24.5	5	
+2024-04-24	Stagman/Karkheck	C	SAC	C	grp-1	2	42.981618	-71.506255	coniferous		36	11.5	free-standing	36	0	0	0	36	6	23	26	5	
+2024-04-24	Stagman/Karkheck	C	SAC	C	grp-1	3	42.981833	-71.506267	deciduous		64	20.4	small-group	0	0	14	0	14	6	23	26	4	
+2024-04-24	Stagman/Karkheck	C	SAC	C	grp-1	4	42.981598	-71.506349	deciduous		62.4	19.9	free-standing	35	3	0	2	40	6	23	26	5	 
+2024-04-24	Stagman/Karkheck	C	SAC	C	grp-1	5	42.981823	-71.506451	deciduous		202.2	64.4	free-standing	0	2	3	0	5	6	23	26	5	
+2024-04-24	Stagman/Karkheck	C	SAC	C	grp-1	6	42.981639	-71.506505	deciduous		180	57.3	free-standing	0	48	0	5	53	6	23	26	5	
+2024-04-24	Donegan/Gangi	C	SAC	C	grp-2	2	42.981606	-71.507367	coniferous		173	55.1	small-group	84	66	38	58	246	3	23	24	4	
+2024-04-24	Donegan/Gangi	C	SAC	C	grp-2	3	42.981661	-71.507378	coniferous		133	42.3	small-group	82	11	69	73	235	6	23	24	4	
+2024-04-24	Donegan/Gangi	C	SAC	C	grp-2	4	42.981575	-71.507476	coniferous		126	40.1	small-group	6	3	11	8	28	6	23	24	5	
+2024-04-24	Donegan/Gangi	C	SAC	C	grp-2	5	42.981627	-71.507454	deciduous		162	51.6	small-group	1	7	4	2	14	6	23	24	6	
+2024-04-24	Donegan/Gangi	C	SAC	C	grp-2	6	42.981591	-71.507539	coniferous		166	52.8	small-group	0	1	2	2	5	6	23	24	4	
+2024-04-24	Pickles/Lemire	C	SAC	C	grp-3	2	42.981685	-71.508424	coniferous		132	42.0	continuous-forest	3	0	0	0	3	1	24	23	4	
+2024-04-24	Pickles/Lemire	C	SAC	C	grp-3	3	42.981669	-71.508380	coniferous		111.8	35.6	continuous-forest	1	2	1	3	7	3	24	23	5	
+2024-04-24	Pickles/Lemire	C	SAC	C	grp-3	4	42.982028	-71.508578	deciduous		68.6	21.8	continuous-forest	8	4	0	1	13	6	24	23	4	
+2024-04-24	Pickles/Lemire	C	SAC	C	grp-3	5	42.981931	-71.508537	coniferous		141	44.9	continuous-forest	0	2	6	0	8	3	24	23	4	
+2024-04-24	Pickles/Lemire	C	SAC	C	grp-3	6	42.981907	-71.508273	deciduous		109.2	34.8	continuous-forest	6	4	2	0	12	6	24	23	5	
+2024-04-24	Marcou/Dearden/Surdam	C	SAC	C	grp-4	2	42.981333	-71.509033	coniferous		93	29.6	continuous-forest	24	5	2	0	31	6	24.5	24.5	4	
+2024-04-24	Marcou/Dearden/Surdam	C	SAC	C	grp-4	3	42.981404	-71.509059	coniferous		133	42.3	continuous-forest	11	5	25	0	41	6	24.5	24.5	4	
+2024-04-24	Marcou/Dearden/Surdam	C	SAC	C	grp-4	4	42.981516	-71.509086	coniferous		106	33.7	continuous-forest	0	1	3	2	6	6	24.5	24.5	4	
+2024-04-24	Marcou/Dearden/Surdam	C	SAC	C	grp-4	5	42.981577	-71.509087	deciduous		120	38.2	continuous-forest	86	84	47	12	229	6	24.5	24.5	4	
+2024-04-24	Marcou/Dearden/Surdam	C	SAC	C	grp-4	6	42.981691	-71.509082	coniferous		103	32.8	continuous-forest	0	2	1	0	3	6	24.5	24.5	4	
+2024-04-24	Nardone/Jacobus	C	SAC	C	grp-5	2	42.980773	-71.509272	deciduous		124.5	39.6	continuous-forest	22	42	26	14	104	6	24.5	20.5	4	
+2024-04-24	Nardone/Jacobus	C	SAC	C	grp-5	3	42.980772	-71.509392	deciduous		91.4	29.1	continuous-forest	10	44	55	14	123	6	24.5	20.5	6	
+2024-04-24	Nardone/Jacobus	C	SAC	C	grp-5	4	42.980752	-71.509677	coniferous		104.14	33.1	continuous-forest	3	3	15	4	25	6	24.5	20.5	4	
+2024-04-24	Nardone/Jacobus	C	SAC	C	grp-5	5	42.980694	-71.509633	coniferous		144.8	46.1	continuous-forest	3	4	23	7	37	6	24.5	20.5	4	
+2024-04-24	Nardone/Jacobus	C	SAC	C	grp-5	6	42.980850	-71.509026	deciduous		132.1	42.0	continuous-forest	64	3	6	16	89	6	24.5	20.5	5	
+2024-04-25	Hynes/Sheehan	D	SAC	D	grp-1	1	42.985701	-71.511638	deciduous		120	38.2	continuous-forest	10	2	2	6	20	6	24	24.5	5	
+2024-04-25	Hynes/Sheehan	D	SAC	D	grp-1	2	42.985982	-71.511921	deciduous		96	30.6	free-standing	4	3	3	2	12	6	24	24.5	5	
+2024-04-25	Hynes/Sheehan	D	SAC	D	grp-1	3	42.985957	-71.511958	deciduous		126	40.1	continuous-forest	5	3	2	2	12	6	24	24.5	5	
+2024-04-25	Hynes/Sheehan	D	SAC	D	grp-1	4	42.985969	-71.511688	deciduous		95	30.2	continuous-forest	14	10	12	4	40	9	24	24.5	5	
+2024-04-25	Hynes/Sheehan	D	SAC	D	grp-1	5	42.986003	-71.511853	coniferous		180	57.3	small-group	7	5	4	2	18	6	24	24.5	5	
+2024-04-25	Hynes/Sheehan	D	SAC	D	grp-1	6	42.985701	-71.511638	deciduous		170	54.1	continuous-forest	8	4	7	5	24	6	24	24.5	5	
+2024-04-25	Gazda/ Watroba	D	SAC	D	grp-2	1	42.985729	-71.511642	deciduous		280	89.1	continuous-forest	19	7	25	17	68	3	23.5	24.5	5	
+2024-04-25	Gazda/ Watroba	D	SAC	D	grp-2	2	42.985909	-71.512150	deciduous		127	40.4	continuous-forest	0	16	2	7	25	3	23.5	24.5	5	
+2024-04-25	Gazda/ Watroba	D	SAC	D	grp-2	3	42.985939	-71.512257	deciduous		103	32.8	continuous-forest	5	11	5	9	30	3	23.5	24.5	4	
+2024-04-25	Gazda/ Watroba	D	SAC	D	grp-2	4	42.985980	-71.512277	deciduous		89	28.3	continuous-forest	11	12	37	18	78	3	23.5	24.5	4	
+2024-04-25	Gazda/ Watroba	D	SAC	D	grp-2	5	42.985852	-71.512309	deciduous		58	18.5	continuous-forest	9	4	5	7	25	3	23.5	24.5	5	
+2024-04-25	Gazda/ Watroba	D	SAC	D	grp-2	6	42.985746	-71.512101	coniferous		71	22.6	continuous-forest	3	0	4	4	11	1	23.5	24.5	4	
+2024-04-25	Leet/Navega	D	SAC	D	grp-3	1	42.985707	-71.511723	deciduous		134	42.7	continuous-forest	3	9	17	3	32	6	28	25	4	
+2024-04-25	Leet/Navega	D	SAC	D	grp-3	2	42.985998	-71.512408	deciduous		104	33.1	continuous-forest	19	13	10	14	56	3	28	25	5	
+2024-04-25	Leet/Navega	D	SAC	D	grp-3	3	42.986027	-71.512605	deciduous		140	44.6	continuous-forest	3	13	25	6	47	6	28	25	4	
+2024-04-25	Leet/Navega	D	SAC	D	grp-3	4	42.985740	-71.512495	deciduous		131	41.7	continuous-forest	13	19	13	7	52	6	28	25	5	
+2024-04-25	Leet/Navega	D	SAC	D	grp-3	5	42.985556	-71.512478	deciduous		132	42.0	continuous-forest	0	3	1	3	7	3	28	25	5	
+2024-04-25	Leet/Navega	D	SAC	D	grp-3	6	42.985659	-71.512365	coniferous		142	45.2	continuous-forest	0	0	0	0	0	1	28	25	4	
+2024-04-25	Bruno/ Doughty	D	SAC	D	grp-4	1	42.985720	-71.511641	deciduous		188	59.8	small-group	61	17	16	28	122	3	26	22	5	
+2024-04-25	Bruno/ Doughty	D	SAC	D	grp-4	2	42.985768	-71.512560	deciduous		149	47.4	free-standing	49	31	19	66	165	6	26	22	5	
+2024-04-25	Bruno/ Doughty	D	SAC	D	grp-4	3	42.985726	-71.512566	deciduous		178.5	56.8	free-standing	43	34	51	68	196	6	26	22	5	
+2024-04-25	Bruno/ Doughty	D	SAC	D	grp-4	4	42.985563	-71.512561	coniferous		110.9	35.3	small-group	0	0	7	5	12	6	26	22	5	
+2024-04-25	Bruno/ Doughty	D	SAC	D	grp-4	5	42.985417	-71.512577	coniferous		168	53.5	continuous-forest	0	0	6	24	30	6	26	22	5	
+2024-04-25	Bruno/ Doughty	D	SAC	D	grp-4	6	42.985373	-71.512526	deciduous		115	36.6	small-group	0	0	0	0	0	1	26	22	5	no changes in water color
+2024-04-25	Burke/Kocak	D	SAC	D	grp-5	1	42.985833	-71.511623	deciduous		171	54.4	continuous-forest	0	0	4	3	7	3	22	26	5	they all look the exact same, no changes in water color
+2024-04-25	Burke/Kocak	D	SAC	D	grp-5	2	42.985570	-71.512677	deciduous		104	33.1	continuous-forest	8	11	3	76	98	6	22	26	5	
+2024-04-25	Burke/Kocak	D	SAC	D	grp-5	3	42.985520	-71.512630	deciduous		187	59.5	continuous-forest	32	13	8	90	143	6	22	26	5	
+2024-04-25	Burke/Kocak	D	SAC	D	grp-5	4	42.985340	-71.512570	coniferous		174	55.4	continuous-forest	4	7	0	0	11	3	22	26	5	
+2024-04-25	Burke/Kocak	D	SAC	D	grp-5	5	42.985394	-71.512570	deciduous		129	41.1	continuous-forest	2	23	4	2	31	3	22	26	5	
+2024-04-25	Burke/Kocak	D	SAC	D	grp-5	6	42.985340	-71.512498	deciduous		76	24.2	continuous-forest	82	16	20	8	126	6	22	26	5	
+2024-04-25	Sullivan/Infante/Adkins	D	SAC	D	grp-6	1	42.985796	-71.511718	deciduous		173	55.1	continuous-forest	12	4	3	1	20	3	24	24	5	
+2024-04-25	Sullivan/Infante/Adkins	D	SAC	D	grp-6	2	42.986289	-71.512277	coniferous		136	43.3	continuous-forest	0	88	75	4	167	3	24	24	5	
+2024-04-25	Sullivan/Infante/Adkins	D	SAC	D	grp-6	3	42.986281	-71.512837	deciduous		139	44.2	continuous-forest	37	96	21	13	167	6	24	24	5	
+2024-04-25	Sullivan/Infante/Adkins	D	SAC	D	grp-6	4	42.986309	-71.513009	deciduous		130	41.4	continuous-forest	10	23	29	4	66	6	24	24	5	
+2024-04-25	Sullivan/Infante/Adkins	D	SAC	D	grp-6	5	42.986306	-71.513033	coniferous		236	75.1	continuous-forest	16	26	10	9	61	6	24	24	5	
+2024-04-25	Sullivan/Infante/Adkins	D	SAC	D	grp-6	6	42.986234	-71.512832	deciduous		139	44.2	continuous-forest	24	26	9	7	66	3	24	24	5	
+2024-04-25	McWhinnie/Boyce	D	SAC	D	grp-7	1	42.985791	-71.511648	deciduous		142	45.2	continuous-forest	27	7	2	6	42	6	24	24	4	
+2024-04-25	McWhinnie/Boyce	D	SAC	D	grp-7	2	42.985977	-71.511705	deciduous		145	46.2	continuous-forest	4	0	3	35	42	6	24	24	5	
+2024-04-25	McWhinnie/Boyce	D	SAC	D	grp-7	3	42.985878	-71.511605	deciduous		58	18.5	small-group	7	2	0	3	12	6	24	24	5	
+2024-04-25	McWhinnie/Boyce	D	SAC	D	grp-7	4	42.987912	-71.512618	deciduous		97.5	31.0	small-group	25	3	2	9	39	6	24	24	4	
+2024-04-25	McWhinnie/Boyce	D	SAC	D	grp-7	5	42.985928	-71.512603	deciduous		55.5	17.7	continuous-forest	0	14	1	0	15	6	24	24	4	
+2024-04-25	McWhinnie/Boyce	D	SAC	D	grp-7	6	42.986012	-71.511564	coniferous		56.6	18.0	small-group	0	0	0	0	0	1	24	24	4	
+2024-04-25	Herman/Schneiderhan/Nguyen	E	SAC	E	grp-1	2	42.988528	-71.508341	coniferous		180	57.3	continuous-forest	2	0	2	1	5	3	24	18	5	
+2024-04-25	Herman/Schneiderhan/Nguyen	E	SAC	E	grp-1	3	42.988605	-71.508466	coniferous		144	45.8	continuous-forest	90	50	98	40	278	6	24	18	5	
+2024-04-25	Herman/Schneiderhan/Nguyen	E	SAC	E	grp-1	4	42.988604	-71.508371	coniferous		131	41.7	continuous-forest	70	80	90	100	340	3	24	18	5	
+2024-04-25	Herman/Schneiderhan/Nguyen	E	SAC	E	grp-1	5	42.988698	-71.508476	coniferous		139	44.2	continuous-forest	20	10	60	40	130	3	24	18	5	
+2024-04-25	Herman/Schneiderhan/Nguyen	E	SAC	E	grp-1	6	42.988715	-71.508387	coniferous		168	53.5	continuous-forest	5	3	2	5	15	6	24	18	5	
+2024-04-25	Ridge/Doherty	E	SAC	E	grp-2	2	42.988277	-71.509003	coniferous		195	62.1	small-group	8	18	16	18	60	6	24	22	4	
+2024-04-25	Ridge/Doherty	E	SAC	E	grp-2	3	42.988292	-71.508970	coniferous		178	56.7	small-group	46	29	13	23	111	3	24	22	4	
+2024-04-25	Ridge/Doherty	E	SAC	E	grp-2	4	42.988338	-71.509003	coniferous		96	30.6	free-standing	61	46	28	27	162	6	24	22	4	
+2024-04-25	Ridge/Doherty	E	SAC	E	grp-2	5	42.988276	-71.508963	coniferous		106	33.7	small-group	27	11	12	11	61	3	24	22	4	
+2024-04-25	Ridge/Doherty	E	SAC	E	grp-2	6	42.988226	-71.508865	coniferous		384	122.2	free-standing	41	23	35	16	115	3	24	22	4	
+2024-04-25	Politano/Dennison/Fezzie	E	SAC	E	grp-3	2	42.988436	-71.508935	coniferous	Eastern White Pine	84	26.7	continuous-forest	2	4	0	0	6	3				
+2024-04-25	Politano/Dennison/Fezzie	E	SAC	E	grp-3	3	42.988360	-71.508923	coniferous	Eastern Hemlock	108	34.4	continuous-forest	1	0	0	1	2	3				
+2024-04-25	Politano/Dennison/Fezzie	E	SAC	E	grp-3	4	42.988424	-71.508882	coniferous	Eastern Hemlock	70	22.3	continuous-forest	0	0	0	0	0	1				
+2024-04-25	Politano/Dennison/Fezzie	E	SAC	E	grp-3	5	42.988426	-71.508753	deciduous	Oak	91	29.0	continuous-forest	0	1	0	0	1	3				
+2024-04-25	Politano/Dennison/Fezzie	E	SAC	E	grp-3	6	42.988490	-71.508830	coniferous	Eastern White Pine	143	45.5	continuous-forest	1	0	0	0	1	3				
+2024-04-25	McAdams/Scaglione	E	SAC	E	grp-4	2	42.988660	-71.508642	coniferous	Vascular plants, pine	106.68	34.0	continuous-forest	6	6	6	10	28	3	23.5	24	5	
+2024-04-25	McAdams/Scaglione	E	SAC	E	grp-4	3	42.988853	-71.508790	coniferous	Eastern Hemlock	113.03	36.0	continuous-forest	7	5	8	5	25	6	23.5	24	5	
+2024-04-25	McAdams/Scaglione	E	SAC	E	grp-4	4	42.988917	-71.508801	deciduous	Butternut	113.03	36.0	continuous-forest	28	7	6	12	53	6	23.5	24	5	
+2024-04-25	McAdams/Scaglione	E	SAC	E	grp-4	5	42.988480	-71.508839	deciduous	American Hophornbeam	116.84	37.2	continuous-forest	1	3	1	2	7	6	23.5	24	5	
+2024-04-25	McAdams/Scaglione	E	SAC	E	grp-4	6	42.988918	-71.508952	coniferous	Eastern White Pine	210.82	67.1	continuous-forest	77	100	64	20	261	6	23.5	24	5	
+2024-04-25	Bompastore/Cote	E	SAC	E	grp-5	2	42.988201	-71.508536	deciduous	Oak	156	49.7	small-group	2	4	96	4	106	3	20	24	5.5	
+2024-04-25	Bompastore/Cote	E	SAC	E	grp-5	3	42.988148	-71.508566	coniferous	Eastern White Pine	119	37.9	small-group	60	38	16	12	126	3	20	24	5	
+2024-04-25	Bompastore/Cote	E	SAC	E	grp-5	4	42.988280	-71.508656	deciduous	Oak (possible)	225	71.6	small-group	87	72	99	88	346	3	20	24	5.5	
+2024-04-25	Bompastore/Cote	E	SAC	E	grp-5	5	42.988164	-71.508647	coniferous	Eastern White Pine	103	32.8	small-group	43	32	26	8	101	3	20	24	4.5	
+2024-04-25	Bompastore/Cote	E	SAC	E	grp-5	6	42.988312	-71.508312	coniferous	Eastern White Pine	76	24.2	continuous-forest	27	13	36	46	122	3	20	24	5	
+2024-04-25	Gandolfo/Posanka	E	SAC	E	grp-6	2	42.988409	-71.509180	deciduous		155	49.3	continuous-forest	1	1	0	0	2	3	20.5	24	5	Water is clear
+2024-04-25	Gandolfo/Posanka	E	SAC	E	grp-6	3	42.988380	-71.509210	deciduous		59	18.8	continuous-forest	3	0	1	5	9	3	20.5	24	4	Water became darker 
+2024-04-25	Gandolfo/Posanka	E	SAC	E	grp-6	4	42.988404	-71.509199	deciduous		84	26.7	continuous-forest	15	23	5	13	56	3	20.5	24	5	Water became darker
+2024-04-25	Gandolfo/Posanka	E	SAC	E	grp-6	5	42.988542	-71.509142	deciduous		100	31.8	continuous-forest	2	4	2	6	14	3	20.5	24	6	Water is clear 
+2024-04-25	Gandolfo/Posanka	E	SAC	E	grp-6	6	42.988298	-71.509109	deciduous		97.5	31.0	continuous-forest	9	9	1	1	20	3	20.5	24	4	Water is clear
+2024-04-16	Emmy and Gracie	A	SAC	F	grp-1	1	42.984608	-71.507811	deciduous		216	68.8	free-standing	53	98	18	70	239	6	192	23	4	
+2024-04-16	Will and Abby	A	SAC	F	grp-2	1	42.984464	-71.508013	deciduous		75	23.9	free-standing	15	76	35	23	149	6				
+2024-04-16	Laurentien & Maria	A	SAC	F	grp-3	1	42.984512	-71.508198	deciduous		176	56.0	free-standing	14	16	14	12	56	6	27	23.5	4.5	
+2024-04-16	Adam, Jamison	A	SAC	F	grp-4	1	42.984641	-71.508181	deciduous		200	63.7	free-standing	40	65	62	54	221	6	30	24	5.5	
+2024-04-16	Grace and Megan	A	SAC	F	grp-5	1	42.984420	-71.508492	deciduous		180	57.3	small-group	39	0	22	54	115	6	192	24	5	
+2024-04-16	Chloe, Peyton & Meryn	A	SAC	F	grp-6	1	42.984264	-71.508560	coniferous		165	52.5	small-group	14	2	7	21	44	6	24	36	4	
+2024-04-16	Sam and Cam	A	SAC	F	grp-7	1	42.986444	-71.505261	deciduous		93.5	29.8	free-standing	22	12	24	0	58	6	24	24	3	
+2024-04-16	McLaughlin/Leighton	B	SAC	F	grp-1	1	42.983705	-71.506114	deciduous		142	45.2	small-group	44	18	0	0	62	6	24	24	4.5	
+2024-04-16	Hall/Figueroa/Cusack	B	SAC	F	grp-2	1	42.983681	-71.506177	coniferous		83.6	26.6	continuous-forest	4	3	0	5	12	6	24	24	4	
+2024-04-16	Cusack/Murphy	B	SAC	F	grp-3	1	42.983620	-71.506224	deciduous		187.96	59.8	free-standing	1	27	0	1	29	3				
+2024-04-16	Frano/Poppleton/Anderson	B	SAC	F	grp-4	1			deciduous		185.42	59.0	free-standing	5	23	0	2	30	3	24.5	24	4	
+2024-04-16	Jordan/Wenzel	B	SAC	F	grp-5	1	42.983516	-71.506099	deciduous		86.12	27.4	free-standing	62	80	2	0	144	6	212	24	5	
+2024-04-16	Smith/Duteau	B	SAC	F	grp-6	1			deciduous		172.72	55.0	free-standing	7	3	4	1	15	3	180	24.5	5	
+2024-04-17	Stagman/Karkheck	C	SAC	F	grp-1	1			deciduous		93.5	29.8	free-standing	24	17	3	2	46	6	23	26	5	
+2024-04-17	Donegan/Gangi	C	SAC	F	grp-2	1	42.983030	-71.505257	deciduous		132.08	42.0	small-group	15	35	53	10	113	6	23	24	4	 
+2024-04-17	Pickles/Lemire	C	SAC	F	grp-3	1	42.983207	-71.505871	deciduous		84	26.7	free-standing	13	30	8	3	54	3	24	23	5	
+2024-04-17	Marcou/Dearden/Surdam	C	SAC	F	grp-4	1	42.982879	-71.505540	deciduous		32	10.2	free-standing	43	24	9	7	83	6	24	24.5	4	
+2024-04-17	Nardone/Jacobus	C	SAC	F	grp-5	1	42.982951	-71.505626	deciduous		81.3	25.9	small-group	35	43	1	7	86	6	24.5	20.5	5	
+2024-04-18	Herman/Schneiderhan/Nguyen	E	SAC	F	grp-1	1	42.986210	-71.508821	coniferous		147	46.8	free-standing	11	5	3	32	51	6	24	18	5	
+2024-04-18	Ridge/Doherty	E	SAC	F	grp-2	1	42.986709	-71.508220	coniferous		182	57.9	small-group	21	16	1	4	42	6	24	22	4	
+2024-04-18	Politano/Dennison/Fezzie	E	SAC	F	grp-3	1	42.986000	-71.507000	deciduous		106	33.7	free-standing	4	8	0	5	17	3				
+2024-04-18	McAdams/Scaglione	E	SAC	F	grp-4	1			coniferous	Hard Pines	61	19.4	small-group	15	14	1	19	49	6	23.5	24	5	 
+2024-04-18	Bompastore/Cote	E	SAC	F	grp-5	1			coniferous	Hard Pine	165	52.5	small-group	18	9	8	2	37	6	20	24	5.5	
+2024-04-18	Gandolfo/Posanka	E	SAC	F	grp-6	1	42.986803	-71.507325	coniferous		167.2	53.2	free-standing	4	2	1	0	7	6	188.5	24	4	Water is clear
