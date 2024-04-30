@@ -4,11 +4,11 @@ date	observers	Section	site	sample-location	group	tree	latitude	longitude	tree-t
 2024-04-23	Emmy and Gracie	A	SAC	A	grp-1	4	42.986844	-71.500407	deciduous		192	61.1	free-standing	0	0	0	0	0	1	27.5	23	5	
 2024-04-23	Emmy and Gracie	A	SAC	A	grp-1	5	42.986948	-71.499092	deciduous		400	127.3	free-standing	7	13	49	30	99	3	27.5	23	5	
 2024-04-23	Emmy and Gracie	A	SAC	A	grp-1	6	42.986460	-71.499673	deciduous		133	42.3	free-standing	15	11	56	4	86	6	27.5	23	5	
-2024-04-23	Will and Abby	A	SAC	A	grp-2	2	42.986155	-71.501095	deciduous		120	38.2	continuous-forest	0	10	1	0	11	3				
-2024-04-23	Will and Abby	A	SAC	A	grp-2	3	42.986176	-71.501284	deciduous		107	34.1	continuous-forest	0	0	0	0	0	1				
-2024-04-03	Will and Abby	A	SAC	A	grp-2	4	42.986207	-71.501322	deciduous		71	22.6	continuous-forest	0	14	12	17	43	3				
-2024-04-03	Will and Abby	A	SAC	A	grp-2	5	42.986133	-71.501935	deciduous		230	73.2	continuous-forest	15	11	3	7	36	3				
-2024-04-03	Will and Abby	A	SAC	A	grp-2	6	42.986069	-71.501977	deciduous		186	59.2	continuous-forest	3	3	3	0	9	3				
+2024-04-23	Will and Abby	A	SAC	A	grp-2	2	42.986155	-71.501095	deciduous		120	38.2	continuous-forest	0	10	1	0	11	3	27	8	5	
+2024-04-23	Will and Abby	A	SAC	A	grp-2	3	42.986176	-71.501284	deciduous		107	34.1	continuous-forest	0	0	0	0	0	1	27	8	4.5	
+2024-04-03	Will and Abby	A	SAC	A	grp-2	4	42.986207	-71.501322	deciduous		71	22.6	continuous-forest	0	14	12	17	43	3	27	8	5	
+2024-04-03	Will and Abby	A	SAC	A	grp-2	5	42.986133	-71.501935	deciduous		230	73.2	continuous-forest	15	11	3	7	36	3	27	8	5	
+2024-04-03	Will and Abby	A	SAC	A	grp-2	6	42.986069	-71.501977	deciduous		186	59.2	continuous-forest	3	3	3	0	9	3	27	8	5	
 2024-04-23	Laurentien & Maria	A	SAC	A	grp-3	2	42.983705	-71.500300	deciduous		70	22.3	continuous-forest	3	0	2	3	8	3	27	23.5	5	
 2024-04-23	Laurentien & Maria	A	SAC	A	grp-3	3	42.985840	-71.500470	coniferous		120	38.2	continuous-forest	10	0	0	0	10	3	27	23.5	5.5	
 2024-04-23	Laurentien & Maria	A	SAC	A	grp-3	4	42.985000	-71.500000	deciduous		88	28.0	continuous-forest	0	0	0	5	5	3	27	23.5	4	
@@ -136,11 +136,11 @@ date	observers	Section	site	sample-location	group	tree	latitude	longitude	tree-t
 2024-04-25	Ridge/Doherty	E	SAC	E	grp-2	4	42.988338	-71.509003	coniferous		96	30.6	free-standing	61	46	28	27	162	6	24	22	4	
 2024-04-25	Ridge/Doherty	E	SAC	E	grp-2	5	42.988276	-71.508963	coniferous		106	33.7	small-group	27	11	12	11	61	3	24	22	4	
 2024-04-25	Ridge/Doherty	E	SAC	E	grp-2	6	42.988226	-71.508865	coniferous		384	122.2	free-standing	41	23	35	16	115	3	24	22	4	
-2024-04-25	Politano/Dennison/Fezzie	E	SAC	E	grp-3	2	42.988436	-71.508935	coniferous	Eastern White Pine	84	26.7	continuous-forest	2	4	0	0	6	3				
-2024-04-25	Politano/Dennison/Fezzie	E	SAC	E	grp-3	3	42.988360	-71.508923	coniferous	Eastern Hemlock	108	34.4	continuous-forest	1	0	0	1	2	3				
-2024-04-25	Politano/Dennison/Fezzie	E	SAC	E	grp-3	4	42.988424	-71.508882	coniferous	Eastern Hemlock	70	22.3	continuous-forest	0	0	0	0	0	1				
-2024-04-25	Politano/Dennison/Fezzie	E	SAC	E	grp-3	5	42.988426	-71.508753	deciduous	Oak	91	29.0	continuous-forest	0	1	0	0	1	3				
-2024-04-25	Politano/Dennison/Fezzie	E	SAC	E	grp-3	6	42.988490	-71.508830	coniferous	Eastern White Pine	143	45.5	continuous-forest	1	0	0	0	1	3				
+2024-04-25	Politano/Dennison/Fezzie	E	SAC	E	grp-3	2	42.988436	-71.508935	coniferous	Eastern White Pine	84	26.7	continuous-forest	2	4	0	0	6	3	75	16	4.5	third patch too light for 5, fourth too light for 4
+2024-04-25	Politano/Dennison/Fezzie	E	SAC	E	grp-3	3	42.988360	-71.508923	coniferous	Eastern Hemlock	108	34.4	continuous-forest	1	0	0	1	2	3	75	16	4.5	third patch too light for 5, fourth too light for 4
+2024-04-25	Politano/Dennison/Fezzie	E	SAC	E	grp-3	4	42.988424	-71.508882	coniferous	Eastern Hemlock	70	22.3	continuous-forest	0	0	0	0	0	1	75	16	4.5	third patch too light for 5, fourth too light for 4
+2024-04-25	Politano/Dennison/Fezzie	E	SAC	E	grp-3	5	42.988426	-71.508753	deciduous	Oak	91	29.0	continuous-forest	0	1	0	0	1	3	75	16	4.5	third patch too light for 5, fourth too light for 4
+2024-04-25	Politano/Dennison/Fezzie	E	SAC	E	grp-3	6	42.988490	-71.508830	coniferous	Eastern White Pine	143	45.5	continuous-forest	1	0	0	0	1	3	75	16	4.5	third patch too light for 5, fourth too light for 4
 2024-04-25	McAdams/Scaglione	E	SAC	E	grp-4	2	42.988660	-71.508642	coniferous	Vascular plants, pine	106.68	34.0	continuous-forest	6	6	6	10	28	3	23.5	24	5	
 2024-04-25	McAdams/Scaglione	E	SAC	E	grp-4	3	42.988853	-71.508790	coniferous	Eastern Hemlock	113.03	36.0	continuous-forest	7	5	8	5	25	6	23.5	24	5	
 2024-04-25	McAdams/Scaglione	E	SAC	E	grp-4	4	42.988917	-71.508801	deciduous	Butternut	113.03	36.0	continuous-forest	28	7	6	12	53	6	23.5	24	5	
@@ -157,26 +157,26 @@ date	observers	Section	site	sample-location	group	tree	latitude	longitude	tree-t
 2024-04-25	Gandolfo/Posanka	E	SAC	E	grp-6	5	42.988542	-71.509142	deciduous		100	31.8	continuous-forest	2	4	2	6	14	3	20.5	24	6	Water is clear 
 2024-04-25	Gandolfo/Posanka	E	SAC	E	grp-6	6	42.988298	-71.509109	deciduous		97.5	31.0	continuous-forest	9	9	1	1	20	3	20.5	24	4	Water is clear
 2024-04-16	Emmy and Gracie	A	SAC	F	grp-1	1	42.984608	-71.507811	deciduous		216	68.8	free-standing	53	98	18	70	239	6	192	23	4	
-2024-04-16	Will and Abby	A	SAC	F	grp-2	1	42.984464	-71.508013	deciduous		75	23.9	free-standing	15	76	35	23	149	6				
-2024-04-16	Laurentien & Maria	A	SAC	F	grp-3	1	42.984512	-71.508198	deciduous		176	56.0	free-standing	14	16	14	12	56	6	27	23.5	4.5	
-2024-04-16	Adam, Jamison	A	SAC	F	grp-4	1	42.984641	-71.508181	deciduous		200	63.7	free-standing	40	65	62	54	221	6	30	24	5.5	
-2024-04-16	Grace and Megan	A	SAC	F	grp-5	1	42.984420	-71.508492	deciduous		180	57.3	small-group	39	0	22	54	115	6	192	24	5	
-2024-04-16	Chloe, Peyton & Meryn	A	SAC	F	grp-6	1	42.984264	-71.508560	coniferous		165	52.5	small-group	14	2	7	21	44	6	24	36	4	
-2024-04-16	Sam and Cam	A	SAC	F	grp-7	1	42.986444	-71.505261	deciduous		93.5	29.8	free-standing	22	12	24	0	58	6	24	24	3	
 2024-04-16	McLaughlin/Leighton	B	SAC	F	grp-1	1	42.983705	-71.506114	deciduous		142	45.2	small-group	44	18	0	0	62	6	24	24	4.5	
-2024-04-16	Hall/Figueroa/Cusack	B	SAC	F	grp-2	1	42.983681	-71.506177	coniferous		83.6	26.6	continuous-forest	4	3	0	5	12	6	24	24	4	
-2024-04-16	Cusack/Murphy	B	SAC	F	grp-3	1	42.983620	-71.506224	deciduous		187.96	59.8	free-standing	1	27	0	1	29	3				
-2024-04-16	Frano/Poppleton/Anderson	B	SAC	F	grp-4	1			deciduous		185.42	59.0	free-standing	5	23	0	2	30	3	24.5	24	4	
-2024-04-16	Jordan/Wenzel	B	SAC	F	grp-5	1	42.983516	-71.506099	deciduous		86.12	27.4	free-standing	62	80	2	0	144	6	212	24	5	
-2024-04-16	Smith/Duteau	B	SAC	F	grp-6	1			deciduous		172.72	55.0	free-standing	7	3	4	1	15	3	180	24.5	5	
 2024-04-17	Stagman/Karkheck	C	SAC	F	grp-1	1			deciduous		93.5	29.8	free-standing	24	17	3	2	46	6	23	26	5	
-2024-04-17	Donegan/Gangi	C	SAC	F	grp-2	1	42.983030	-71.505257	deciduous		132.08	42.0	small-group	15	35	53	10	113	6	23	24	4	 
-2024-04-17	Pickles/Lemire	C	SAC	F	grp-3	1	42.983207	-71.505871	deciduous		84	26.7	free-standing	13	30	8	3	54	3	24	23	5	
-2024-04-17	Marcou/Dearden/Surdam	C	SAC	F	grp-4	1	42.982879	-71.505540	deciduous		32	10.2	free-standing	43	24	9	7	83	6	24	24.5	4	
-2024-04-17	Nardone/Jacobus	C	SAC	F	grp-5	1	42.982951	-71.505626	deciduous		81.3	25.9	small-group	35	43	1	7	86	6	24.5	20.5	5	
 2024-04-18	Herman/Schneiderhan/Nguyen	E	SAC	F	grp-1	1	42.986210	-71.508821	coniferous		147	46.8	free-standing	11	5	3	32	51	6	24	18	5	
+2024-04-16	Will and Abby	A	SAC	F	grp-2	1	42.984464	-71.508013	deciduous		75	23.9	free-standing	15	76	35	23	149	6	27	8	4.5	
+2024-04-16	Hall/Figueroa/Cusack	B	SAC	F	grp-2	1	42.983681	-71.506177	coniferous		83.6	26.6	continuous-forest	4	3	0	5	12	6	24	24	4	
+2024-04-17	Donegan/Gangi	C	SAC	F	grp-2	1	42.983030	-71.505257	deciduous		132.08	42.0	small-group	15	35	53	10	113	6	23	24	4	 
 2024-04-18	Ridge/Doherty	E	SAC	F	grp-2	1	42.986709	-71.508220	coniferous		182	57.9	small-group	21	16	1	4	42	6	24	22	4	
-2024-04-18	Politano/Dennison/Fezzie	E	SAC	F	grp-3	1	42.986000	-71.507000	deciduous		106	33.7	free-standing	4	8	0	5	17	3				
+2024-04-16	Laurentien & Maria	A	SAC	F	grp-3	1	42.984512	-71.508198	deciduous		176	56.0	free-standing	14	16	14	12	56	6	27	23.5	4.5	
+2024-04-16	Cusack/Murphy	B	SAC	F	grp-3	1	42.983620	-71.506224	deciduous		187.96	59.8	free-standing	1	27	0	1	29	3				
+2024-04-17	Pickles/Lemire	C	SAC	F	grp-3	1	42.983207	-71.505871	deciduous		84	26.7	free-standing	13	30	8	3	54	3	24	23	5	
+2024-04-18	Politano/Dennison/Fezzie	E	SAC	F	grp-3	1	42.986000	-71.507000	deciduous		106	33.7	free-standing	4	8	0	5	17	3	243	16	5	
+2024-04-16	Adam, Jamison	A	SAC	F	grp-4	1	42.984641	-71.508181	deciduous		200	63.7	free-standing	40	65	62	54	221	6	30	24	5.5	
+2024-04-16	Frano/Poppleton/Anderson	B	SAC	F	grp-4	1			deciduous		185.42	59.0	free-standing	5	23	0	2	30	3	24.5	24	4	
+2024-04-17	Marcou/Dearden/Surdam	C	SAC	F	grp-4	1	42.982879	-71.505540	deciduous		32	10.2	free-standing	43	24	9	7	83	6	24	24.5	4	
 2024-04-18	McAdams/Scaglione	E	SAC	F	grp-4	1			coniferous	Hard Pines	61	19.4	small-group	15	14	1	19	49	6	23.5	24	5	 
+2024-04-16	Grace and Megan	A	SAC	F	grp-5	1	42.984420	-71.508492	deciduous		180	57.3	small-group	39	0	22	54	115	6	192	24	5	
+2024-04-16	Jordan/Wenzel	B	SAC	F	grp-5	1	42.983516	-71.506099	deciduous		86.12	27.4	free-standing	62	80	2	0	144	6	212	24	5	
+2024-04-17	Nardone/Jacobus	C	SAC	F	grp-5	1	42.982951	-71.505626	deciduous		81.3	25.9	small-group	35	43	1	7	86	6	24.5	20.5	5	
 2024-04-18	Bompastore/Cote	E	SAC	F	grp-5	1			coniferous	Hard Pine	165	52.5	small-group	18	9	8	2	37	6	20	24	5.5	
+2024-04-16	Chloe, Peyton & Meryn	A	SAC	F	grp-6	1	42.984264	-71.508560	coniferous		165	52.5	small-group	14	2	7	21	44	6	24	36	4	
+2024-04-16	Smith/Duteau	B	SAC	F	grp-6	1			deciduous		172.72	55.0	free-standing	7	3	4	1	15	3	180	24.5	5	
 2024-04-18	Gandolfo/Posanka	E	SAC	F	grp-6	1	42.986803	-71.507325	coniferous		167.2	53.2	free-standing	4	2	1	0	7	6	188.5	24	4	Water is clear
+2024-04-16	Sam and Cam	A	SAC	F	grp-7	1	42.986444	-71.505261	deciduous		93.5	29.8	free-standing	22	12	24	0	58	6	24	24	3	

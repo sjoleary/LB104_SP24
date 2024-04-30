@@ -1,3 +1,8 @@
+---
+output: html_document
+editor_options: 
+  chunk_output_type: console
+---
 # Lichen Data Analysis {#sec-lichen-data-analysis}
 
 ```{r}
@@ -57,9 +62,9 @@ options(htmltools.dir.version = FALSE)
 ## Get set up to analyze your data
 
 ::: {.callout-warning title="Heads up"}
-Two weeks ago, each of you formulated two hypotheses of important abiotic and biotic variables determining presence/absence, distribution, and type of lichen present in local microhabitats. This means that each of you will be analyzing different aspects of your data set. As such we will have you working directly in your lab report to analyze your data and describe your results. Before you go today, make sure you can render your report (i.e. all the tables and figures are being produced and your code is running smoothly).
+Two weeks ago, each of you formulated two hypotheses of important abiotic and biotic variables determining presence/absence, distribution, and type of lichen present in local microhabitats and/or what that tells us about their environment. 
 
-We have two quarto documents available for you, the first will render to an `html`-file as you are used to from previous projects this semester, the second with convert to an editable `*.docx`-file.
+This means that each of you will be analyzing different aspects of your data set. As such we will have you working directly in your lab report to analyze your data and describe your results. Before you go today, make sure you can render your report to a word document that will contain all your figures and tables that you will then be able to use to complete your lab report.
 
 Take some notes during class room discussions for you to be able to use when you finalize your introduction, methods, results, and discussion section and turn in your report.
 :::
@@ -75,6 +80,7 @@ In the next section we will generate a sample map that you should include in you
 ```{r}
 #| label: fig-map
 #| fig-cap: "Sample Area Saint Anselm Campus Lichen survey. Individual dots represent sampled trees. Colors correspond to sample areas."
+#| collapse: true
 #| message: false
 #| error: false
 #| warning: false
@@ -180,17 +186,19 @@ We sampled five locations on campus. For many of the question you are interested
 
 Completing a comprehensive survey across campus both allows us to look at differences at a microhabitat level (differences among locations on campus) as well as look at some broad-scale patterns to determine if they are significant across a range of conditions - i.e. it allows us to account for confounding variables.
 
+Remember to describe the different sample locations in your lab report.
+
 *Note: if you are interested in patterns like the effect of tree size on lichen coverage then the fact that you sampled across a range of different types of locations might be an important component because you can eliminate confounding factors that might have played a role in just one location.*
 
 :::
 
-Let's look at our data and see how some of our explanatory variables vary across campus, let's start with our categorical explanatory variables:
+Let's look at our data and see how some of our explanatory variables vary across campus. We'll start with our categorical variables.
 
 Instead of measuring sunlight directly or canopy coverage, we have classified trees as being free-standing, in small groups, or in forested area where a continuous canopy is likely:
 
 ```{r}
 #| label: tbl-summary-table-tree-density
-#| tbl-cap: "."
+#| tbl-cap: "Tree density in each sample location."
 #| message: false
 #| error: false
 #| warning: false
@@ -220,6 +228,7 @@ We can also re-plot our map color coded by tree-density to get some insight into
 ```{r}
 #| label: fig-map-density
 #| fig-cap: "Sample Area Saint Anselm Campus Lichen survey. Individual dots represent sampled trees. Colors correspond to tree density."
+#| collapse: true
 #| message: false
 #| error: false
 #| warning: false
@@ -271,7 +280,7 @@ Another important question is whether our locations differ by tree type:
 
 ```{r}
 #| label: tbl-summary-table-tree-type
-#| tbl-cap: "."
+#| tbl-cap: "Number of coniferous and deciduous trees sampled at each campus location."
 #| message: false
 #| error: false
 #| warning: false
@@ -301,6 +310,7 @@ Again, we can re-plot our map to see if there are differences in terms of how ou
 ```{r}
 #| label: fig-map-type
 #| fig-cap: "Sample Area Saint Anselm Campus Lichen survey. Individual dots represent sampled trees. Colors correspond to tree type."
+#| collapse: true
 #| message: false
 #| error: false
 #| warning: false
@@ -376,7 +386,7 @@ lichen %>%
             sd = sd(!!sym(col_response), na.rm = TRUE),
             min = min(!!sym(col_response), na.rm = TRUE),
             max = max(!!sym(col_response), na.rm = TRUE)) %>%
-  kable()
+  kable(digits = 1)
 
 ```
 
@@ -385,6 +395,7 @@ We can create a color-scale to compare the dbh across the different sample locat
 ```{r}
 #| label: fig-map-dbh
 #| fig-cap: "Sample Area Saint Anselm Campus Lichen survey. Individual dots represent sampled trees. Colors correspond to dbh (diameter at breast height)."
+#| collapse: true
 #| message: false
 #| error: false
 #| warning: false
@@ -458,7 +469,7 @@ lichen %>%
             sd = sd(!!sym(col_response), na.rm = TRUE),
             min = min(!!sym(col_response), na.rm = TRUE),
             max = max(!!sym(col_response), na.rm = TRUE)) %>%
-  kable()
+  kable(digits = 1)
 
 ```
 
@@ -467,6 +478,7 @@ Again, we can create a color-scale to compare the dbh across the different sampl
 ```{r}
 #| label: fig-map-ph
 #| fig-cap: "Sample Area Saint Anselm Campus Lichen survey. Individual dots represent sampled trees. Colors correspond to level of bark pH."
+#| collapse: true
 #| message: false
 #| error: false
 #| warning: false
@@ -582,7 +594,7 @@ lichen %>%
 
 ```
 
-Our next step will be to create a summary figure and use an anova to determine if the observed differences are random or due to sample location.
+Our next step will be to create a summary figure and use an ANOVA to determine if the observed differences are random or due to sample location.
 
 ```{r}
 #| label: fig-location-lichen-coverage
