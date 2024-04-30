@@ -1,0 +1,75 @@
+{
+    "sources": [
+        {
+            "DOI": "10.1093/comjnl/27.2.97",
+            "ISSN": "0010-4620",
+            "URL": "https://doi.org/10.1093/comjnl/27.2.97",
+            "author": [
+                {
+                    "family": "Knuth",
+                    "given": "Donald E."
+                }
+            ],
+            "container-title": "Comput. J.",
+            "id": "knuth84",
+            "issue": "2",
+            "issued": {
+                "date-parts": [
+                    [
+                        1984,
+                        5
+                    ]
+                ]
+            },
+            "page": "97-111",
+            "publisher": "Oxford University Press, Inc.",
+            "publisher-place": "USA",
+            "title": "Literate programming",
+            "type": "article-journal",
+            "volume": "27"
+        },
+        {
+            "DOI": "10.1371/journal.pone.0090081",
+            "URL": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0090081",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2024,
+                        1,
+                        8
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "family": "Gorman",
+                    "given": "Kristen B."
+                },
+                {
+                    "family": "Williams",
+                    "given": "Tony D."
+                },
+                {
+                    "family": "Fraser",
+                    "given": "William R."
+                }
+            ],
+            "container-title": "PLOS ONE",
+            "id": "gormanEcologicalSexualDimorphism2014",
+            "issue": "3",
+            "issued": {
+                "date-parts": [
+                    [
+                        2014
+                    ]
+                ]
+            },
+            "title": "Ecological sexual dimorphism and environmental variability within a community of Antarctic penguins (genus Pygoscelis).",
+            "type": "article-journal",
+            "volume": "9"
+        }
+    ],
+    "project_biblios": [
+        "references.bib"
+    ]
+}
