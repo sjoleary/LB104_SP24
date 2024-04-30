@@ -80,7 +80,7 @@ In the next section we will generate a sample map that you should include in you
 ```{r}
 #| label: fig-map
 #| fig-cap: "Sample Area Saint Anselm Campus Lichen survey. Individual dots represent sampled trees. Colors correspond to sample areas."
-#| collapse: true
+#| code-fold: true
 #| message: false
 #| error: false
 #| warning: false
@@ -228,11 +228,10 @@ We can also re-plot our map color coded by tree-density to get some insight into
 ```{r}
 #| label: fig-map-density
 #| fig-cap: "Sample Area Saint Anselm Campus Lichen survey. Individual dots represent sampled trees. Colors correspond to tree density."
-#| collapse: true
+#| code-fold: true
 #| message: false
 #| error: false
 #| warning: false
-#| cache: true
 
 # compile plot
 ggplot() +
@@ -310,7 +309,7 @@ Again, we can re-plot our map to see if there are differences in terms of how ou
 ```{r}
 #| label: fig-map-type
 #| fig-cap: "Sample Area Saint Anselm Campus Lichen survey. Individual dots represent sampled trees. Colors correspond to tree type."
-#| collapse: true
+#| code-fold: true
 #| message: false
 #| error: false
 #| warning: false
@@ -395,7 +394,7 @@ We can create a color-scale to compare the dbh across the different sample locat
 ```{r}
 #| label: fig-map-dbh
 #| fig-cap: "Sample Area Saint Anselm Campus Lichen survey. Individual dots represent sampled trees. Colors correspond to dbh (diameter at breast height)."
-#| collapse: true
+#| code-fold: true
 #| message: false
 #| error: false
 #| warning: false
@@ -478,7 +477,7 @@ Again, we can create a color-scale to compare the dbh across the different sampl
 ```{r}
 #| label: fig-map-ph
 #| fig-cap: "Sample Area Saint Anselm Campus Lichen survey. Individual dots represent sampled trees. Colors correspond to level of bark pH."
-#| collapse: true
+#| code-fold: true
 #| message: false
 #| error: false
 #| warning: false
@@ -1772,7 +1771,7 @@ aov(coverage ~ tree_density + direction,
 
 ```
 
-This indicates that while overall there is no significance of differences in sample location or side of the tree, when we control for differences in side of the tree, overall there are differences in the patterns of lichen abundance for sample locations.
+We already saw earlier that tree density plays a role in total lichen coverage. Here we see that the pattern of which side of the tree we see differs among our different categories of tree density.
 
 ### Tree density and sample location
 
